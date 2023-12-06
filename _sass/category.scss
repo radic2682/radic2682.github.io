@@ -13,6 +13,7 @@
         position: absolute;
         top: 0;
         height: calc(20vh + 100px);
+        max-height: 340px;
         width: 100%;
         z-index: 10;
     
@@ -24,33 +25,40 @@
         -moz-box-shadow: 0px 17px 9px -15px rgba(0,0,0,0.19);
 
         transition: border-radius 0.3s ease;
+
+        .wave{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            z-index: 13;
+        
+            background: url("/assets/images/wave.png");
+            background-size: 1000px 100px;
+            
+            border-radius: 10px;
+            border: transparent;
+            transition: border-radius 0.3s ease;
+        }
+        .wave_1{opacity: 1;   top: 20vh; 	z-index: 13; animation: wave  4s linear infinite;}
+        .wave_2{opacity: 0.5; top: 19.5vh; 	z-index: 12; animation: wave2 4s linear infinite;}
+        .wave_3{opacity: 0.2; top: 19vh; 	z-index: 11; animation: wave2 4s linear infinite;}
+        .wave_4{opacity: 0.7; top: 18.5vh; 	z-index: 10; animation: wave  4s linear infinite;}
+
+        .island_box {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
+            .island{
+                position: absolute;
+                bottom: 0;
+                height: calc((20vh + 100px)*0.8);
+                z-index: 10;
+            }
+        }
+
     }
 
-    .wave{
-        position: absolute;
-        top: 20vh;
-        height: 100px;
-        width: 100%;
-        z-index: 13;
-    
-        background: url("/assets/images/wave.png");
-        background-size: 1000px 100px;
-        
-        border-radius: 10px;
-        border: transparent;
-        transition: border-radius 0.3s ease;
-    }
-    .wave_1{opacity: 1; 	 top: 20vh; 	z-index: 13; animation: wave  4s linear infinite;}
-    .wave_2{opacity: 0.5; top: 19.5vh; 	z-index: 12; animation: wave2 4s linear infinite;}
-    .wave_3{opacity: 0.2; top: 19vh; 	z-index: 11; animation: wave2 4s linear infinite;}
-    .wave_4{opacity: 0.7; top: 18.5vh; 	z-index: 10; animation: wave  4s linear infinite;}
-    
-    .island{
-        position: absolute;
-        top: 5vh;
-        height: calc((20vh + 100px)*0.8);
-        z-index: 10;
-    }
 
     .category_body{
         width: auto;
