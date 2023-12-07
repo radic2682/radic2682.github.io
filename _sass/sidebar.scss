@@ -1,0 +1,82 @@
+#sidebar {
+    .menu_close_btn{
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        width: 100%;
+
+        img{
+            width: 25px;
+            height: 25px;
+            margin: 15px 15px 0 0;
+            cursor: pointer;
+            transition: all 0.5s;
+        }
+
+        :hover{
+            rotate: 360deg;
+        }
+    }
+
+    .profile{
+        @include layout($lay: col_center);
+        margin: 15px 0;
+
+        .profile_pic{
+            width: 140px;
+            height: 140px; 
+            border-radius: 70%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                -webkit-transition: .3s ease-in-out;
+                transition: .3s ease-in-out;
+            }
+
+            :hover {
+                -webkit-transform: rotate(-5deg) scale(1.2);
+                transform: rotate(-5deg) scale(1.2);
+            }
+        }
+
+        p {
+            @include font_poppins($size: m-1);
+            margin: 6px;
+            color: #000;
+        }
+    }
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
