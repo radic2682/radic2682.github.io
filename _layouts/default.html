@@ -18,7 +18,16 @@
       {% include sidebar.html %}
     </div>
     <div id="content">
+      <div id="scoll_bar"></div>
+      <div id="top_nav_bar">
+        <a href="/"><img src="/assets/images/logoB.png" alt="Home" class="logo"></a>
+        <img id="top_search" src="/assets/images/icon_search_l.png" alt="Search" onclick="searching_show()">
+      </div>
+
       {{ content }}
     </div>
+
+
+    <script src="/assets/js/srollbar.js"></script>
   </body>
 </html>

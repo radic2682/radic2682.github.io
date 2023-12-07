@@ -24,6 +24,53 @@ body {
 	width: 100%;
 	position: relative;
     background-color: beige;
+
+    #scoll_bar {
+        width: 0;
+        height: 4px;
+        transition: all linear 0.2s;
+        background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
+        border-radius: 100px;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    #top_nav_bar {
+        position: sticky;
+        top: 4px;
+    
+        min-height: 5vh;
+        width: auto;
+        padding: 20px 30px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        background: none;
+        z-index: 100;
+
+        img{
+            height: 55px;
+            z-index: 100;
+        }
+        .logo{
+            transition: all 0.5s;
+        }
+        #top_search{
+            transition: all 0.5s;
+            z-index: 100;
+        }
+
+    }
+
+
+
+
+
+
+
 }
 
 
