@@ -3,7 +3,11 @@ body {
 }
 
 #sidebar {
-    @include layout($lay: col_top);
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+	justify-content: start;
 
     position: sticky;
 	top: 0px;
@@ -13,7 +17,7 @@ body {
     /* overflow-x: hidden; */
 	margin-left: 0;
 
-    background-color: #FFFFFF;
+    background-color: $mainSidebar;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 
 	transition: margin-left 0.3s ease;
@@ -23,7 +27,7 @@ body {
 	padding: 0;
 	width: 100%;
 	position: relative;
-    background-color: beige;
+    background-color: $mainBackground;
 
     #scoll_bar {
         width: 0;

@@ -10,17 +10,90 @@
 </div>
 
 <div class="contact sidebar_box">
-    <p>Contact Me</p>
-    <!-- <div class="mail contact_box">		<img src="./images/icon_mail.png" 		alt="Mail">			<a href="matilto:32182479@dankook.ac.kr">32182479@dankook.ac.kr</a></div>
-    <div class="linkedin contact_box">	<img src="./images/icon_linkedin.png" 	alt="Linked In">	<a href="https://www.linkedin.com/in/sunhong-an/">Linked In</a></div>
-    <div class="notion contact_box">	<img src="./images/icon_notion.png" 	alt="Noyion">		<a href="https://www.notion.so/Sun-Hong-78ee5a443bfd49aab679d33f8c0697ef?pvs=4/">Portfolio</a></div>
-    <div class="github contact_box">	<img src="./images/icon_github.gif" 	alt="Github">		<a href="https://github.com/radic2682">Github</a></div> -->
+    <h1>Contact Me</h1>
+    <div class="mail contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/fluency/96/mail--v1.png" alt="mail--v1"/>
+        <a href="matilto:32182479@dankook.ac.kr">32182479@dankook.ac.kr</a>
+    </div>
+    <div class="linkedin contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"/>	
+        <a href="https://www.linkedin.com/in/sunhong-an/">Linked In</a>
+    </div>
+    <div class="notion contact_box">
+        <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/notion.png" alt="notion"/>	
+        <a href="https://www.notion.so/Sun-Hong-78ee5a443bfd49aab679d33f8c0697ef?pvs=4/">Portfolio</a>
+    </div>
+    <div class="github contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/github.png" alt="github"/>
+        <a href="https://github.com/radic2682">Github</a>
+    </div>
 </div>
 
 <div id="category" class="sidebar_box">
-    <p>카테고리 리스트</p>
+    <h1>Category<span class="count">{{site.posts.size}}</span></h1>
+    <ul class="menu_list">
+        {% assign sortedCategories = site.categories | sort: "order" %}
+    
+        {% for category in sortedCategories %}
+
+            {% if category.isSub %}
+                {% continue %}
+            {% endif %}
+    
+    
+            {% assign menuUrl = category.url %}
+    
+            {% if category.children.size >= 1 %}
+                {% assign menuUrl = 'javascript:;' %}
+            {% endif %}
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    {{ category.icon }}
+                    <a href="{{ menuUrl }}">{{ category.title }}</a>
+                </li>
+        
+                {% if category.children.size >= 1 %}
+                    <ul class="cat_part">
+                        {% for child in category.children %}
+    
+                            {% assign post_count = 0 %}
+    
+                            {% for post in site.posts %}
+                                {% for category in post.categories %}
+                                    {% if child == category %}
+                                        {% assign post_count = post_count | plus: 1 %}
+                                    {% endif %}
+                                {% endfor %}
+                            {% endfor %}
+    
+                            <li>
+                                {% for sub_category in site.categories %}
+                                    {% if sub_category.title == child %}
+                                        {{sub_category.icon}}
+                                    {% endif %}
+                                {% endfor %}
+    
+                                {% assign url_parts = page.url | split: '/' %}
+                                {% assign last_part = url_parts | last | url_decode %}
+    
+                                <a href="{{ category.url }}{{ child }}/" class="{% if last_part == child %}highlight{% endif %}">{{ child }}<span class="count_m">{{ post_count }}</span></a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+    
+        {% endfor %}
+    </ul>
 </div>
 
+
+
+
+
+
+
 <div class="count sidebar_box">
-    <p>Count</p>
+    <h1>Count</h1>
 </div>

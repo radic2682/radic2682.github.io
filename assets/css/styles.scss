@@ -47,39 +47,47 @@ table {
 }
 // ====================================================
 
-@mixin layout($lay: row) {
-    display: flex;
-
-    align-items: center;
-
-    
-}
-
-@mixin layout($lay: col_top) {
-	display: flex;
-	
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: start;
-}
-@mixin layout($lay: col_center) {
-	display: flex;
-	
-	flex-direction: column;
-	align-items: center;
-	align-content: center;
-	justify-content: start;
-}
-
-@mixin font_poppins($size: m-1) {
+@mixin font_poppins-s1 {
 	font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 16px;
+	font-weight: 500;
+	font-size: 13px;
 }
+
+@mixin font_poppins-s2 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 10px;
+}
+
+@mixin font_poppins-m1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+@mixin font_poppins-m2 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+@mixin font_poppins-m3 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 12px;
+}
+
+// color
+$mainBackground: #edf2f4;
+$mainSidebar: #f5ebe0;
+
+$MyOrange: #e76f51;
 
 
 
 
 @import "default";
 @import "sidebar";
+@import "index";
+
+

@@ -1,12 +1,78 @@
 ---
 layout: default
-title: Home
+title: traumhaft - Sun Hong
 ---
 
-<h1>{{ "Hello World!" | downcase }}</h1>
-<a href="./about"><h2>wqdq</h2></a>
+<div class="main_box">
+  <div class="main_title">
+    <div>
+      <img width="96" height="96" src="https://img.icons8.com/color-glass/96/project-management.png" alt="project-management"/>
+      <h1>Projects</h1>
+    </div>
+    <h2>Take a look at my wonderful treasures!</h2>
+  </div>
+  <div class="main_content">
+    <div id="project_box_wrapper">
+      {% for post in site.posts %}
+        {% for category in post.categories %}
+          {% if category == 'Project' %}
 
-<h2>Latest Posts</h2>
+            <div id="new_project_box" onClick="location.href ='{{ post.url }}'" style="cursor:pointer;">
+              <div id="imgBox">
+                {% if post.thumbnail %}
+                  <img src="{{ post.thumbnail }}" alt="{{ post.title }} Thumbnail">
+                {% endif %}
+              </div>
+
+              {% for sub_category in post.categories %}
+                {% if sub_category != 'Project' %}
+
+                  {% for selected_category in site.categories %}
+                    {% if selected_category.title == sub_category %}
+
+                      <a href="{{selected_category.url}}"><p id="box_category">{{ sub_category }}</p></a>
+                      
+                    {% endif %}
+                  {% endfor %}
+
+                {% endif %}
+              {% endfor %}
+
+              <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
+              <p id="signature">- Sun Hong</p>
+            </div>
+
+          {% endif %}
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% include skills.html %}
+
+
+<div class="main_box">
+  <div class="main_title">
+    <div>
+      <img width="96" height="96" src="https://img.icons8.com/fluency/96/music.png" alt="music"/>
+      <h1>Rhythmic Hobby</h1>
+    </div>
+    <h2>Come listen to my little hobby, EDM Composition.</h2>
+  </div>
+  <div class="youtube">
+    <a href="https://www.youtube.com/@radic2884/videos">
+      <img width="100" height="100" src="https://img.icons8.com/plasticine/400/youtube-play--v2.png" alt="youtube-play--v2" style="width: 100px; height: 100px;"/>
+    </a>
+  </div>
+  <div class="project_box">
+    <iframe width="480" height="260" src="https://www.youtube.com/embed/rkLLi6Z5Y8M?si=8FdcLPTxM0xJQbF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="480" height="260" src="https://www.youtube.com/embed/DrcZs3yaPYk?si=KAZfTcd2CHxI6S3t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+
+
+<!--
 <ul>
     {% for post in site.posts %}
       <li>
@@ -14,50 +80,9 @@ title: Home
         <p>{{ post.excerpt }}</p>
       </li>
     {% endfor %}
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias dolorum ea rem distinctio cupiditate maiores modi non voluptates. Rerum quo accusantium reiciendis et minima eveniet iusto magni doloremque? Natus, a!</p>
-
-
-
-
+ 
 </ul>
-
+-->
 <div class="page_footer">
     <p>© Copyright 2023 Sun Hong</p>
 </div>

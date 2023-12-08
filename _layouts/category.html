@@ -1,0 +1,32 @@
+---
+layout: default
+
+---
+
+<h1>카테고리 페이지</h1>
+
+
+
+<div class="list">
+    {% for post in site.posts %}
+        {% for category in post.categories %}
+            {% if page.name == category %}
+                <div class="list-module">
+                    <!-- <span class="post-meta">{{ post.date | date: '%b %d %Y' }}, {{ site.data.authors[post.author].name }}
+                        <img src="{{ site.baseurl }}{{ site.data.authors[post.author].picture }}" class="gravatar">
+                    </span> -->
+                    <a href="{{ site.baseurl }}{{ post.url }}">
+                        <h2 class="post-link">{{ post.title }}</h2>
+                        <p class="post-description">{{ post.description }}</p>
+                    </a>
+                </div>
+
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</div>
+
+
+<div class="page_footer">
+    <p>© Copyright 2023 Sun Hong</p>
+  </div>
