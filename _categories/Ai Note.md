@@ -1,6 +1,6 @@
 ---
 # order 필드로 카테고리를 정렬
-order: 1
+order: 2
 # 카테고리 이름
 title: Ai Note
 # 포스팅의 속할 카테고리를 지정할 때 사용
