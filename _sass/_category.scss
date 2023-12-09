@@ -1,0 +1,130 @@
+
+#category_page {
+	display: flex;
+	/* flex-wrap: wrap; */
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items: center;
+	align-content: start;
+
+	/* margin-top: 30vh; */
+	width: 100%;
+
+    .backg{
+        position: absolute;
+        top: 0;
+        height: calc(20vh + 100px);
+        width: 100%;
+        z-index: 10;
+    
+        background-color: $mainColor;
+    
+        box-shadow: 0px 17px 9px -15px rgba(0,0,0,0.19);
+        -webkit-box-shadow: 0px 17px 9px -15px rgba(0,0,0,0.19);
+        -moz-box-shadow: 0px 17px 9px -15px rgba(0,0,0,0.19);
+    }
+
+    .wave{
+        position: absolute;
+        top: 20vh;
+        height: 100px;
+        width: 100%;
+        z-index: 13;
+    
+        background: url("/assets/images/wave.png");
+        background-size: 1000px 100px;
+        
+    
+        border: transparent;
+    }
+    .wave_1{opacity: 1; 	 top: 20vh; 	z-index: 13; animation: wave  4s linear infinite;}
+    .wave_2{opacity: 0.5; top: 19.5vh; 	z-index: 12; animation: wave2 4s linear infinite;}
+    .wave_3{opacity: 0.2; top: 19vh; 	z-index: 11; animation: wave2 4s linear infinite;}
+    .wave_4{opacity: 0.7; top: 18.5vh; 	z-index: 10; animation: wave  4s linear infinite;}
+    
+    .island{
+        position: absolute;
+        top: 5vh;
+        height: calc((20vh + 100px)*0.8);
+        z-index: 10;
+    }
+
+    .category_body{
+        width: auto;
+        min-height: 40vh;
+        padding: 0;
+        margin: 2rem 1rem;
+        margin-top: 250px;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+    
+    #head{
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        width: 100%;
+
+        margin-bottom: 30px;
+
+        h5 {
+            margin-bottom: 5px;
+            color: #000000;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        h2 {
+            color: #000000;
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: 'Poppins', sans-serif;
+        }
+        img {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 15px
+        }
+    }
+   
+    
+    @include new_projectBox;
+    
+
+
+
+}
+@keyframes wave {
+	0% {background-position-x: 1000px;}
+	100% {background-position-x: 0;}
+}
+@keyframes wave2 {
+	0% {background-position-x: 0px;}
+	100% {background-position-x: 1000px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

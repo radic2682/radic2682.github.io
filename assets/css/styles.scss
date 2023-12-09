@@ -80,12 +80,13 @@ table {
 // color
 $mainBackground: #edf2f4;
 $mainSidebar: #f5ebe0;
+$mainColor: #003049;
 
 $MyOrange: #e76f51;
 
 
-
-
+@import "new_project_box";
+@import "category";
 @import "default";
 @import "sidebar";
 @import "index";

@@ -1,6 +1,6 @@
 ---
-title: C & C++
-name: C & C++
+title: C & CPP
+name: C & CPP
 isSub: true
 layout: category
 parent: Study
