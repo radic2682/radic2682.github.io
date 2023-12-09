@@ -17,7 +17,7 @@
         width: 280px;
         height: 80px;
         border-radius: 100px;
-        z-index: 100;
+        z-index: 20;
         /* filter: drop-shadow(0 0 2px #000); */
         background: #1B263B;
 
@@ -43,7 +43,7 @@
         /* text-shadow: 0 0 5px #000; */
         transform-origin: bottom;
         animation: cloud_eff 2s linear forwards;
-        z-index: 99;
+        z-index: 19;
     }
     .description{
         display: flex;
@@ -276,10 +276,43 @@
     @include new_projectBox;
 
 }
+
+@media (max-width: 920px){
+    .main_top {
+
+
+        .description {
+
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
 @media (max-width: 768px){
 	.main_box{
 		padding: 0 15px;
 	}
+
+    .main_top {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        min-height: 70vh;
+         
+        .description {
+            align-items: center;
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
 }
 
 

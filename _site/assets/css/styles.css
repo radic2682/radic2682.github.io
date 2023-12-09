@@ -243,6 +243,7 @@ table {
     padding: 0;
     margin-bottom: 40px;
     width: 80%;
+    background-color: #F8F9FB;
   }
   #category_page #new_project_box #signature {
     display: none;
@@ -267,21 +268,21 @@ table {
 }
 body {
   display: flex;
+  overflow-x: hidden;
 }
 
 #sidebar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: center;
   justify-content: start;
   position: sticky;
   top: 0px;
   height: 100vh;
   min-width: 280px;
   max-width: 280px;
+  width: 280px;
   overflow-y: auto;
-  /* overflow-x: hidden; */
   margin-left: 0;
   background-color: #f5ebe0;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
@@ -296,6 +297,7 @@ body {
   width: 100%;
   position: relative;
   background-color: #edf2f4;
+  box-sizing: border-box;
   transition: width 0.3s ease;
 }
 #content #scoll_bar {
@@ -317,6 +319,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-sizing: border-box;
   background: none;
   z-index: 100;
 }
@@ -345,6 +348,20 @@ body {
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  #content {
+    padding: 0 10px;
+  }
+  #content #top_nav_bar {
+    padding: 15px 10px;
+  }
+}
+#sidebar {
+  scrollbar-width: none;
+}
+#sidebar::-webkit-scrollbar {
+  width: 0;
+}
 #sidebar .menu_close_btn {
   display: flex;
   flex-direction: row;
@@ -406,7 +423,7 @@ body {
 }
 #sidebar .sidebar_box:hover {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-  background-color: #F9FAFB;
+  background-color: #f5eee7;
 }
 #sidebar h1 {
   font-family: "Poppins", sans-serif;
@@ -570,7 +587,7 @@ body {
   width: 280px;
   height: 80px;
   border-radius: 100px;
-  z-index: 100;
+  z-index: 20;
   /* filter: drop-shadow(0 0 2px #000); */
   background: #1B263B;
 }
@@ -595,7 +612,7 @@ body {
   /* text-shadow: 0 0 5px #000; */
   transform-origin: bottom;
   animation: cloud_eff 2s linear forwards;
-  z-index: 99;
+  z-index: 19;
 }
 .main_top .description {
   display: flex;
@@ -904,15 +921,37 @@ body {
     padding: 0;
     margin-bottom: 40px;
     width: 80%;
+    background-color: #F8F9FB;
   }
   .main_box #new_project_box #signature {
     display: none;
   }
 }
 
+@media (max-width: 920px) {
+  .main_top .description h1 {
+    font-size: 2rem;
+  }
+  .main_top .description p {
+    font-size: 1.2rem;
+  }
+}
 @media (max-width: 768px) {
   .main_box {
     padding: 0 15px;
+  }
+  .main_top {
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    min-height: 70vh;
+  }
+  .main_top .description {
+    align-items: center;
+  }
+  .main_top .description h1 {
+    font-size: 2rem;
   }
 }
 #post_page {
