@@ -5,7 +5,9 @@ url: "https://radic2682.github.io"
 
 
 markdown: kramdown
-
+kramdown:
+  input: GFM
+  
 futrue: true
 
 # Archives
