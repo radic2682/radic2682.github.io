@@ -51,7 +51,7 @@
 </div>
 
 <div id="category" class="sidebar_box">
-    <h1>Category<span class="count">4</span></h1>
+    <h1>Category<span class="count">6</span></h1>
     <ul class="menu_list">
         
     
@@ -132,7 +132,7 @@
                                 
                                 
     
-                                <a href="/category/Project/Hardware Project/" class="">Hardware Project<span class="count_m">3</span></a>
+                                <a href="/category/Project/Hardware Project/" class="">Hardware Project<span class="count_m">4</span></a>
                             </li>
                         
     
@@ -442,7 +442,7 @@
                                 
                                 
     
-                                <a href="/category/Study/GIT/" class="">GIT<span class="count_m">0</span></a>
+                                <a href="/category/Study/GIT/" class="">GIT<span class="count_m">1</span></a>
                             </li>
                         
                     </ul>
@@ -463,6 +463,10 @@
     <h1>Count</h1>
 </div>
 
+<button id="sidebar_on_off_btn">
+    <img width="64" height="64" src="/assets/images/icon_menu.png" alt="menu" onclick="menu_tag_click()"/>
+</button>
+
     </div>
     <div id="content">
       <div id="scoll_bar"></div>
@@ -471,10 +475,41 @@
         <img id="top_search" src="/assets/images/icon_search_l.png" alt="Search" onclick="searching_show()">
       </div>
 
-      <h1>Kiwifruit</h1>
-<p>22 Aug 2018 - jill</p>
+      <div id="post_page">
+    <div class="backg"></div>
+    <div class="catShelter">
+        <div class="window">
+            <img class="castle" src="/assets/images/castle.png" alt="castle">
+            <div class="kitty">
+                <div class="ear"></div>
+            </div>
+            <div class="moon"></div>
+            <div class="star"></div>
+        </div>
+    </div>
 
-<p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
+    <div class="post_wapper">
+        <div id="head">
+
+            <div class="postpage_category_v">
+                <h4><a href=" ">카테고리 이름</a></h4>
+            </div>
+
+            <h1>Kiwifruit</h1>
+
+            <div class="mini_box_wAd">
+                <div class="mini_box_writer">
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/user-typing-using-typewriter.png" alt="user-typing-using-typewriter"/>
+                    <p>Sun Hong</p>	
+                </div>
+                <p class="date">2018년 08월 22일</p>
+            </div>
+        </div>
+
+        <div id="body">
+
+            <div class="article">
+                <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
 berry of several species of woody vines in the genus Actinidia.</p>
 
 <p>The most common cultivar group of kiwifruit is oval, about the size of a large
@@ -483,11 +518,26 @@ diameter). It has a fibrous, dull greenish-brown skin and bright green or
 golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
 texture, with a sweet and unique flavor.</p>
 
+            </div>
+            <td></td>
+            <!-- <div class="tag_title">
+            </div>
 
+            <div class="tag_label">
+            </div>
 
+            <div class="comment_box">
+            </div> -->
 
+        </div>
+    </div>
+</div>
 
-
+<!-- <div class="table_contents">
+    <div class="table_contents_btn" onclick="table_close_click()"><p>C</p></div>
+    <p class="table_title">Contents</p>
+    <div class="table_content_inner"></div>
+</div> -->
 
 
 
@@ -499,9 +549,12 @@ texture, with a sweet and unique flavor.</p>
 <div class="page_footer">
     <p>© Copyright 2023 Sun Hong</p>
 </div>
+      
     </div>
 
     <script src="/assets/js/srollbar.js"></script>
+    <script src="/assets/js/top_nav.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
   </body>
 </html>
 

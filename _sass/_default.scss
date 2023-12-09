@@ -24,10 +24,15 @@ body {
 	z-index: 30;
 }
 #content {
+    display: flex;
+    flex-direction: column;
+
 	padding: 0;
 	width: 100%;
 	position: relative;
     background-color: $mainBackground;
+
+    transition: width 0.3s ease;
 
     #scoll_bar {
         width: 0;
@@ -71,6 +76,7 @@ body {
 }
 
 .page_footer {
+    box-sizing : border-box;
 	width: 100%;
 	min-height: 30px;
 	padding: 0 30px;
