@@ -3,74 +3,82 @@ layout: default
 title: traumhaft - Sun Hong
 ---
 
-<div class="main_box">
-  <div class="main_title">
-    <div>
-      <img width="96" height="96" src="https://img.icons8.com/color-glass/96/project-management.png" alt="project-management"/>
-      <h1>Projects</h1>
-    </div>
-    <h2>Take a look at my wonderful treasures!</h2>
+<div class="main_top">
+
+  <div class="main_img">
+    <div class="cloud"></div>
   </div>
-  <div class="main_content">
-    <div id="project_box_wrapper">
-      {% for post in site.posts %}
-        {% for category in post.categories %}
-          {% if category == 'Project' %}
+  <script>
+    function randomText(){
+      const text = ["H", "L", "L", "E", "O"];
+      return text[Math.floor(Math.random() * text.length)];
+    }
+    function rain(){
+      const cloud = document.querySelector('.cloud');
+      const e = document.createElement('div');
+      let left = Math.floor(Math.random() * 230);
+      let size = Math.random() * 1.3;
+      let duration = Math.random() * 1;
 
-            <div id="new_project_box" onClick="location.href ='{{ post.url }}'" style="cursor:pointer;">
-              <div id="imgBox">
-                {% if post.thumbnail %}
-                  <img src="{{ post.thumbnail }}" alt="{{ post.title }} Thumbnail">
-                {% endif %}
-              </div>
+      e.classList.add('text');
+      cloud.appendChild(e);
+      e.innerText = randomText();
+      e.style.left = 20 + left + 'px';
+      e.style.fontSize = 0.5 + size + 'em';
+      e.style.animationDuration = 2 + duration + 's';
 
-              {% for sub_category in post.categories %}
-                {% if sub_category != 'Project' %}
+      setTimeout(() => {
+        cloud.removeChild(e);
+      }, 2000);
+    }
+    setInterval(() => {
+      rain();
+    }, 80)
+  </script>
 
-                  {% for selected_category in site.categories %}
-                    {% if selected_category.title == sub_category %}
-
-                      <a href="{{selected_category.url}}"><p id="box_category">{{ sub_category }}</p></a>
-                      
-                    {% endif %}
-                  {% endfor %}
-
-                {% endif %}
-              {% endfor %}
-
-              <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
-              <p class="description">{{ post.excerpt }}</p>
-              <p id="signature">- Sun Hong</p>
-            </div>
-
-          {% endif %}
-        {% endfor %}
-      {% endfor %}
-    </div>
+  <div class="description">
+    <h1 class="wave_welcome">Welcome to my Blog</h1>
+    <p>From hardware to software,</p>
+    <p>I'm <span class="emp_word">System Engineer</span></p>
   </div>
+  <script>
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeEffect(){
+      const words = ["System Engineer.", "Developer.", "Designer."];
+      const word = document.querySelector('.emp_word');
+      const currentWord = words[wordIndex];
+
+      word.textContent =currentWord.substring(0, charIndex);
+
+      if(!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typeEffect, 140);
+      } else if(isDeleting && charIndex >0){
+        charIndex--;
+        setTimeout(typeEffect, 30);
+      } else {
+        isDeleting = !isDeleting;
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1500);
+      }
+    }
+    typeEffect();
+  </script>
+
+</div>
+<div id="down_box">
+  <img width="100" height="100" src="https://img.icons8.com/stickers/100/down.png" alt="down"/>
 </div>
 
-{% include skills.html %}
 
-
-<div class="main_box">
-  <div class="main_title">
-    <div>
-      <img width="96" height="96" src="https://img.icons8.com/fluency/96/music.png" alt="music"/>
-      <h1>Rhythmic Hobby</h1>
-    </div>
-    <h2>Come listen to my little hobby, EDM Composition.</h2>
-  </div>
-  <div class="youtube">
-    <a href="https://www.youtube.com/@radic2884/videos">
-      <img width="100" height="100" src="https://img.icons8.com/plasticine/400/youtube-play--v2.png" alt="youtube-play--v2" style="width: 100px; height: 100px;"/>
-    </a>
-  </div>
-  <div class="project_box">
-    <iframe width="480" height="260" src="https://www.youtube.com/embed/rkLLi6Z5Y8M?si=8FdcLPTxM0xJQbF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <iframe width="480" height="260" src="https://www.youtube.com/embed/DrcZs3yaPYk?si=KAZfTcd2CHxI6S3t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-  </div>
-</div>
+{% include index-projects.html %}
+{% include index-notes.html %}
+{% include index-skills.html %}
+{% include index-activities.html %}
+{% include index-hobby.html %}
 
 
 <!--
@@ -84,6 +92,6 @@ title: traumhaft - Sun Hong
  
 </ul>
 -->
-<div class="page_footer">
-    <p>© Copyright 2023 Sun Hong</p>
-</div>
+
+
+{% include footer.html %}

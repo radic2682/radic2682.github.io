@@ -471,241 +471,338 @@
         <img id="top_search" src="/assets/images/icon_search_l.png" alt="Search" onclick="searching_show()">
       </div>
 
-      <div class="main_box">
+      <div class="main_top">
+
+  <div class="main_img">
+    <div class="cloud"></div>
+  </div>
+  <script>
+    function randomText(){
+      const text = ["H", "L", "L", "E", "O"];
+      return text[Math.floor(Math.random() * text.length)];
+    }
+    function rain(){
+      const cloud = document.querySelector('.cloud');
+      const e = document.createElement('div');
+      let left = Math.floor(Math.random() * 230);
+      let size = Math.random() * 1.3;
+      let duration = Math.random() * 1;
+
+      e.classList.add('text');
+      cloud.appendChild(e);
+      e.innerText = randomText();
+      e.style.left = 20 + left + 'px';
+      e.style.fontSize = 0.5 + size + 'em';
+      e.style.animationDuration = 2 + duration + 's';
+
+      setTimeout(() => {
+        cloud.removeChild(e);
+      }, 2000);
+    }
+    setInterval(() => {
+      rain();
+    }, 80)
+  </script>
+
+  <div class="description">
+    <h1 class="wave_welcome">Welcome to my Blog</h1>
+    <p>From hardware to software,</p>
+    <p>I'm <span class="emp_word">System Engineer</span></p>
+  </div>
+  <script>
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function typeEffect(){
+      const words = ["System Engineer.", "Developer.", "Designer."];
+      const word = document.querySelector('.emp_word');
+      const currentWord = words[wordIndex];
+
+      word.textContent =currentWord.substring(0, charIndex);
+
+      if(!isDeleting && charIndex < currentWord.length) {
+        charIndex++;
+        setTimeout(typeEffect, 140);
+      } else if(isDeleting && charIndex >0){
+        charIndex--;
+        setTimeout(typeEffect, 30);
+      } else {
+        isDeleting = !isDeleting;
+        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
+        setTimeout(typeEffect, 1500);
+      }
+    }
+    typeEffect();
+  </script>
+
+</div>
+<div id="down_box">
+  <img width="100" height="100" src="https://img.icons8.com/stickers/100/down.png" alt="down"/>
+</div>
+
+
+<div class="main_box">
+    <div class="main_title">
+      <div>
+        <img width="96" height="96" src="https://img.icons8.com/color-glass/96/project-management.png" alt="project-management"/>
+        <h1>Projects</h1>
+      </div>
+      <h2>Take a look at my wonderful treasures!</h2>
+    </div>
+    <div class="main_content">
+      <div id="project_box_wrapper">
+        
+          
+            
+  
+              <div id="new_project_box" onClick="location.href ='/project/hardware%20project/2023/12/08/ai_accelerator.html'" style="cursor:pointer;">
+                <div id="imgBox">
+                  
+                    <img src="/assets/images/ai_accelerator.png" alt="[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI) Thumbnail">
+                  
+                </div>
+  
+                
+                  
+                
+                  
+  
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+  
+                        <a href="/category/Project/Hardware%20Project/"><p id="box_category">Hardware Project</p></a>
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+  
+                  
+                
+  
+                <a href="/project/hardware%20project/2023/12/08/ai_accelerator.html"><p id="box_title">[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)</p></a>
+                <p class="description">AI 가속기 설계를 어쩌구 저쩌구</p>
+                <p id="signature">- Sun Hong</p>
+              </div>
+  
+            
+          
+            
+          
+        
+          
+            
+  
+              <div id="new_project_box" onClick="location.href ='/project/app%20project/2018/08/22/kiwifruit.html'" style="cursor:pointer;">
+                <div id="imgBox">
+                  
+                </div>
+  
+                
+                  
+                
+                  
+  
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+  
+                        <a href="/category/Project/App%20Project/"><p id="box_category">App Project</p></a>
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+  
+                  
+                
+  
+                <a href="/project/app%20project/2018/08/22/kiwifruit.html"><p id="box_title">Kiwifruit</p></a>
+                <p class="description">Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia.</p>
+                <p id="signature">- Sun Hong</p>
+              </div>
+  
+            
+          
+            
+          
+        
+          
+            
+  
+              <div id="new_project_box" onClick="location.href ='/project/hardware%20project/2018/08/21/apples.html'" style="cursor:pointer;">
+                <div id="imgBox">
+                  
+                    <img src="https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w=" alt="사과 나무에서 사과가 뚝 Thumbnail">
+                  
+                </div>
+  
+                
+                  
+                
+                  
+  
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+  
+                        <a href="/category/Project/Hardware%20Project/"><p id="box_category">Hardware Project</p></a>
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+  
+                  
+                
+  
+                <a href="/project/hardware%20project/2018/08/21/apples.html"><p id="box_title">사과 나무에서 사과가 뚝</p></a>
+                <p class="description">An apple is a sweet, edible fruit produced by an apple tree.</p>
+                <p id="signature">- Sun Hong</p>
+              </div>
+  
+            
+          
+            
+          
+        
+          
+            
+  
+              <div id="new_project_box" onClick="location.href ='/project/hardware%20project/2018/08/20/bananas.html'" style="cursor:pointer;">
+                <div id="imgBox">
+                  
+                </div>
+  
+                
+                  
+                
+                  
+  
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+  
+                        <a href="/category/Project/Hardware%20Project/"><p id="box_category">Hardware Project</p></a>
+                        
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+  
+                  
+                
+  
+                <a href="/project/hardware%20project/2018/08/20/bananas.html"><p id="box_title">Bananas</p></a>
+                <p class="description">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</p>
+                <p id="signature">- Sun Hong</p>
+              </div>
+  
+            
+          
+            
+          
+        
+      </div>
+    </div>
+  </div>
+<div class="main_box">
   <div class="main_title">
     <div>
-      <img width="96" height="96" src="https://img.icons8.com/color-glass/96/project-management.png" alt="project-management"/>
-      <h1>Projects</h1>
+      <img width="96" height="96" src="https://img.icons8.com/color/96/left-handed.png" alt="left-handed"/>
+      <h1>Notes</h1>
     </div>
-    <h2>Take a look at my wonderful treasures!</h2>
+    <h2>These are the notes I worked hard to organize!</h2>
   </div>
   <div class="main_content">
     <div id="project_box_wrapper">
-      
-        
-          
-
-            <div id="new_project_box" onClick="location.href ='/project/hardware%20project/2023/12/08/ai_accelerator.html'" style="cursor:pointer;">
-              <div id="imgBox">
-                
-                  <img src="/assets/images/ai_accelerator.png" alt="[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI) Thumbnail">
-                
-              </div>
-
-              
-                
-              
-                
-
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-
-                      <a href="/category/Project/Hardware%20Project/"><p id="box_category">Hardware Project</p></a>
-                      
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-
-                
-              
-
-              <a href="/project/hardware%20project/2023/12/08/ai_accelerator.html"><p id="box_title">[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)</p></a>
-              <p class="description">AI 가속기 설계를 어쩌구 저쩌구</p>
-              <p id="signature">- Sun Hong</p>
-            </div>
-
-          
-        
-          
-        
-      
-        
-          
-
-            <div id="new_project_box" onClick="location.href ='/project/app%20project/2018/08/22/kiwifruit.html'" style="cursor:pointer;">
-              <div id="imgBox">
-                
-              </div>
-
-              
-                
-              
-                
-
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-
-                      <a href="/category/Project/App%20Project/"><p id="box_category">App Project</p></a>
-                      
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-
-                
-              
-
-              <a href="/project/app%20project/2018/08/22/kiwifruit.html"><p id="box_title">Kiwifruit</p></a>
-              <p class="description">Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia.</p>
-              <p id="signature">- Sun Hong</p>
-            </div>
-
-          
-        
-          
-        
-      
-        
-          
-
-            <div id="new_project_box" onClick="location.href ='/project/hardware%20project/2018/08/21/apples.html'" style="cursor:pointer;">
-              <div id="imgBox">
-                
-                  <img src="https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w=" alt="사과 나무에서 사과가 뚝 Thumbnail">
-                
-              </div>
-
-              
-                
-              
-                
-
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-
-                      <a href="/category/Project/Hardware%20Project/"><p id="box_category">Hardware Project</p></a>
-                      
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-
-                
-              
-
-              <a href="/project/hardware%20project/2018/08/21/apples.html"><p id="box_title">사과 나무에서 사과가 뚝</p></a>
-              <p class="description">An apple is a sweet, edible fruit produced by an apple tree.</p>
-              <p id="signature">- Sun Hong</p>
-            </div>
-
-          
-        
-          
-        
-      
-        
-          
-
-            <div id="new_project_box" onClick="location.href ='/project/hardware%20project/2018/08/20/bananas.html'" style="cursor:pointer;">
-              <div id="imgBox">
-                
-              </div>
-
-              
-                
-              
-                
-
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-
-                      <a href="/category/Project/Hardware%20Project/"><p id="box_category">Hardware Project</p></a>
-                      
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-                    
-                  
-
-                
-              
-
-              <a href="/project/hardware%20project/2018/08/20/bananas.html"><p id="box_title">Bananas</p></a>
-              <p class="description">A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</p>
-              <p id="signature">- Sun Hong</p>
-            </div>
-
-          
-        
-          
-        
-      
+      <div class="detail_content">
+        <h3>- 추가 예정 -</h3>
+        <p> -- -- </p>
+        <p> -- -- </p>
+        <p> -- -- </p>
+        <p> -- -- </p>
+      </div>
+      <div class="detail_content">
+        <h3>- 추가 예정 -</h3>
+        <p> -- -- </p>
+        <p> -- -- </p>
+        <p> -- -- </p>
+        <p> -- -- </p>
+      </div>
     </div>
   </div>
 </div>
-
 <div class="main_box">
     <div class="main_title">
       <div>
@@ -743,13 +840,13 @@
         <div class="mini_box">
           <h4>Hardware</h4>
           <section>
-            <img src="./images/icon_systemverilog.png" alt="Systemverilog">
-            <img src="./images/icon_vivado.png" alt="Vivado">
-            <img src="./images/icon_vitis.png" alt="Vitis">
+            <img src="/assets/images/icon_systemverilog.png" alt="Systemverilog">
+            <img src="/assets/images/vivado_logo.png" alt="Vivado">
+            <img src="/assets/images/ide_icon.png" alt="Vitis">
             <img width="48" height="48" src="https://img.icons8.com/fluency/48/arduino.png" alt="arduino"/>
-            <img src="./images/icon_raspberrypi.png" alt="Raspberrypi">
-            <img src="./images/icon_arm.png" alt="Arm">
-            <img src="./images/logo_risc_v.png" alt="Risc-V">
+            <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/96/external-raspberry-pi-is-a-small-and-affordable-computer-that-you-can-use-to-learn-programming-logo-color-tal-revivo.png" alt="external-raspberry-pi-is-a-small-and-affordable-computer-that-you-can-use-to-learn-programming-logo-color-tal-revivo"/>
+            <img width="96" height="96" src="https://img.icons8.com/color/96/arm-logo.png" alt="arm-logo"/>
+            <img src="/assets/images/logo_risc_v.png" alt="Risc-V">
           </section>
         </div>
         <div class="mini_box">
@@ -788,33 +885,72 @@
         <div class="mini_box">
           <h4>etc.</h4>
           <section>
-            <img src="./images/icon_git.png" alt="Git">
+            <img width="96" height="96" src="https://img.icons8.com/color/96/git.png" alt="git"/>
             <img width="48" height="48" src="https://img.icons8.com/external-those-icons-flat-those-icons/48/external-Linux-logos-and-brands-those-icons-flat-those-icons.png" alt="external-Linux-logos-and-brands-those-icons-flat-those-icons"/>
           </section>
         </div>
       </div>
     </div>
   </div>
-
-
 <div class="main_box">
   <div class="main_title">
     <div>
-      <img width="96" height="96" src="https://img.icons8.com/fluency/96/music.png" alt="music"/>
-      <h1>Rhythmic Hobby</h1>
+      <img width="66" height="66" src="https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/66/external-Study-school-smashingstocks-flat-smashing-stocks-5.png" alt="external-Study-school-smashingstocks-flat-smashing-stocks-5"/>
+      <h1>Activities</h1>
     </div>
-    <h2>Come listen to my little hobby, EDM Composition.</h2>
+    <h2>These are the activities I've been working on so far.</h2>
   </div>
-  <div class="youtube">
-    <a href="https://www.youtube.com/@radic2884/videos">
-      <img width="100" height="100" src="https://img.icons8.com/plasticine/400/youtube-play--v2.png" alt="youtube-play--v2" style="width: 100px; height: 100px;"/>
-    </a>
-  </div>
-  <div class="project_box">
-    <iframe width="480" height="260" src="https://www.youtube.com/embed/rkLLi6Z5Y8M?si=8FdcLPTxM0xJQbF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    <iframe width="480" height="260" src="https://www.youtube.com/embed/DrcZs3yaPYk?si=KAZfTcd2CHxI6S3t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  <div class="main_content">
+    <div class="detail_content">
+      <h3>Education</h3>
+      <p>B.S. @Dankook University, School of Electronics and Electrical Engineering</p>
+    </div>
+    <div class="detail_content">
+      <h3>Awards and Honors</h3>
+      <p>Sungkyunkwan University Engineering Innovation Center. Creative Comprehensive Design Competition (Nov. 2021)</p>
+    </div>
+    <div class="detail_content">
+      <h3>External activities</h3>
+      <p>College Student Code-it Coding Camp 5th (an Outstanding Activist)</p>
+      <p>Comento Course - Designing Semiconductor Circuits (CHIPs) with Eyes</p>
+    </div>
+    <div class="detail_content">
+      <h3>Taking a lecture</h3>
+      <p>IDEC_ Deep Learning Foundation and Design(Jul. 2022)</p>
+      <p>IDEC_ Verilog HDL Basic and Deep Learning Neural Network Design(Jul. 2022)</p>
+      <p>IDEC_ Embedded System Design Based on FPGA(Aug. 2022)</p>
+      <p>IDEC_ Embedded Memory (SRAM) Foundation(Jan. 2023)</p>
+      <p>IDEC_ Artificial Intelligence Acceleration Processor(Feb. 2023)</p>
+      <p>IDEC_ CUDA-based GPU programming foundation(Jul. 2023)</p>
+      <p>IDEC_ Layout Design for Full Custom IC Design(Jul. 2023)</p>
+      <p>Udemy_ 객체지향 프로그래밍 및 설계(Java)</p>
+      <p>Udemy_ Android 12 및 Kotlin 개발 완전 정복</p>
+      <p>Udemy_ Git & Github 실무 활용 완벽 가이드</p>
+      <p>Udemy_ The Web Developer 부트캠프 2023</p>
+      <p>Udemy_ High-Level Synthesis for FPGA, Part 1-Combinational Circuits</p>
+      <p>인프런_ 설계독학맛비's 실전 FPGA를 이용한 HW 가속기 설계</p>
+      <p>인프런_ 설계독학맛비's 실전 AI HW 설계를 위한 바이블, CNN 연산 완전정복</p>
+    </div>
   </div>
 </div>
+<div class="main_box">
+    <div class="main_title">
+      <div>
+        <img width="96" height="96" src="https://img.icons8.com/fluency/96/music.png" alt="music"/>
+        <h1>Rhythmic Hobby</h1>
+      </div>
+      <h2>Come listen to my little hobby, EDM Composition.</h2>
+    </div>
+    <div class="youtube">
+      <a href="https://www.youtube.com/@radic2884/videos">
+        <img width="100" height="100" src="https://img.icons8.com/plasticine/400/youtube-play--v2.png" alt="youtube-play--v2" style="width: 100px; height: 100px;"/>
+      </a>
+    </div>
+    <div class="project_box">
+      <iframe width="480" height="260" src="https://www.youtube.com/embed/rkLLi6Z5Y8M?si=8FdcLPTxM0xJQbF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <iframe width="480" height="260" src="https://www.youtube.com/embed/DrcZs3yaPYk?si=KAZfTcd2CHxI6S3t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </div>
 
 
 <!--
@@ -843,11 +979,15 @@
  
 </ul>
 -->
+
+
 <div class="page_footer">
     <p>© Copyright 2023 Sun Hong</p>
 </div>
+
     </div>
 
     <script src="/assets/js/srollbar.js"></script>
   </body>
 </html>
+
