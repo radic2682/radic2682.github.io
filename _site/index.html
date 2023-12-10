@@ -2,22 +2,23 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>traumhaft - Sun Hong</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>traumhaft - Sun Hong</title>
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/assets/images/favicon.ico">
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="/assets/images/favicon.ico">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="/assets/css/styles.css">
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400;500;600;700&family=Dongle:wght@300;400;700&family=Gugi&family=Karla:wght@200;300;400;500;600;700;800&family=Katibeh&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400;500;600;700&family=Dongle:wght@300;400;700&family=Gugi&family=Karla:wght@200;300;400;500;600;700;800&family=Katibeh&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
 
   <body>
+
     <div id="sidebar">
       <div class="menu_close_btn">
     <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/x.png" alt="x" onclick="menu_close_click()"/>
@@ -468,85 +469,40 @@
 </button>
 
     </div>
-    <div id="content">
-      <div id="scoll_bar"></div>
-      <div id="top_nav_bar">
-        <a href="/"><img src="/assets/images/logoB.png" alt="Home" class="logo"></a>
-        <img id="top_search" src="/assets/images/icon_search_l.png" alt="Search" onclick="searching_show()">
-      </div>
 
-      <div class="main_top">
+    <div class="all_wrapper">
+      <div id="sidebar_area"></div>
 
-  <div class="main_img">
-    <div class="cloud"></div>
-  </div>
-  <script>
-    function randomText(){
-      const text = ["H", "L", "L", "E", "O"];
-      return text[Math.floor(Math.random() * text.length)];
-    }
-    function rain(){
-      const cloud = document.querySelector('.cloud');
-      const e = document.createElement('div');
-      let left = Math.floor(Math.random() * 230);
-      let size = Math.random() * 1.3;
-      let duration = Math.random() * 1;
+      <div id="content_area">
 
-      e.classList.add('text');
-      cloud.appendChild(e);
-      e.innerText = randomText();
-      e.style.left = 20 + left + 'px';
-      e.style.fontSize = 0.5 + size + 'em';
-      e.style.animationDuration = 2 + duration + 's';
+        <div id="top_area">
+          <div id="scoll_bar"></div>
+          <div id="top_nav_bar">
+            <a href="/"><img src="/assets/images/logoB.png" alt="Home" class="logo"></a>
+            <img id="top_search" src="/assets/images/icon_search_l.png" alt="Search" onclick="searching_show()">
+          </div>
+        </div>
 
-      setTimeout(() => {
-        cloud.removeChild(e);
-      }, 2000);
-    }
-    setInterval(() => {
-      rain();
-    }, 80)
-  </script>
+        <div id="content"> <div class="main_top">
 
-  <div class="description">
-    <h1 class="wave_welcome">Welcome to my Blog</h1>
-    <p>From hardware to software,</p>
-    <p>I'm <span class="emp_word">System Engineer</span></p>
-  </div>
-  <script>
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+    <div class="main_img">
+      <div class="cloud"></div>
+    </div>
+  
+    <div class="description">
+      <h1 class="wave_welcome">Welcome to my Blog</h1>
+      <p>From hardware to software,</p>
+      <p>I'm <span class="emp_word">System Engineer</span></p>
+    </div>
     
-    function typeEffect(){
-      const words = ["System Engineer.", "Developer.", "Designer."];
-      const word = document.querySelector('.emp_word');
-      const currentWord = words[wordIndex];
-
-      word.textContent =currentWord.substring(0, charIndex);
-
-      if(!isDeleting && charIndex < currentWord.length) {
-        charIndex++;
-        setTimeout(typeEffect, 140);
-      } else if(isDeleting && charIndex >0){
-        charIndex--;
-        setTimeout(typeEffect, 30);
-      } else {
-        isDeleting = !isDeleting;
-        wordIndex = !isDeleting ? (wordIndex + 1) % words.length : wordIndex;
-        setTimeout(typeEffect, 1500);
-      }
-    }
-    typeEffect();
-  </script>
-
-</div>
-<div id="down_box">
-  <img width="100" height="100" src="https://img.icons8.com/stickers/100/down.png" alt="down"/>
-</div>
-
-
-<div class="main_box">
+  </div>
+  
+  <div id="down_box">
+    <img width="100" height="100" src="https://img.icons8.com/stickers/100/down.png" alt="down"/>
+  </div>
+  
+  
+  <div class="main_box">
     <div class="main_title">
       <div>
         <img width="96" height="96" src="https://img.icons8.com/color-glass/96/project-management.png" alt="project-management"/>
@@ -842,7 +798,7 @@
       </div>
     </div>
   </div>
-<div class="main_box">
+  <div class="main_box">
   <div class="main_title">
     <div>
       <img width="96" height="96" src="https://img.icons8.com/color/96/left-handed.png" alt="left-handed"/>
@@ -869,7 +825,7 @@
     </div>
   </div>
 </div>
-<div class="main_box">
+  <div class="main_box">
     <div class="main_title">
       <div>
         <img width="64" height="64" src="https://img.icons8.com/cotton/64/pen-2.png" alt="pen-2"/>
@@ -958,7 +914,7 @@
       </div>
     </div>
   </div>
-<div class="main_box">
+  <div class="main_box">
   <div class="main_title">
     <div>
       <img width="66" height="66" src="https://img.icons8.com/external-smashingstocks-flat-smashing-stocks/66/external-Study-school-smashingstocks-flat-smashing-stocks-5.png" alt="external-Study-school-smashingstocks-flat-smashing-stocks-5"/>
@@ -999,7 +955,7 @@
     </div>
   </div>
 </div>
-<div class="main_box">
+  <div class="main_box">
     <div class="main_title">
       <div>
         <img width="96" height="96" src="https://img.icons8.com/fluency/96/music.png" alt="music"/>
@@ -1017,57 +973,61 @@
       <iframe width="440" height="240" src="https://www.youtube.com/embed/DrcZs3yaPYk?si=KAZfTcd2CHxI6S3t" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     </div>
   </div>
-
-
-<!--
-<ul>
-    
-      <li>
-        <h2><a href="/study/git/2023/12/08/all-markdown.html">올 마크 다운</a></h2>
-        <p>AI 가속기 설계를 어쩌구 저쩌구</p>
-      </li>
-    
-      <li>
-        <h2><a href="/project/hardware%20project/2023/12/08/ai.html">[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)</a></h2>
-        <p>AI 가속기 설계를 어쩌구 저쩌구</p>
-      </li>
-    
-      <li>
-        <h2><a href="/project/hardware%20project/2023/12/08/ai_accelerator.html">[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)</a></h2>
-        <p>AI 가속기 설계를 어쩌구 저쩌구</p>
-      </li>
-    
-      <li>
-        <h2><a href="/project/app%20project/2018/08/22/kiwifruit.html">Kiwifruit</a></h2>
-        <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia.</p>
-      </li>
-    
-      <li>
-        <h2><a href="/project/hardware%20project/2018/08/21/apples.html">사과 나무에서 사과가 뚝</a></h2>
-        <p>An apple is a sweet, edible fruit produced by an apple tree.</p>
-      </li>
-    
-      <li>
-        <h2><a href="/project/hardware%20project/2018/08/20/bananas.html">Bananas</a></h2>
-        <p>A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</p>
-      </li>
-    
- 
-</ul>
--->
-
-
-<div class="page_footer">
-    <p>© Copyright 2023 Sun Hong</p>
-</div>
-
+  
+  
+  <!--
+  <ul>
       
+        <li>
+          <h2><a href="/study/git/2023/12/08/all-markdown.html">올 마크 다운</a></h2>
+          <p>AI 가속기 설계를 어쩌구 저쩌구</p>
+        </li>
+      
+        <li>
+          <h2><a href="/project/hardware%20project/2023/12/08/ai.html">[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)</a></h2>
+          <p>AI 가속기 설계를 어쩌구 저쩌구</p>
+        </li>
+      
+        <li>
+          <h2><a href="/project/hardware%20project/2023/12/08/ai_accelerator.html">[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)</a></h2>
+          <p>AI 가속기 설계를 어쩌구 저쩌구</p>
+        </li>
+      
+        <li>
+          <h2><a href="/project/app%20project/2018/08/22/kiwifruit.html">Kiwifruit</a></h2>
+          <p>Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia.</p>
+        </li>
+      
+        <li>
+          <h2><a href="/project/hardware%20project/2018/08/21/apples.html">사과 나무에서 사과가 뚝</a></h2>
+          <p>An apple is a sweet, edible fruit produced by an apple tree.</p>
+        </li>
+      
+        <li>
+          <h2><a href="/project/hardware%20project/2018/08/20/bananas.html">Bananas</a></h2>
+          <p>A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa.</p>
+        </li>
+      
+   
+  </ul>
+  -->
+  
+  
+  
+  <div class="page_footer">
+    <p>© Copyright 2023 Sun Hong</p>
+</div> </div>
+
+      </div>
     </div>
 
     <script src="/assets/js/srollbar.js"></script>
     <script src="/assets/js/top_nav.js"></script>
     <script src="/assets/js/sidebar.js"></script>
-    <script src="/assets/js/post-table.js"></script>
+    <script src="/assets/js/cloud.js"></script>
+    <script src="/assets/js/introduce.js"></script>
+    <!-- <script src="/assets/js/post-table.js"></script> -->
+    
   </body>
 </html>
 

@@ -1,4 +1,24 @@
 #sidebar {
+    @include flex-col-center-start;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 270px;
+
+	overflow-y: auto;
+
+	margin: 15px 0 15px 15px;
+
+    border-radius: 10px;
+    background-color: $mainSidebar;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+	transition: all 0.3s ease;
+
+	z-index: 100;
 
     scrollbar-width: none;
     &::-webkit-scrollbar {width: 0;}
@@ -196,41 +216,14 @@
         img{
             width: 50px;
             height: 50px;
-            transition: all 0.5s;
+            transition: all 0.2s;
 
             &:hover{
-                width: 55px;
-                height: 55px;
+                width: 52px;
+                height: 52px;
             }
         }
     }
 }
 
-@media (max-width: 1300px) {
-    #sidebar {
-        margin-left: -280px;
-    
-        #sidebar_on_off_btn{
-            position: fixed;
-            background-color: transparent;
-            border: transparent;
-        
-            left: 0px;
-            bottom: 20px;
-            transition: all 0.3s;
-            z-index: 500;
-            margin-left: 20px;
-    
-            #sidebar_on_off_btn img{
-                width: 40px;
-                height: 40px;
-    
-                &:hover{
-                    width: 45px;
-                    height: 45px;
-                }
-            }
-        }
-    }
-}
 

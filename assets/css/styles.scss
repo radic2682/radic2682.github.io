@@ -1,93 +1,40 @@
 ---
+
 ---
 
-// ====================================================
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+* {
+    box-sizing: border-box;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+div {
+    padding: 0;
+    margin: 0;
 }
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-// ====================================================
+  
+// Mixins
+@import "mixins/font";
+@import "mixins/colors";
+@import "mixins/flex_box";
 
-@mixin font_poppins-s1 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 13px;
-}
 
-@mixin font_poppins-s2 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 10px;
-}
 
-@mixin font_poppins-m1 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	font-size: 16px;
-}
+// default
+@import "default";
 
-@mixin font_poppins-m2 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	font-size: 15px;
-}
 
-@mixin font_poppins-m3 {
-	font-family: 'Poppins', sans-serif;
-	font-weight: 600;
-	font-size: 12px;
-}
+// basic_UI
+@import "basic_ui/footer";
+@import "basic_ui/sidebar";
 
-// color
-$mainBackground: #edf2f4;
-$mainSidebar: #f5ebe0;
-$mainColor: #003049;
+// media query
+@import "media_q/max_0to767";
+@import "media_q/max_768to1023";
+@import "media_q/max_1300";
 
-$MyOrange: #e76f51;
 
 @import "new_project_box";
 @import "category";
-@import "default";
-@import "sidebar";
+
+
 @import "index";
 @import "post";
 
