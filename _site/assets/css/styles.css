@@ -1312,17 +1312,6 @@ body {
   #category_page #head h2 {
     font-size: 28px;
   }
-}
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  .main_top .description h1 {
-    font-size: 2rem;
-  }
-  .main_top .description p {
-    font-size: 1.2rem;
-  }
-  .main_box {
-    padding: 0 15px;
-  }
   .main_top {
     flex-direction: column;
     justify-content: space-evenly;
@@ -1335,6 +1324,17 @@ body {
   }
   .main_top .description h1 {
     font-size: 2rem;
+  }
+}
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .main_top .description h1 {
+    font-size: 2rem;
+  }
+  .main_top .description p {
+    font-size: 1.2rem;
+  }
+  .main_box {
+    padding: 0 15px;
   }
 }
 @media (max-width: 1300px) {
