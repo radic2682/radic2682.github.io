@@ -36,6 +36,11 @@ body {
 
     transition: width, margin 0.3s ease;
 
+    #content_area_wrapper {
+        width: 100%;
+        position: absolute;
+    }
+
     #top_area {
         width: 100%;
 

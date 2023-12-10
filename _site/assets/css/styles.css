@@ -83,6 +83,10 @@ body {
   margin: 15px;
   transition: width, margin 0.3s ease;
 }
+#content_area #content_area_wrapper {
+  width: 100%;
+  position: absolute;
+}
 #content_area #top_area {
   width: 100%;
   position: sticky;
@@ -999,13 +1003,13 @@ body {
   width: 100%;
   min-height: 200px;
   padding: 0 20%;
-  margin-top: 365px;
+  margin-top: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: start;
-  position: absolute;
+  position: relative;
 }
 #post_page .post_wapper #head {
   margin: 0;
