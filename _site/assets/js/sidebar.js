@@ -7,6 +7,10 @@ const content_area = document.querySelector('#content_area');
 const top_area = document.querySelector('#top_area');
 const top_nav_bar = document.querySelector('#top_nav_bar');
 
+const post_back = document.querySelector('#post_page .backg');
+const cate_back = document.querySelector('#category_page .backg');
+const cate_wave = document.querySelector('#category_page .wave');
+
 let sidebar_Open = true;
 let sidebar_blocked = false;
 
@@ -29,6 +33,11 @@ function close_menu(){
     content_area.style.margin = "0";
     top_area.style.top = "0";
     top_nav_bar.style.padding = "20px 20px 0 20px";
+
+    post_back?.style.setProperty('border-radius', '0', 'important');
+    cate_back?.style.setProperty('border-radius', '0', 'important');
+    cate_wave?.style.setProperty('border-radius', '0', 'important');
+    
     sidebar_Open = false;
 }
 function open_menu(){
@@ -38,7 +47,12 @@ function open_menu(){
     // content_area.style.width = "80%";
     content_area.style.margin = "15px";
     top_area.style.top = "15px";
-    top_nav_bar.style.padding = "15px 15px 0 15px";
+    top_nav_bar.style.padding = "11px 15px 0 15px";
+
+    post_back?.style.setProperty('border-radius', '10px');
+    cate_back?.style.setProperty('border-radius', '10px');
+    cate_wave?.style.setProperty('border-radius', '10px');
+
     sidebar_Open = true;
 }
 

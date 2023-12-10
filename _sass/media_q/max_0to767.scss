@@ -1,12 +1,26 @@
 @media all and (max-width:767px) {
 
 
+    #new_project_box {
+        margin: 0;
+        padding: 0;
+        margin-bottom: 40px;
+        width: 80%;
+        background-color: #F8F9FB;
+    }
 
+    #category_page .island {
+        top: 9vh;
+        height: calc((20vh + 100px) * 0.7);
+    }
 
+    #category_page #head {
+        margin-top: 0;
 
-
-
-
+        h2 {
+            font-size: 28px;
+        }
+    }
 
 
 

@@ -34,7 +34,7 @@ body {
 
     margin: 15px;
 
-    transition: width margin 0.3s ease;
+    transition: width, margin 0.3s ease;
 
     #top_area {
         width: 100%;
@@ -44,7 +44,7 @@ body {
 
         transition: top 0.3s ease;
 
-        z-index: 300;
+        z-index: 200;
 
         #scoll_bar {
             position: relative;
@@ -57,7 +57,7 @@ body {
         #top_nav_bar {
             position: relative;
             width: auto;
-            padding: 15px 15px 0 15px;
+            padding: 11px 15px 0 15px;
         
             display: flex;
             justify-content: space-between;
@@ -65,8 +65,8 @@ body {
         
             box-sizing : border-box;
         
-            background: none;
-        
+            transition: padding 0.3s ease;
+
             img{
                 height: 55px;
             }
@@ -76,8 +76,6 @@ body {
             #top_search{
                 transition: all 0.5s;
             }
-            
-            transition: padding 0.3s ease;
         }
 
     }

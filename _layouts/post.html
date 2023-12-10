@@ -18,9 +18,19 @@ layout: default
     <div class="post_wapper">
         <div id="head">
 
-            <div class="postpage_category_v">
-                <h4><a href=" ">카테고리 이름</a></h4>
-            </div>
+            {% for site_category in site.categories %}
+                {% for page_category in page.categories %}
+                    {% if site_category.name == page_category %}
+                        {% if site_category.isSub %}
+
+                        <div class="postpage_category_v" style="background-color: {{ site_category.color }};">
+                            <p><a href="{{ site_category.url }}">{{ site_category.name }}</a></p>
+                        </div>
+
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
 
             <h1>{{ page.title }}</h1>
 
@@ -49,21 +59,14 @@ layout: default
             </div> -->
 
         </div>
+
+        {% include basic-ui/footer.html %}
     </div>
 </div>
 
-<div class="table_contents">
+<!-- <div class="table_contents">
     <div class="table_contents_btn" onclick="table_close_click()"><p>C</p></div>
     <p class="table_title">Contents</p>
     <div class="table_content_inner"></div>
-</div>
+</div> -->
 
-
-
-
-
-
-
-
-
-{% include basic-ui/footer.html %}

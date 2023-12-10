@@ -15,32 +15,34 @@ title: traumhaft - Welcome to my Blog
       <p>I'm <span class="emp_word">System Engineer</span></p>
     </div>
     
-  </div>
+</div>
+
+<div id="down_box">
+  <img width="100" height="100" src="https://img.icons8.com/stickers/100/down.png" alt="down"/>
+</div>
+
+
+{% include main/projects.html %}
+{% include main/recent.html %}
+{% include main/notes.html %}
+{% include main/skills.html %}
+{% include main/activities.html %}
+{% include main/hobby.html %}
+
+
+<!--
+<ul>
+    {% for post in site.posts %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p>{{ post.excerpt }}</p>
+      </li>
+    {% endfor %}
   
-  <div id="down_box">
-    <img width="100" height="100" src="https://img.icons8.com/stickers/100/down.png" alt="down"/>
-  </div>
-  
-  
-  {% include index-projects.html %}
-  {% include index-notes.html %}
-  {% include index-skills.html %}
-  {% include index-activities.html %}
-  {% include index-hobby.html %}
-  
-  
-  <!--
-  <ul>
-      {% for post in site.posts %}
-        <li>
-          <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-          <p>{{ post.excerpt }}</p>
-        </li>
-      {% endfor %}
-   
-  </ul>
-  -->
-  
-  
-  
-  {% include basic-ui/footer.html %}
+</ul>
+-->
+
+{% include basic-ui/footer.html %}
+
+<script src="/assets/js/cloud.js"></script>
+<script src="/assets/js/introduce.js"></script>

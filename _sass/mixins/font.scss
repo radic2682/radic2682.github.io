@@ -29,3 +29,44 @@
 	font-size: 12px;
 }
 
+
+
+// font_poppins
+@mixin font_poppins_600 {
+	margin: 0; padding: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+}
+
+@mixin font_poppins_500 {
+	margin: 0; padding: 0;
+	font-family: 'Pacifico', cursive;
+	font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+// font Size
+
+@mixin font_size_M1 {font-size: 20px;}
+
+@mixin font_size_L1 {font-size: 30px;}
+@mixin font_size_L2 {font-size: 32px;}
+@mixin font_size_L3 {font-size: 34px;}
+@mixin font_size_L4 {font-size: 36px;}
+@mixin font_size_L5 {font-size: 38px;}
+
+
+
+
+
+
+
+
+

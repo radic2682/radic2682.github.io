@@ -2,18 +2,42 @@
 
 
 
-    #content {
-        // padding: 0 10px;
 
-        #top_nav_bar {
-            padding: 15px 10px;
+
+
+    .main_top {
+
+
+        .description {
+
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
         }
     }
 
+	.main_box{
+		padding: 0 15px;
+	}
 
+    .main_top {
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-content: center;
+        align-items: center;
+        min-height: 70vh;
+         
+        .description {
+            align-items: center;
 
-
-
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
 
 
 

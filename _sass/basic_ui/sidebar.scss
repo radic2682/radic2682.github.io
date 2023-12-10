@@ -18,7 +18,7 @@
 
 	transition: all 0.3s ease;
 
-	z-index: 100;
+	z-index: 300;
 
     scrollbar-width: none;
     &::-webkit-scrollbar {width: 0;}
@@ -99,7 +99,7 @@
 
     h1 {
         @include font_poppins-m1;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         color: #000;
     }
 
@@ -108,8 +108,7 @@
         flex-direction: row;
         align-items: center;
         align-content: center;
-        margin-left: 10px;
-        margin-bottom: 5px;
+        margin-bottom: 3px;
 
         img {width: 24px; height: 24px;}
         a {
@@ -139,6 +138,7 @@
 
         ul, li {
             list-style: none;
+            margin: 0; padding: 0;
             @include font_poppins-m2;
         }
     
@@ -148,8 +148,7 @@
             .cat_title {
                 display: flex;
                 align-items: center;
-    
-                margin-left: 10px;
+
                 margin-bottom: 10px;
                 padding: 0;
     
@@ -168,7 +167,7 @@
     
             }
             .cat_part {
-                margin-left: 24px;
+                margin-left: 14px;
                 margin-bottom: 10px;
                 padding: 0;
     

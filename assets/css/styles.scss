@@ -9,13 +9,16 @@ div {
     padding: 0;
     margin: 0;
 }
-  
+
+
 // Mixins
 @import "mixins/font";
 @import "mixins/colors";
 @import "mixins/flex_box";
+@import "mixins/new_project_box";
 
-
+// Animation
+@import "animation/animation";
 
 // default
 @import "default";
@@ -25,16 +28,28 @@ div {
 @import "basic_ui/footer";
 @import "basic_ui/sidebar";
 
+
+// ===========================
+// main
+@import "main/down_box";
+@import "main/main_box";
+@import "main/main_top";
+
+
+@import "category";
+
+@import "post";
+
+
+// ===========================
+
+
+// ===========================
 // media query
 @import "media_q/max_0to767";
 @import "media_q/max_768to1023";
 @import "media_q/max_1300";
 
 
-@import "new_project_box";
-@import "category";
 
-
-@import "index";
-@import "post";
-
+// ===========================

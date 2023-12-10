@@ -18,15 +18,15 @@ layout: default
 
             {% for category in site.categories %}
                 {% if category.name == last_part %}
+
                     {{ category.icon }}
+                    <h2>{{ last_part }}</h2>
+                    {{ category.icon }}
+
                 {% endif %}
             {% endfor %}
-
-
-            <h5>&lt;/category&gt;</h5>
-
-            <h2>{{ last_part }}</h2>
         </div>
+        
         <div id="project_box_wrapper">
             {% for post in site.posts %}
                 {% for category in post.categories %}
@@ -48,7 +48,7 @@ layout: default
                                 {% for selected_category in site.categories %}
                                 {% if selected_category.title == sub_category %}
                                     {% if selected_category.isSub %}
-                                        <a href="{{selected_category.url}}"><p id="box_category">{{ sub_category }}</p></a>
+                                        <a href="{{selected_category.url}}"><p id="box_category" style="background-color: {{ selected_category.color }};">{{ sub_category }}</p></a>
                                     {% endif %}
                                 {% endif %}
                                 {% endfor %}
@@ -68,7 +68,6 @@ layout: default
             
     </div>
 
-
-
+</div>
 
 {% include basic-ui/footer.html %}
