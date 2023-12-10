@@ -50,7 +50,7 @@
             <div class="cat_box">
                 <li class="cat_title">
                     {{ category.icon }}
-                    <a href="{{ menuUrl }}">{{ category.title }}</a>
+                    <a href="{{ category.url }}">{{ category.title }}</a>
                 </li>
         
                 {% if category.children.size >= 1 %}
