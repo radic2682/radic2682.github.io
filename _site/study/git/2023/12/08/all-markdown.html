@@ -514,13 +514,13 @@
 <h3 id="heading-3">Heading 3</h3>
 <h4 id="heading-4">Heading 4</h4>
 
-<p><em>Italics</em>
-<em>This will also be italic</em>
-<strong>Bold text</strong>
-<strong>This will also be bold</strong>
-<strong><em>Bold and Italics</em></strong>
-<em>You <strong>can</strong> combine them</em>
-<del>Striked Text</del>
+<p><em>Italics</em><br />
+<em>This will also be italic</em><br />
+<strong>Bold text</strong><br />
+<strong>This will also be bold</strong><br />
+<strong><em>Bold and Italics</em></strong><br />
+<em>You <strong>can</strong> combine them</em><br />
+<del>Striked Text</del><br />
 <strong><em><del>Italic, bold, and strikethrough1</del></em></strong></p>
 
 <p> </p>
@@ -530,8 +530,8 @@
   <li><strong>c</strong></li>
 </ul>
 
-<p><br />
- 
+<p><br /><br />
+ <br />
  </p>
 
 <p>이거 사용 X  ———-</p>
@@ -557,7 +557,7 @@
 
 <p><a href="./example">example</a></p>
 
-<p> 
+<p> <br />
 <img src="https://user-images.githubusercontent.com/81953271/124010886-b571ca80-d9df-11eb-86ac-b358c48ac6aa.png" alt="Octocat" title="Github logo" /></p>
 
 <p><img src="https://user-images.githubusercontent.com/81953271/124010886-b571ca80-d9df-11eb-86ac-b358c48ac6aa.png" alt="Octocat" title="Github logo" width="60%" /></p>
@@ -594,29 +594,32 @@
 <p> </p>
 
 <blockquote>
-  <p>이것은 BlockQuote 입니다.
+  <p>이것은 BlockQuote 입니다.<br />
 이것은 BlockQuote 입니다.</p>
   <blockquote>
-    <p>이것은 BlockQuote 입니다.
-이것은 BlockQuote 입니다.
+    <p>이것은 BlockQuote 입니다.<br />
+이것은 BlockQuote 입니다.<br />
 이것은 BlockQuote 입니다.</p>
     <blockquote>
-      <p>이것은 BlockQuote 입니다.
-이것은 BlockQuote 입니다.
-이것은 BlockQuote 입니다.
+      <p>이것은 BlockQuote 입니다.<br />
+이것은 BlockQuote 입니다.<br />
+이것은 BlockQuote 입니다.<br />
 이것은 BlockQuote 입니다. 이게 인식이 안돼</p>
     </blockquote>
   </blockquote>
 </blockquote>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   <span class="c1"># This program adds up integers in the command line
-</span><span class="kn">import</span> <span class="n">sys</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">total</span> <span class="o">=</span> <span class="nf">sum</span><span class="p">(</span><span class="nf">int</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
-    <span class="k">print</span> <span class="sh">'</span><span class="s">sum =</span><span class="sh">'</span><span class="p">,</span> <span class="n">total</span>
-<span class="k">except</span> <span class="nb">ValueError</span><span class="p">:</span>
-    <span class="k">print</span> <span class="sh">'</span><span class="s">Please supply integer arguments</span><span class="sh">'</span>
-</code></pre></div></div>
+<div class="language-python highlighter-coderay"><div class="CodeRay">
+  <div class="code"><pre><span class="line-numbers"><a href="#n1" name="n1">1</a></span>   <span style="color:#777"># This program adds up integers in the command line</span>
+<span class="line-numbers"><a href="#n2" name="n2">2</a></span><span style="color:#080;font-weight:bold">import</span> <span style="color:#B44;font-weight:bold">sys</span>
+<span class="line-numbers"><a href="#n3" name="n3">3</a></span><span style="color:#080;font-weight:bold">try</span>:
+<span class="line-numbers"><a href="#n4" name="n4">4</a></span>    total = <span style="color:#369;font-weight:bold">sum</span>(<span style="color:#369;font-weight:bold">int</span>(arg) <span style="color:#080;font-weight:bold">for</span> arg <span style="color:#080;font-weight:bold">in</span> sys.argv[<span style="color:#00D">1</span>:])
+<span class="line-numbers"><a href="#n5" name="n5">5</a></span>    <span style="color:#080;font-weight:bold">print</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">sum =</span><span style="color:#710">'</span></span>, total
+<span class="line-numbers"><a href="#n6" name="n6">6</a></span><span style="color:#080;font-weight:bold">except</span> <span style="color:#C00;font-weight:bold">ValueError</span>:
+<span class="line-numbers"><a href="#n7" name="n7">7</a></span>    <span style="color:#080;font-weight:bold">print</span> <span style="background-color:hsla(0,100%,50%,0.05)"><span style="color:#710">'</span><span style="color:#D20">Please supply integer arguments</span><span style="color:#710">'</span></span>
+</pre></div>
+</div>
+</div>
 
 
             </div>
