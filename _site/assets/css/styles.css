@@ -336,6 +336,15 @@ body {
 #sidebar #category .cat_box:last-child {
   margin-bottom: 0;
 }
+#sidebar #control_panel .set_ele {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#sidebar #control_panel .set_ele img {
+  width: 30px;
+  height: auto;
+}
 #sidebar #sidebar_on_off_btn {
   position: fixed;
   background-color: transparent;

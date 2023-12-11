@@ -198,6 +198,21 @@
         }
     }
 
+
+    #control_panel {
+        .set_ele{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+            img{
+                width: 30px;
+                height: auto;
+            }
+        }
+    }
+
+
     #sidebar_on_off_btn{
         position: fixed;
         background-color: transparent;
