@@ -9,6 +9,15 @@
         background-color: #F8F9FB;
     }
 
+
+    // default
+    #content_area #content_area_wrapper {
+        overflow-x: clip;
+    }
+
+
+
+
     #category_page .island {
         top: 9vh;
         height: calc((20vh + 100px) * 0.7);
@@ -61,8 +70,6 @@
     #content_area #top_area #top_nav_bar img {
         height: 50px;
     }
-
-
 
 
 
