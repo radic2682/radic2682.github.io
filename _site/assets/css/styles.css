@@ -1317,12 +1317,25 @@ body {
     align-content: center;
     align-items: center;
     min-height: 70vh;
+    padding: 0 3%;
   }
   .main_top .description {
     align-items: center;
   }
   .main_top .description h1 {
     font-size: 2rem;
+  }
+  .main_box .project_box iframe {
+    display: none;
+  }
+  .main_box .project_box .mini_box img {
+    height: 25px;
+  }
+  .main_box .project_box .mini_box h4 {
+    margin-bottom: 15px;
+  }
+  #content_area #top_area #top_nav_bar img {
+    height: 50px;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {

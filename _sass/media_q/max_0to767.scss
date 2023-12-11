@@ -23,13 +23,16 @@
     }
 
 
+
+    // main page
     .main_top {
         flex-direction: column;
         justify-content: space-evenly;
         align-content: center;
         align-items: center;
         min-height: 70vh;
-         
+        padding: 0 3%;
+
         .description {
             align-items: center;
 
@@ -39,12 +42,25 @@
         }
     }
 
+    .main_box .project_box {
+        iframe {
+            display: none;
+        }
+        .mini_box {
+            img {
+                height: 25px;
+            }
+            h4 {
+                margin-bottom: 15px;
+            }
+        }
+    }
 
 
-
-
-
-
+    // top nav
+    #content_area #top_area #top_nav_bar img {
+        height: 50px;
+    }
 
 
 
