@@ -144,6 +144,13 @@ body {
   justify-content: space-evenly;
   align-items: center;
 }
+.page_footer p {
+  margin: 0;
+  padding: 0;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-size: 14px;
+}
 
 #sidebar {
   display: flex;
@@ -999,9 +1006,8 @@ body {
   }
 }
 #post_page .post_wapper {
-  width: 100%;
+  max-width: 750px;
   min-height: 200px;
-  padding: 0 20%;
   margin-top: 10px;
   box-sizing: border-box;
   display: flex;
@@ -1193,22 +1199,18 @@ body {
 
 .table_contents {
   position: fixed;
-  top: 35vh;
-  right: 0;
+  top: calc(20vh + 100px + 30px);
+  right: 15px;
   width: 190px;
   max-height: 50vh;
   padding: 10px;
   margin-right: 0px;
-  background-color: #ffffff;
-  border-radius: 45px 0 0 5px;
-  border: 2px solid;
-  border-right: none;
-  border-color: #E96A02;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #f5ebe0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   overflow-x: hidden;
   overflow-y: scroll;
   z-index: 300;
-  display: none;
   flex-direction: column;
   align-items: center;
   align-content: center;
@@ -1221,12 +1223,12 @@ body {
 .table_contents .table_contents_btn {
   position: fixed;
   margin: 6px;
-  top: calc(34vh + 8px);
-  right: 180px;
+  top: calc(20vh + 100px + 30px);
+  right: 185px;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background-color: #E96A02;
+  background-color: #ffd6a5;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1244,7 +1246,9 @@ body {
   font-family: "Pretendard-Regular", sans-serif;
 }
 .table_contents .table_title {
+  margin: 0;
   margin-bottom: 10px;
+  text-align: center;
   color: #000000;
   font-size: 1rem;
   font-weight: 600;
@@ -1285,14 +1289,6 @@ body {
   font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-  .table_contents {
-    display: none !important;
-  }
-  #post_page .post_wapper {
-    padding: 0 5%;
-  }
-}
 @media all and (max-width: 767px) {
   #new_project_box {
     margin: 0;
@@ -1337,8 +1333,17 @@ body {
   .main_box .project_box .mini_box h4 {
     margin-bottom: 15px;
   }
+  #content_area #top_area #top_nav_bar {
+    padding: 15px 15px 0px !important;
+  }
   #content_area #top_area #top_nav_bar img {
-    height: 50px;
+    height: 45px;
+  }
+  .table_contents {
+    display: none !important;
+  }
+  #post_page .post_wapper {
+    padding: 0 5%;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {
@@ -1350,6 +1355,9 @@ body {
   }
   .main_box {
     padding: 0 15px;
+  }
+  #post_page .post_wapper {
+    padding: 0 5%;
   }
 }
 @media (max-width: 1300px) {

@@ -38,7 +38,12 @@
 	font-weight: 600;
 }
 
-@mixin font_poppins_500 {
+@mixin font_pacifico_400 {
+	margin: 0; padding: 0;
+	font-family: 'Pacifico', cursive;
+	font-weight: 400;
+}
+@mixin font_pacifico_500 {
 	margin: 0; padding: 0;
 	font-family: 'Pacifico', cursive;
 	font-weight: 500;
@@ -53,6 +58,10 @@
 
 
 // font Size
+@mixin font_size_S1 {font-size: 10px;}
+@mixin font_size_S2 {font-size: 12px;}
+@mixin font_size_S3 {font-size: 14px;}
+@mixin font_size_S4 {font-size: 16px;}
 
 @mixin font_size_M1 {font-size: 20px;}
 
