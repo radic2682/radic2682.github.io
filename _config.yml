@@ -1,6 +1,15 @@
 url: "https://radic2682.github.io"
 
 
+repository: "radic2682/radic2682.github.io"
+
+comments:
+  provider:     "utterances"
+  utterances:
+    theme:      "preferred-color-scheme"
+    issue_term: "pathname"
+
+
 plugins:
   - jemoji
 

@@ -1,9 +1,8 @@
-console.log("dqwqwd");
 const table_contents = document.querySelector('.table_contents');
 const table_contents_btn = document.querySelector('.table_contents_btn');
 const table_contents_btn_p = document.querySelector('.table_contents_btn p');
 
-const original_table_contents_btn = window.getComputedStyle(table_contents_btn);
+const original_table_contents_btn = table_contents_btn ? window.getComputedStyle(table_contents_btn) : "";
 
 function table_close_click(){
     if (table_contents.style.right === '' || table_contents.style.right === '15px') {
