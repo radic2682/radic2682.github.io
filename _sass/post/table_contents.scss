@@ -96,18 +96,17 @@
 
         .toc-level-1,
         .toc-level-2{
+            @include font_poppins_500;
+            @include font_size_S3;
+            color: $MyOrange;
+
             margin-bottom: 5px;
             padding-bottom: 1px;
-
-            color: #E96A02;
-            font-size: 0.9rem;
-            font-weight: 600;
-            font-family: 'Pretendard-Regular', sans-serif;
         }
         .toc-level-2{
+            @include font_size_S2;
             margin-left: 10px;
             color: #000000;
-            font-size: 0.8rem;
         }
     }
 

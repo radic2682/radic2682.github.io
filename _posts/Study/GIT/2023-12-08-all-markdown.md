@@ -1,6 +1,6 @@
 ---
-title: "올 마크 다운"
-thumbnail: "/assets/images/ai_accelerator.png"
+title: "이 블로그에서 사용 가능한 마크다운 문법"
+thumbnail: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png"
 
 layout: post
 author: Sun Hong
@@ -14,45 +14,23 @@ tag: [tag1, tag2, tag3]
 excerpt: "AI 가속기 설계를 어쩌구 저쩌구"
 ---
 
-벡틱
-`벡틱`
-강조
-**강조**
 
----
-__Advertisement :)__
-
-- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
-  resize in browser.
-- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
----
-
-# h1 Heading 8-)
+# h1 Heading
 ## h2 Heading
 ### h3 Heading
-#### h4 Heading
-##### h5 Heading
-###### h6 Heading
 
+`(h4, h5, h6 안씀)`
 
-## Horizontal Rules
+# Horizontal Rules
 
 ___
 
----
 
-***
-
-
-## Typographic replacements
+# Typographic replacements
 
 Enable typographer option to see result.
 
-(c) (C) (r) (R) (tm) (TM) (p) (P) +-
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-    =>  `사용x`
 
 test.. test... test..... test?..... test!....
 
@@ -61,7 +39,7 @@ test.. test... test..... test?..... test!....
 "Smartypants, double quotes" and 'single quotes'
 
 
-## Emphasis
+# Emphasis
 
 **This is bold text**
 
@@ -73,8 +51,13 @@ _This is italic text_
 
 ~~Strikethrough~~
 
+<u>밑줄</u>
 
-## Blockquotes
+
+
+<embed src="https://radic2682.github.io/">
+
+# Blockquotes
 
 
 > Blockquotes can also be nested...
@@ -82,7 +65,7 @@ _This is italic text_
 > > > ...or with spaces between arrows.
 
 
-## Lists
+# Lists
 
 Unordered
 
@@ -166,8 +149,9 @@ Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
 ## Images
 
-![Minion](https://octodex.github.com/images/minion.png)
-![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
+![Minion](https://octodex.github.com/images/minion.png){: width="70%" height="70%" }
+
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat"){: width="70%" height="70%"}
 
 Like links, Images also have a footnote style syntax
 

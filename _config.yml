@@ -1,7 +1,8 @@
 url: "https://radic2682.github.io"
 
 
-
+plugins:
+  - jemoji
 
 
 # Conversion
@@ -21,9 +22,9 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: true
+  highlighter: rouge
 
-futrue: true
+future: true
 
 # Archives
 #  Type
