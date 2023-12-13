@@ -1111,11 +1111,11 @@ body {
 .table_contents .table_content_inner .toc-level-2 {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Pretendard-Regular";
   font-weight: 500;
   font-size: 14px;
   color: #e76f51;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   padding-bottom: 1px;
 }
 .table_contents .table_content_inner .toc-level-2 {
@@ -1315,6 +1315,9 @@ body {
   margin-left: 15px;
   padding: 3px 16px;
 }
+.article .highlighter-rouge pre {
+  overflow: scroll;
+}
 .article .highlighter-rouge code {
   background-color: transparent;
   padding: 0;
@@ -1513,7 +1516,6 @@ body {
 
 .highlight .err {
   color: #a61717;
-  background-color: #e3d2d2;
 }
 
 .highlight .gr {

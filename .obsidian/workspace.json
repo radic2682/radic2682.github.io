@@ -1,0 +1,192 @@
+{
+  "main": {
+    "id": "e5d1bf182d3816cd",
+    "type": "split",
+    "children": [
+      {
+        "id": "4f3be78ca83964a5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "33828176a70c9f3c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d7353e61bd8c0960",
+    "type": "split",
+    "children": [
+      {
+        "id": "a9e477720680e9b3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0e858b04c6ac7ef0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "931829079c6c56c0",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2bf02c3c3d70b370",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          },
+          {
+            "id": "4bf51db7233baa0c",
+            "type": "leaf",
+            "state": {
+              "type": "mk-file-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "836dcf25d688f4a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "d347f4d68a78c8a3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04523c4474634bc2",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "049e8775653d2222",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9db73fcda32320cf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "e542be22a5a1619c",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md"
+              }
+            }
+          },
+          {
+            "id": "0bbbd8d8a87ec194",
+            "type": "leaf",
+            "state": {
+              "type": "copilot-chat-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 581.5,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "33828176a70c9f3c",
+  "lastOpenFiles": [
+    "_site/assets/css/styles.css.map",
+    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
+    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+    "_site/project/hardware project/2023/12/13/Slot_Machine.html",
+    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier-1.html",
+    "_posts/Study/GIT/2023-12-08-all-markdown.md",
+    "_posts/Study/GIT/2023-12-08-ai.md",
+    "Spaces/Home",
+    "Spaces",
+    "visiting.md",
+    "_site/post_assets/images/image01.png",
+    "_site/post_assets/images",
+    "_site/post_assets",
+    "post_assets/images/image01.png",
+    "post_assets/images",
+    "post_assets",
+    "_site/image01.png",
+    "image01.png",
+    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier.html",
+    "_site/project/hardware project/2023/12/13/Wallace-Tree-Multiplier.html",
+    "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
+    "_posts/Project/Hardware Project/2018-08-21-apples.md"
+  ]
+}

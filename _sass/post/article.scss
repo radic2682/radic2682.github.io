@@ -225,6 +225,9 @@
             margin-left: 15px;
             padding: 3px 16px;
         }
+        pre {
+            overflow: scroll;
+        }
         code {
             background-color: transparent;
             padding: 0;

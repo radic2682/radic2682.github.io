@@ -96,11 +96,11 @@
 
         .toc-level-1,
         .toc-level-2{
-            @include font_poppins_500;
+            @include font_pretendard_500;
             @include font_size_S3;
             color: $MyOrange;
 
-            margin-bottom: 5px;
+            margin-bottom: 8px;
             padding-bottom: 1px;
         }
         .toc-level-2{
