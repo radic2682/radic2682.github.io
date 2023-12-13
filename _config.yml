@@ -59,6 +59,9 @@ collections:
     output: true  # html 페이지 생성
     permalink: /category/:path/ # 생성된 페이지의 URL 형식
 
+
+
+
 defaults:
   - scope:
       path: ""

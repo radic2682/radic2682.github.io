@@ -151,10 +151,8 @@ body {
 
 .page_footer {
   box-sizing: border-box;
-  width: 100%;
   min-height: 30px;
-  padding: 0 30px;
-  margin: 10rem 1rem 2rem 1rem;
+  margin: 5rem auto 2rem auto;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -258,6 +256,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   font-size: 16px;
+  margin: 0;
   margin-bottom: 10px;
   color: #000;
 }
@@ -353,13 +352,22 @@ body {
 #sidebar #category .cat_box:last-child {
   margin-bottom: 0;
 }
+#sidebar #user_panel .set_ele {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+#sidebar #user_panel .set_ele img {
+  width: 28px;
+  height: auto;
+}
 #sidebar #control_panel .set_ele {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
 }
 #sidebar #control_panel .set_ele img {
-  width: 30px;
+  width: 28px;
   height: auto;
 }
 #sidebar #sidebar_on_off_btn {
@@ -1664,6 +1672,65 @@ body {
   color: #bbbbbb;
 }
 
+#visiting_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+#visiting_page .dragon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  margin-top: 80px;
+  width: 80%;
+  max-width: 820px;
+  z-index: 100;
+}
+#visiting_page .dragon section {
+  margin-top: 20px;
+}
+#visiting_page .dragon section span {
+  color: #e76f51;
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+#visiting_page .dragon section h1 {
+  margin-top: 10px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+#visiting_page .dragon section h2 {
+  color: #000;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+#visiting_page .dragon section img {
+  width: 40px;
+  height: auto;
+}
+#visiting_page #body {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+#visiting_page #body .comment_box {
+  width: 100%;
+}
+
 @media all and (max-width: 767px) {
   #new_project_box {
     margin: 0;
@@ -1718,6 +1785,9 @@ body {
   }
   #post_page .post_wapper {
     padding: 0 5%;
+  }
+  #visiting_page .dragon {
+    flex-direction: column;
   }
 }
 @media all and (min-width: 768px) and (max-width: 1023px) {

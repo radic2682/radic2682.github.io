@@ -99,6 +99,7 @@
 
     h1 {
         @include font_poppins-m1;
+        margin: 0;
         margin-bottom: 10px;
         color: #000;
     }
@@ -202,8 +203,20 @@
 
 
 
+    #user_panel {
+        .set_ele{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
 
+            img{
+                width: 28px;
+                height: auto;
+            }
+        }
+    }
     
+
     #control_panel {
         .set_ele{
             display: flex;
@@ -211,7 +224,7 @@
             justify-content: space-evenly;
 
             img{
-                width: 30px;
+                width: 28px;
                 height: auto;
             }
         }

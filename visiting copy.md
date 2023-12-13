@@ -1,7 +1,7 @@
 ---
-layout: default
-title: About
+layout: search
+permalink: /search/
 ---
-# About page
+# search page
 
 This page tells you a little bit about me.

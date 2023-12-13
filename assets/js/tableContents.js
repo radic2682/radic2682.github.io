@@ -12,9 +12,9 @@ function table_close_click(){
     }
 }
 
-const mediaQuery1300 = window.matchMedia('(max-width: 1300px)');
-mediaQuery1300.addListener(() =>{
-    if (mediaQuery1300.matches){
+const mediaQuery1460 = window.matchMedia('(max-width: 1460px)');
+mediaQuery1460.addListener(() =>{
+    if (mediaQuery1460.matches){
         close_contents_btn();
     } else {
         open_contents_btn();
