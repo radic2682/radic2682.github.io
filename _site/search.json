@@ -1,0 +1,65 @@
+[
+    
+        {
+        "title"         : "이 블로그에서 사용 가능한 마크다운 문법",
+        "thumbnail"     : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/1200px-Markdown-mark.svg.png",
+        "category"      : "Study > GIT",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/study/git/2023/12/08/all-markdown.html",
+        "date"          : "2023-12-08 00:00:00 +0900",
+        "excerpt"       : "AI 가속기 설계를 어쩌구 저쩌구"
+        } ,
+    
+        {
+        "title"         : "[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
+        "thumbnail"     : "/assets/images/ai_accelerator.png",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/project/hardware%20project/2023/12/08/ai.html",
+        "date"          : "2023-12-08 00:00:00 +0900",
+        "excerpt"       : "AI 가속기 설계를 어쩌구 저쩌구"
+        } ,
+    
+        {
+        "title"         : "[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
+        "thumbnail"     : "/assets/images/ai_accelerator.png",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/project/hardware%20project/2023/12/08/AI_accelerator.html",
+        "date"          : "2023-12-08 00:00:00 +0900",
+        "excerpt"       : "AI 가속기 설계를 어쩌구 저쩌구"
+        } ,
+    
+        {
+        "title"         : "Kiwifruit",
+        "thumbnail"     : "",
+        "category"      : "Project > App Project",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/project/app%20project/2018/08/22/kiwifruit.html",
+        "date"          : "2018-08-22 00:00:00 +0900",
+        "excerpt"       : "Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible berry of several species of woody vines in the genus Actinidia."
+        } ,
+    
+        {
+        "title"         : "사과 나무에서 사과가 뚝",
+        "thumbnail"     : "https://media.istockphoto.com/id/184276818/photo/red-apple.jpg?s=612x612&w=0&k=20&c=NvO-bLsG0DJ_7Ii8SSVoKLurzjmV0Qi4eGfn6nW3l5w=",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/project/hardware%20project/2018/08/21/apples.html",
+        "date"          : "2018-08-21 00:00:00 +0900",
+        "excerpt"       : "An apple is a sweet, edible fruit produced by an apple tree."
+        } ,
+    
+        {
+        "title"         : "바나나 나라에 사는 미니 바나나",
+        "thumbnail"     : "https://cdn.kormedi.com/wp-content/uploads/2023/03/gettyimages-636739764.jpg.webp",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/project/hardware%20project/2018/08/20/bananas.html",
+        "date"          : "2018-08-20 00:00:00 +0900",
+        "excerpt"       : "A banana is an edible fruit – botanically a berry – produced by several kinds of large herbaceous flowering plants in the genus Musa."
+        } 
+    
+]
+
+

@@ -141,6 +141,8 @@
         @include article_border_shadow_padding;
         margin-top: 20px; margin-bottom: 40px;
 
+        background-color: $mainSidebar;
+
         text-decoration: none;
 
         padding: 6px 8px;

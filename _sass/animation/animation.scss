@@ -36,3 +36,11 @@
 	50% {opacity: 50%;}
 }
 
+
+
+// search
+@keyframes spin {
+	49% {z-index: 11;}
+	50% {left: 210px; bottom: -70px; z-index: 9;}
+	100% {z-index: 9;}
+}
