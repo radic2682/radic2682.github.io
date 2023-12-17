@@ -12,6 +12,7 @@ comments:
 
 plugins:
   - jemoji
+  - jekyll-sitemap
 
 
 # Conversion
