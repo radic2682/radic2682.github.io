@@ -17,7 +17,7 @@
 
           {% for post in sorted_posts %}
             {% for category in post.categories %}
-              {% if category == "Ai Note" %}
+              {% if category == "Ai Study Note" %}
                   <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
               {% endif %}
             {% endfor %}
@@ -26,12 +26,22 @@
       </div>
       
       <div class="detail_content">
-        <h3>- 추가 예정 -</h3>
-        <p> -- -- </p>
-        <p> -- -- </p>
-        <p> -- -- </p>
-        <p> -- -- </p>
+        <h3>GIT</h3>
+
+        <div class="dc_box">
+          {% assign sorted_posts = site.posts | sort: 'title' %}
+
+          {% for post in sorted_posts %}
+            {% for category in post.categories %}
+              {% if category == "GIT" %}
+                  <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+
       </div>
+
     </div>
   </div>
 </div>

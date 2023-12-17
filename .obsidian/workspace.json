@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md"
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md"
               }
             }
           },
@@ -166,42 +166,42 @@
   },
   "active": "33828176a70c9f3c",
   "lastOpenFiles": [
-    "_sass/main/notes.scss",
+    "_site/project/hardware project/2023/11/26/VendingMachine.html",
+    "_site/project/hardware project/2023/11/26",
+    "_site/project/hardware project/2023/11",
+    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier-1.html",
+    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+    "_site/category/Hardware Note/HW Study Note/index.html",
+    "_site/category/Hardware Note/HW Study Note",
+    "_categories/Hardware Note/HW Study Note.md",
+    "_site/category/Hardware Note/index.html",
+    "_site/category/Hardware Note.md",
+    "_categories/Study.md",
+    "visiting copy.md",
+    "_categories/Hardware Note.md",
+    "_categories/Project.md",
+    "_categories/Ai Note.md",
+    "_categories/Hardware Note/Hardware Study Note.md",
+    "_categories/Ai Note/Deep Learning.md",
+    "_categories/Ai Note/Ai Study Note.md",
+    "_site/category/Hardware Note/Hardware Study Note/index.html",
+    "_site/category/Hardware Note/Hardware Study Note",
+    "_site/category/Hardware Note/Ai Study Note 1/index.html",
+    "_site/category/Hardware Note/Ai Study Note 1",
+    "_categories/Ai Note/Ai Note.md",
+    "_categories/Hardware Note/Hardware Note.md",
+    "_categories/Untitled.md",
+    "_site/category/Untitled.md",
+    "_categories/Project/Hardware Project.md",
+    "_categories/Project/App Project.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
-    "_site/ai note/ai study note/2023/11/19/Neuro_06.html",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_05.md",
-    "_site/ai note/ai study note/2023/11/19/Neuro_05-1.html",
-    "_site/ai note/ai study note/2023/11/19/Neuro_05.html",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_04.md",
-    "_site/ai note/ai study note/2023/11/19/Neuro_04-1.html",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_03.md",
-    "_site/ai note/ai study note/2023/11/19/Neuro_04.html",
-    "_site/ai note/ai study note/2023/11/19/Neuro_03-1.html",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_02.md",
-    "_site/ai note/ai study note/2023/11/19/Neuro_03.html",
-    "_site/ai note/ai study note/2023/11/19/Neuro_02-1.html",
-    "_site/ai note/ai study note/2023/11/19/Neuro_02.html",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
-    "_site/ai note/ai study note/2023/11/19/Neuro_01-1.html",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_06.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_05.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_04.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_02.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_03.md",
-    "_posts/Study/GIT/GIT.md",
-    "_posts/Ai Note/Ai Study Note/Ai Study Note.md",
-    "_posts/Ai Note/Untitled.md",
-    "_posts/Ai Note/Ai Note.md",
-    "_posts/Untitled.md",
-    "_posts/Project/Ai Note.md",
-    "_posts/Project/Ai Note 1.md",
-    "_posts/Study/GIT/2023-12-04-GIT_08.md",
-    "_posts/Study/GIT/2023-12-04-GIT_07.md",
-    "_posts/Study/GIT/2023-11-29-GIT_05.md",
-    "_posts/Study/GIT/2023-11-29-GIT_06.md",
-    "_posts/Study/GIT/2023-11-27-GIT_Kranken.md",
-    "_posts/Study/GIT/2023-11-27-GIT_03.md",
     "_site/Pasted image 20231217210944.png",
     "Pasted image 20231217210944.png",
     "Pasted image 20231217154548.png",

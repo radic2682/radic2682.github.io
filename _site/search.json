@@ -121,6 +121,16 @@
         } ,
     
         {
+        "title"         : "[임베디드] IOT를 접목한 본격적인 자판기 using RaspberryPi",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/project/hardware%20project/2023/11/26/VendingMachine.html",
+        "date"          : "2023-11-26 00:00:00 +0900",
+        "excerpt"       : "고속 곱셈을 위한 병렬 곱셈 알고리즘 중 하나로, 여러 비트로 구성된 두 개의 숫자를 곱하는 데 사용됩니다."
+        } ,
+    
+        {
         "title"         : "[신경망 이론] 6. 연상 메모리",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a44e2f78-ba28-400f-94c2-109d8843ff55",
         "category"      : "Ai Note > Ai Study Note",
