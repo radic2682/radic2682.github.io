@@ -23,13 +23,13 @@
 
     h1, h2, h3, h4, h5, h6, p, a, blockquote,
     ul, ol, li, u {
-        @include font_pretendard_500;
-        @include font_size_S4;
+        @include font_pretendard_400;
+        @include font_size_S3-5;
         color: $articleColor;
         
-        margin-top: 15px; margin-bottom: 15px;
+        margin-top: 30px; margin-bottom: 30px;
 
-        line-height: 30px;
+        line-height: 28px;
     }
 
     // ---------------------------------------------
@@ -41,7 +41,7 @@
 
         max-width: max-content;
 
-        margin-top: 50px; margin-bottom: 20px;
+        margin-top: 60px; margin-bottom: 20px;
         padding-bottom: 5px;
 
         border-bottom: 3px solid;
@@ -49,19 +49,19 @@
     h2 {
         @include font_pretendard_600;
         @include font_size_M3;
-        margin-top: 40px; margin-bottom: 20px;
+        margin-top: 50px; margin-bottom: 20px;
     }
     h3 {
         @include font_pretendard_600;
         @include font_size_M2;
-        margin-top: 30px; margin-bottom: 16px;
+        margin-top: 40px; margin-bottom: 16px;
         font-size: 20px;
     }
     p {
         max-width: 100%;
         width: 100%;
 
-        line-height: 34px;
+        line-height: 28px;
     }
     a {
         @include font_pretendard_500;
@@ -87,7 +87,7 @@
     }
     code {
         @include font_pretendard_500;
-        @include font_size_S3;
+        @include font_size_S3-5;
 
         background-color: #fed9b7;
 
@@ -99,7 +99,7 @@
     }
     u {
         text-decoration: none;
-        background: linear-gradient(to top, rgba(255, 201, 175, 0.4) 50%, transparent 40%);
+        background: linear-gradient(to top, rgba(246, 225, 153, 0.4) 50%, transparent 60%);
         border-radius: 0px 0px 0px 10px;
     }
 
@@ -111,7 +111,7 @@
 
             
             img {
-                width: 28px;
+                width: 24px;
                 height: auto;
                 margin-right: 6px;
                 vertical-align: middle;
@@ -141,7 +141,7 @@
         @include article_border_shadow_padding;
         margin-top: 20px; margin-bottom: 40px;
 
-        background-color: $mainSidebar;
+        background-color: transparent;
 
         text-decoration: none;
 
@@ -170,7 +170,7 @@
     // ---------------------------------------------
     // blockquote
     blockquote {
-        border-left: 5px solid;
+        border-left: 3px solid;
         border-color: $MyOrange;
         
         padding-left: 15px;

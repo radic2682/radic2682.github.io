@@ -1,0 +1,789 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNPBKM8PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNNPBKM8PX');
+</script>
+
+<title>[Git] 4. Git Branch</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400;500;600;700&family=Dongle:wght@300;400;700&family=Gugi&family=Karla:wght@200;300;400;500;600;700;800&family=Katibeh&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNPBKM8PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNNPBKM8PX');
+</script>
+
+
+  </head>
+
+  <body>
+
+    <div id="sidebar">
+      <div class="menu_close_btn">
+    <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/x.png" alt="x" onclick="menu_close_click()"/>
+</div>
+
+<div class="profile">
+    <div class="profile_pic">
+        <img src="/assets/images/me.png" alt="It's me">
+    </div>
+    <p>Sun Hong</p>
+</div>
+
+
+
+<div class="contact sidebar_box">
+    <h1>Contact Me</h1>
+    <div class="mail contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/fluency/96/mail--v1.png" alt="mail--v1"/>
+        <a href="matilto:32182479@dankook.ac.kr">32182479@dankook.ac.kr</a>
+    </div>
+    <div class="linkedin contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"/>	
+        <a href="https://www.linkedin.com/in/sunhong-an/">Linked In</a>
+    </div>
+    <div class="notion contact_box">
+        <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/notion.png" alt="notion"/>	
+        <a href="https://www.notion.so/Sun-Hong-78ee5a443bfd49aab679d33f8c0697ef?pvs=4/">Portfolio</a>
+    </div>
+    <div class="github contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/github.png" alt="github"/>
+        <a href="https://github.com/radic2682">Github</a>
+    </div>
+</div>
+
+
+<div id="category" class="sidebar_box">
+    <h1>Category<span class="count">24</span></h1>
+    <ul class="menu_list">
+        
+    
+        
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="96" height="96" src="https://img.icons8.com/external-goofy-color-kerismaker/96/external-Project-graphic-design-goofy-color-kerismaker.png" alt="external-Project-graphic-design-goofy-color-kerismaker"/>
+                    <a href="/category/Project/">Project</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="64" height="64" src="https://img.icons8.com/wired/64/processor.png" alt="processor"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/Hardware Project/" class="">Hardware Project<span class="count_m">3</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/iphone14-pro.png" alt="iphone14-pro"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/App Project/" class="">App Project<span class="count_m">0</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="53" height="53" src="https://img.icons8.com/external-vectorslab-outline-color-vectorslab/53/external-brain-processor-machine-learning-vectorslab-outline-color-vectorslab.png" alt="external-brain-processor-machine-learning-vectorslab-outline-color-vectorslab"/>
+                    <a href="/category/Ai%20Note/">Ai Note</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="68" height="68" src="https://img.icons8.com/external-smashingstocks-mixed-smashing-stocks/68/external-deep-learning-science-smashingstocks-mixed-smashing-stocks.png" alt="external-deep-learning-science-smashingstocks-mixed-smashing-stocks"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Deep Learning/" class="">Deep Learning<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/machine-learning.png" alt="machine-learning"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Machine Learning/" class="">Machine Learning<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                        <img width="80" height="80" src="https://img.icons8.com/dotty/80/note.png" alt="note"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Ai Study Note/" class="">Ai Study Note<span class="count_m">12</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="64" height="64" src="https://img.icons8.com/dusk/64/saving-book.png" alt="saving-book"/>
+                    <a href="/category/Study/">Study</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="48" height="48" src="https://img.icons8.com/badges/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/C & CPP/" class="">C & CPP<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/genealogy.png" alt="genealogy"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/Algorithm/" class="">Algorithm<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/git.png" alt="git"/>
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/GIT/" class="">GIT<span class="count_m">9</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+    </ul>
+</div>
+
+
+
+
+
+<div id="count" class="sidebar_box">
+    <h1>Count</h1>
+    <div class="set_ele">
+       
+    </div>
+</div>
+
+
+
+<div id="user_panel" class="sidebar_box">
+    <h1>User Panel</h1>
+    <div class="set_ele">
+        <a href="/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/home.png" alt="home"/>
+        </a>
+        <a href="/visiting/">
+            <img src="/assets/images/logo_dragon_64x64.png" alt="Dragon">
+        </a>
+        <a href="/search/">
+            <img width="40" height="40" src="https://img.icons8.com/office/40/search--v1.png" alt="search--v1"/>
+        </a>
+    </div>
+</div>
+
+
+<div id="control_panel" class="sidebar_box">
+    <h1>Control Panel</h1>
+    <div class="set_ele">
+        <a href="https://analytics.google.com/analytics/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/analytics--v1.png" alt="analytics--v1"/>
+        </a>
+        <a href="https://search.google.com/search-console/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/console.png" alt="console"/>
+        </a>
+    </div>
+</div>
+
+
+<button id="sidebar_on_off_btn">
+    <img width="64" height="64" src="/assets/images/icon_menu.png" alt="menu" onclick="menu_tag_click()"/>
+</button>
+
+    </div>
+
+    <div class="all_wrapper">
+      <div id="sidebar_area"></div>
+
+      <div id="content_area">
+
+        <div id="content_area_wrapper">
+
+          <div id="top_area">
+            <div id="scoll_bar"></div>
+            <div id="top_nav_bar">
+              <a href="/"><img src="/assets/images/logoB.png" alt="Home" class="logo"></a>
+              <a href="/search/"><img id="top_search" src="/assets/images/icon_search_l.png" alt="Search"></a>
+            </div>
+          </div>
+  
+          <div id="content"> <div id="post_page">
+    <div class="backg"></div>
+    <div class="catShelter">
+        <div class="window">
+            <img class="castle" src="/assets/images/castle.png" alt="castle">
+            <div class="kitty">
+                <div class="ear"></div>
+            </div>
+            <div class="moon"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+
+    <div class="post_wapper">
+        <div id="head">
+
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+
+                        <div class="postpage_category_v" style="background-color: #E4EEDE;">
+                            <p><a href="/category/Study/GIT/">GIT</a></p>
+                        </div>
+
+                        
+                    
+                
+            
+
+            <h1>[Git] 4. Git Branch</h1>
+
+            <div class="mini_box_wAd">
+                <div class="mini_box_writer">
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/user-typing-using-typewriter.png" alt="user-typing-using-typewriter"/>
+                    <p>Sun Hong</p>	
+                </div>
+                <p class="date">2023년 11월 28일</p>
+            </div>
+        </div>
+
+        <div id="body">
+
+            <div class="article">
+                <p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/6f262c22-13f5-4fd7-8d37-803cad5becf5" alt="image" /></p>
+
+<h1 id="1-git-branch">1. Git Branch?</h1>
+
+<p><code class="language-plaintext highlighter-rouge">Git 브랜치(branch)</code>는 Git 버전 관리 시스템에서 코드를 효과적으로 관리하고 개발하는 데 사용되는 기능 중 하나입니다. 브랜치는 코드의 특정 버전을 나타내는 <u>포인터</u>이며, 개발자들은 동시에 여러 가지 작업을 진행하거나 서로 다른 기능을 개발할 수 있도록 도와줍니다.</p>
+
+<p>새로운 기능을 추가하거나 버그를 수정하려고 할 때, 기존의 코드를 변경하지 않고 새로운 브랜치에서 작업할 수 있습니다. 이는 여러 작업이 서로 간섭하지 않고 병렬로 진행될 수 있도록 합니다. 작업이 완료되면, 해당 브랜치를 기존의 코드에 통합할 수 있습니다.</p>
+
+<p>아래와 같이 각 <code class="language-plaintext highlighter-rouge">Commit</code>은 <code class="language-plaintext highlighter-rouge">해시 코드</code>를 가지고 있으며 부모의 해시코드를 가리키고 있습니다.</p>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/e40fd6a6-c4d6-4826-bfb7-22dd8bcd7fac" alt="image" width="80%" height="80%" /></p>
+
+<p><a href="https://git-scm.com/book/ko/v2/Git-%EB%B8%8C%EB%9E%9C%EC%B9%98-%EB%B8%8C%EB%9E%9C%EC%B9%98%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80">출처</a></p>
+
+<h1 id="2-master-branch">2. Master Branch</h1>
+
+<p><code class="language-plaintext highlighter-rouge">Master Branch</code>는 Git 저장소에서 <u>기본적으로 생성되는 기본 브랜치</u> 중 하나입니다. 이 브랜치는 초기 Git 저장소를 생성할 때 자동으로 만들어지며, 보통 프로젝트의 초기 상태를 나타냅니다. 개발자들은 이 “master” 브랜치에서 작업을 시작하고, 여기에 있는 코드를 기반으로 새로운 기능을 개발하거나 버그를 수정할 수 있습니다.</p>
+
+<p>아래 그림에서 보이는 main이 Master Branch를 의미합니다.<br />
+또한, ’<u>On Branch main</u>‘도 이를 의미합니다.</p>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/98121274-b3d6-444b-8960-0cd41f079da7" alt="image" /></p>
+
+<blockquote>
+  <p>“master” 브랜치는 Git 저장소를 초기화할 때 기본적으로 생성되는 기본 브랜치의 이름 중 하나였습니다. 그러나 Git의 사용 방식이 변화하면서 “master” 브랜치의 이름 대신 “main”이나 다른 이름을 사용하는 추세가 있습니다. 이것은 주로 다양한 이유로, 특히 다양한 문화적 및 언어적 이슈와 함께 사용자 커뮤니티에서의 더 나은 포용성을 위해서입니다.</p>
+</blockquote>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git branch</code><br />
+저장소에 있는 <u>현재 존재하는 브랜치 목록</u>을 보여줌<br />
+(<code class="language-plaintext highlighter-rouge">*</code>가 있는 곳이 현재 위치하는 Branch)</p>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/ffd4833a-1674-4b56-9bcc-17738c7b8a1b" alt="image" /></p>
+
+<h2 id="-head---master"># Head -&gt; Master</h2>
+
+<p><code class="language-plaintext highlighter-rouge">HEAD -&gt; master</code>는 Git에서 현재 작업 중인 브랜치와 커밋을 나타내는 표기입니다.</p>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/cb3662f2-2aca-40b3-9a0e-cf540294ffb7" alt="image" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">HEAD</code>: Git에서 <u>현재 작업 중인 커밋을 가리키는 포인터</u>입니다. HEAD는 현재 브랜치의 최신 커밋을 가리키거나, 직접적으로 커밋을 가리키는 “detached HEAD” 상태에 있을 수 있습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">master</code>: 이는 <u>현재 작업 중인 브랜치의 이름</u>입니다. “master”라는 브랜치에서 작업 중이라는 것을 나타냅니다.</p>
+
+<p><u>* Head는 언제나 master branch에서 가장 최근에 commit한 branch를 가리킴</u></p>
+
+<h1 id="3-branch-생성-및-전환">3. Branch 생성 및 전환</h1>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git branch &lt;branch-name&gt;</code><br />
+새로운 branch를 만듦 (Note : <u>만든 branch로 이동하는 것이 아님</u>)<br />
+=&gt; Head는 master와 새로 만든 branch를 가리킴</p>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/45171677-96e1-484d-b866-d135610b7b4b" alt="image" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git switch &lt;branch-name&gt;</code><br />
+branch간에 이동</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git switch -c &lt;branch-name&gt;</code><br />
+branch를 생성 후, 생성된 branch로 이동</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">&gt;git checkout &lt;branch-name&gt;</code><br />
+git switch와 동일한 작업을 하지만, 오래된 명령</p>
+</blockquote>
+
+<p><strong>※ 주의 사항</strong><br />
+파일을 수정한 후, git switch 명령시 데이터가 삭제될 수 있어서 오류가 발생합니다.<br />
+-&gt; <u>commit하거나 삭제하거나 stash(임시 저장)하여 해결</u></p>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/4dc23f70-4ae5-4bad-a32a-fc747471da6a" alt="image" /></p>
+
+<h1 id="4-branch-삭제-및-이름-변경">4. Branch 삭제 및 이름 변경</h1>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git branch -d &lt;branch-name&gt;</code><br />
+branch 삭제</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git branch -D &lt;branch-name&gt;</code><br />
+병합 상태와 관계없이 강제 삭제</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git branch -d &lt;new-branch-name&gt;</code><br />
+branch 이름 변경 ( 이름을 바꾸고자 하는 branch에서 수행)</p>
+
+            </div>
+            <td></td>
+            <!-- <div class="tag_title">
+            </div>
+
+            <div class="tag_label">
+            </div> -->
+
+            <div class="comment_box">
+                <script src="https://utteranc.es/client.js"
+                        repo="radic2682/radic2682.github.io"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="table_contents">
+    <div class="table_contents_btn" onclick="table_close_click()"><p>C</p></div>
+    <p class="table_title">Contents</p>
+    <div class="table_content_inner"></div>
+</div>
+
+
+
+
+<script src="/assets/js/add_img_in_li.js"></script>
+<script src="/assets/js/add_language_in_codeBlock.js"></script>
+<script src="/assets/js/tableContents.js"></script>
+
+ </div>
+          
+          <div class="page_footer">
+    <p>© Copyright 2023 Sun Hong</p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/srollbar.js"></script>
+    <script src="/assets/js/top_nav.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    
+    
+  </body>
+</html>
+

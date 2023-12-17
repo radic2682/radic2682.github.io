@@ -62,6 +62,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         table_content_inner.appendChild(tocList);
-    } else {}
+    } else {
+        table_contents.style.display = "none";
+        table_contents_btn.style.display = "none";
+    }
 });
 

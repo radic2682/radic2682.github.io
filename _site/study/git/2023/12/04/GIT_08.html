@@ -1,0 +1,761 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNPBKM8PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNNPBKM8PX');
+</script>
+
+<title>[Git] 8. Git Checkout/Restore</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400;500;600;700&family=Dongle:wght@300;400;700&family=Gugi&family=Karla:wght@200;300;400;500;600;700;800&family=Katibeh&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNPBKM8PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNNPBKM8PX');
+</script>
+
+
+  </head>
+
+  <body>
+
+    <div id="sidebar">
+      <div class="menu_close_btn">
+    <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/x.png" alt="x" onclick="menu_close_click()"/>
+</div>
+
+<div class="profile">
+    <div class="profile_pic">
+        <img src="/assets/images/me.png" alt="It's me">
+    </div>
+    <p>Sun Hong</p>
+</div>
+
+
+
+<div class="contact sidebar_box">
+    <h1>Contact Me</h1>
+    <div class="mail contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/fluency/96/mail--v1.png" alt="mail--v1"/>
+        <a href="matilto:32182479@dankook.ac.kr">32182479@dankook.ac.kr</a>
+    </div>
+    <div class="linkedin contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"/>	
+        <a href="https://www.linkedin.com/in/sunhong-an/">Linked In</a>
+    </div>
+    <div class="notion contact_box">
+        <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/notion.png" alt="notion"/>	
+        <a href="https://www.notion.so/Sun-Hong-78ee5a443bfd49aab679d33f8c0697ef?pvs=4/">Portfolio</a>
+    </div>
+    <div class="github contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/github.png" alt="github"/>
+        <a href="https://github.com/radic2682">Github</a>
+    </div>
+</div>
+
+
+<div id="category" class="sidebar_box">
+    <h1>Category<span class="count">24</span></h1>
+    <ul class="menu_list">
+        
+    
+        
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="96" height="96" src="https://img.icons8.com/external-goofy-color-kerismaker/96/external-Project-graphic-design-goofy-color-kerismaker.png" alt="external-Project-graphic-design-goofy-color-kerismaker"/>
+                    <a href="/category/Project/">Project</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="64" height="64" src="https://img.icons8.com/wired/64/processor.png" alt="processor"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/Hardware Project/" class="">Hardware Project<span class="count_m">3</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/iphone14-pro.png" alt="iphone14-pro"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/App Project/" class="">App Project<span class="count_m">0</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="53" height="53" src="https://img.icons8.com/external-vectorslab-outline-color-vectorslab/53/external-brain-processor-machine-learning-vectorslab-outline-color-vectorslab.png" alt="external-brain-processor-machine-learning-vectorslab-outline-color-vectorslab"/>
+                    <a href="/category/Ai%20Note/">Ai Note</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="68" height="68" src="https://img.icons8.com/external-smashingstocks-mixed-smashing-stocks/68/external-deep-learning-science-smashingstocks-mixed-smashing-stocks.png" alt="external-deep-learning-science-smashingstocks-mixed-smashing-stocks"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Deep Learning/" class="">Deep Learning<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/machine-learning.png" alt="machine-learning"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Machine Learning/" class="">Machine Learning<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                        <img width="80" height="80" src="https://img.icons8.com/dotty/80/note.png" alt="note"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Ai Study Note/" class="">Ai Study Note<span class="count_m">12</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="64" height="64" src="https://img.icons8.com/dusk/64/saving-book.png" alt="saving-book"/>
+                    <a href="/category/Study/">Study</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="48" height="48" src="https://img.icons8.com/badges/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/C & CPP/" class="">C & CPP<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/genealogy.png" alt="genealogy"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/Algorithm/" class="">Algorithm<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/git.png" alt="git"/>
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/GIT/" class="">GIT<span class="count_m">9</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+    </ul>
+</div>
+
+
+
+
+
+<div id="count" class="sidebar_box">
+    <h1>Count</h1>
+    <div class="set_ele">
+       
+    </div>
+</div>
+
+
+
+<div id="user_panel" class="sidebar_box">
+    <h1>User Panel</h1>
+    <div class="set_ele">
+        <a href="/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/home.png" alt="home"/>
+        </a>
+        <a href="/visiting/">
+            <img src="/assets/images/logo_dragon_64x64.png" alt="Dragon">
+        </a>
+        <a href="/search/">
+            <img width="40" height="40" src="https://img.icons8.com/office/40/search--v1.png" alt="search--v1"/>
+        </a>
+    </div>
+</div>
+
+
+<div id="control_panel" class="sidebar_box">
+    <h1>Control Panel</h1>
+    <div class="set_ele">
+        <a href="https://analytics.google.com/analytics/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/analytics--v1.png" alt="analytics--v1"/>
+        </a>
+        <a href="https://search.google.com/search-console/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/console.png" alt="console"/>
+        </a>
+    </div>
+</div>
+
+
+<button id="sidebar_on_off_btn">
+    <img width="64" height="64" src="/assets/images/icon_menu.png" alt="menu" onclick="menu_tag_click()"/>
+</button>
+
+    </div>
+
+    <div class="all_wrapper">
+      <div id="sidebar_area"></div>
+
+      <div id="content_area">
+
+        <div id="content_area_wrapper">
+
+          <div id="top_area">
+            <div id="scoll_bar"></div>
+            <div id="top_nav_bar">
+              <a href="/"><img src="/assets/images/logoB.png" alt="Home" class="logo"></a>
+              <a href="/search/"><img id="top_search" src="/assets/images/icon_search_l.png" alt="Search"></a>
+            </div>
+          </div>
+  
+          <div id="content"> <div id="post_page">
+    <div class="backg"></div>
+    <div class="catShelter">
+        <div class="window">
+            <img class="castle" src="/assets/images/castle.png" alt="castle">
+            <div class="kitty">
+                <div class="ear"></div>
+            </div>
+            <div class="moon"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+
+    <div class="post_wapper">
+        <div id="head">
+
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+
+                        <div class="postpage_category_v" style="background-color: #E4EEDE;">
+                            <p><a href="/category/Study/GIT/">GIT</a></p>
+                        </div>
+
+                        
+                    
+                
+            
+
+            <h1>[Git] 8. Git Checkout/Restore</h1>
+
+            <div class="mini_box_wAd">
+                <div class="mini_box_writer">
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/user-typing-using-typewriter.png" alt="user-typing-using-typewriter"/>
+                    <p>Sun Hong</p>	
+                </div>
+                <p class="date">2023년 12월 04일</p>
+            </div>
+        </div>
+
+        <div id="body">
+
+            <div class="article">
+                <p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/2bc70869-0d02-45fa-82d5-8a1ffe5e4da2" alt="image" /></p>
+
+<h1 id="1-git-checkout">1. Git Checkout</h1>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git checkout &lt;commit-hash&gt;</code><br />
+특정 commit hash로 checkout<br />
+즉, 특정 commit hash로 건너뜁니다. (시간을 이동합니다.)</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git checkout HEAD~1</code><br />
+HEAD에서 1개 이전의 commit을 참조합니다.</p>
+
+<hr />
+
+<ul>
+  <li>아래와 같은 문장이 나올 수 있습니다!<br />
+-&gt; <u>HEAD가 분리되었습니다.</u> 하하</li>
+</ul>
+
+<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/506cfa47-4ddf-4163-b838-e29978023693" alt="image" width="80%" height="80%" /></p>
+
+<p>HEAD가 branch를 통해 commit에 붙어 있어야 하는데, <u>branch없이 commit에 붙어 있어서 발생하는 문제</u>입니다.</p>
+
+<p>아래와 같이 새로운 branch를 만들어서 이동하면 문제는 해결됩니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git switch -c &lt;branch-name&gt;</code></p>
+
+<h1 id="2-변경-사항-초기화하기">2. 변경 사항 초기화하기</h1>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git checkout HEAD &lt;file-name&gt;</code> or <code class="language-plaintext highlighter-rouge">&gt;git checkout -- &lt;file-name&gt;</code><br />
+file의 수정한 내용을 전부 삭제합니다. (처음으로 되돌리기/<u>마지막 commit의 내용으로 재설정</u>)</p>
+
+<p>[<u>신 명령어</u>]<br />
+<code class="language-plaintext highlighter-rouge">&gt;git restore &lt;file-name&gt;</code> or <code class="language-plaintext highlighter-rouge">&gt;git **restore** --source &lt;file-name&gt;</code></p>
+
+<h1 id="3-unstaging하기">3. Unstaging하기</h1>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git restore --staged &lt;file-name&gt;</code><br />
+stage에 올라간 변경사항들을 취소할 때 사용합니다.</p>
+
+<h1 id="4-commit-취소하기복구하기">4. Commit 취소하기/복구하기</h1>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git reset &lt;commit-hash&gt;</code><br />
+commit-hash 이후의 commit을 제거하며, 현재 파일의 데이터는 유지 -&gt; working directory의 변경 사항은 유지</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git reset --hard &lt;commit&gt;</code><br />
+commit-hash 이후의 commit을 제거하며, 현재 파일의 데이터도 삭제 -&gt; working directory의 변경 사항도 삭제<br />
+=&gt; branch 기준으로 움직임으로, 다른 branch에는 영향이 없습니다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">&gt;git revert &lt;commit-hash&gt;</code><br />
+새로운 commit을 만들고 이전 commit의 변경 사항을 취소합니다. (모든 commit은 남아 있음)<br />
+-&gt; 새로운 commit에 복구할 commit의 정보를 담습니다.</p>
+
+
+            </div>
+            <td></td>
+            <!-- <div class="tag_title">
+            </div>
+
+            <div class="tag_label">
+            </div> -->
+
+            <div class="comment_box">
+                <script src="https://utteranc.es/client.js"
+                        repo="radic2682/radic2682.github.io"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="table_contents">
+    <div class="table_contents_btn" onclick="table_close_click()"><p>C</p></div>
+    <p class="table_title">Contents</p>
+    <div class="table_content_inner"></div>
+</div>
+
+
+
+
+<script src="/assets/js/add_img_in_li.js"></script>
+<script src="/assets/js/add_language_in_codeBlock.js"></script>
+<script src="/assets/js/tableContents.js"></script>
+
+ </div>
+          
+          <div class="page_footer">
+    <p>© Copyright 2023 Sun Hong</p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/srollbar.js"></script>
+    <script src="/assets/js/top_nav.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    
+    
+  </body>
+</html>
+

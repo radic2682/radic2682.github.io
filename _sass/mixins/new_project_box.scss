@@ -29,7 +29,7 @@
             transition: background-color, transform 0.2s ease-in-out;
     
             &:hover {
-                background-color: #F8F9FB;
+                background-color: #f0f2f7;
                 transform: scale(1.01);
             }
     
@@ -38,6 +38,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                border-radius: 15px;
+
+                background-color: #F8F9FB;
             
                 width: 100%;
     

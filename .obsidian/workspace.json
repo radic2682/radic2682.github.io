@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md"
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md"
               }
             }
           },
@@ -166,27 +166,51 @@
   },
   "active": "33828176a70c9f3c",
   "lastOpenFiles": [
-    "_site/assets/css/styles.css.map",
-    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
-    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
-    "_site/project/hardware project/2023/12/13/Slot_Machine.html",
-    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier-1.html",
-    "_posts/Study/GIT/2023-12-08-all-markdown.md",
-    "_posts/Study/GIT/2023-12-08-ai.md",
-    "Spaces/Home",
-    "Spaces",
-    "visiting.md",
+    "_sass/main/notes.scss",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
+    "_site/ai note/ai study note/2023/11/19/Neuro_06.html",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_05.md",
+    "_site/ai note/ai study note/2023/11/19/Neuro_05-1.html",
+    "_site/ai note/ai study note/2023/11/19/Neuro_05.html",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_04.md",
+    "_site/ai note/ai study note/2023/11/19/Neuro_04-1.html",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_03.md",
+    "_site/ai note/ai study note/2023/11/19/Neuro_04.html",
+    "_site/ai note/ai study note/2023/11/19/Neuro_03-1.html",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_02.md",
+    "_site/ai note/ai study note/2023/11/19/Neuro_03.html",
+    "_site/ai note/ai study note/2023/11/19/Neuro_02-1.html",
+    "_site/ai note/ai study note/2023/11/19/Neuro_02.html",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
+    "_site/ai note/ai study note/2023/11/19/Neuro_01-1.html",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_06.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_05.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_04.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_02.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_03.md",
+    "_posts/Study/GIT/GIT.md",
+    "_posts/Ai Note/Ai Study Note/Ai Study Note.md",
+    "_posts/Ai Note/Untitled.md",
+    "_posts/Ai Note/Ai Note.md",
+    "_posts/Untitled.md",
+    "_posts/Project/Ai Note.md",
+    "_posts/Project/Ai Note 1.md",
+    "_posts/Study/GIT/2023-12-04-GIT_08.md",
+    "_posts/Study/GIT/2023-12-04-GIT_07.md",
+    "_posts/Study/GIT/2023-11-29-GIT_05.md",
+    "_posts/Study/GIT/2023-11-29-GIT_06.md",
+    "_posts/Study/GIT/2023-11-27-GIT_Kranken.md",
+    "_posts/Study/GIT/2023-11-27-GIT_03.md",
+    "_site/Pasted image 20231217210944.png",
+    "Pasted image 20231217210944.png",
+    "Pasted image 20231217154548.png",
+    "Pasted image 20231217154555.png",
+    "_site/Pasted image 20231217154555.png",
+    "_site/Pasted image 20231217154548.png",
     "_site/post_assets/images/image01.png",
-    "_site/post_assets/images",
-    "_site/post_assets",
     "post_assets/images/image01.png",
-    "post_assets/images",
-    "post_assets",
     "_site/image01.png",
-    "image01.png",
-    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier.html",
-    "_site/project/hardware project/2023/12/13/Wallace-Tree-Multiplier.html",
-    "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
-    "_posts/Project/Hardware Project/2018-08-21-apples.md"
+    "image01.png"
   ]
 }
