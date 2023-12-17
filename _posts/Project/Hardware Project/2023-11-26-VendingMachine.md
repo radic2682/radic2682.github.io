@@ -1,6 +1,6 @@
 ---
 title: "[임베디드] IOT를 접목한 본격적인 자판기 using RaspberryPi"
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86
+thumbnail: https://dsm01pap009files.storage.live.com/y4mjdwSeG7ETbWc_clX3vD962aCbR_sAW5ZKO5kiZtc0qff36dGaGorjahrV3OhFzq-jJwZ0Y-Vjp4Jy-MlCaQYyNqx1GtPa_4aObOs-_-fGNWMWgnybZ3g5r22Fwh3M9FoI6m9qVeV0kFelZOhZYOm5rzcYum-x-dDqFTcYWNUWPRwQSklD2nJY3q0yOU4oGaX8FXHhdMtP9eyfpTnu2ItQq6ZnbRiAKYn052Lvndv4WI?encodeFailures=1&width=1041&height=444
 layout: post
 author: Sun Hong
 categories:
@@ -10,7 +10,8 @@ tags:
   - tag1
   - tag2
   - tag3
-excerpt: 고속 곱셈을 위한 병렬 곱셈 알고리즘 중 하나로, 여러 비트로 구성된 두 개의 숫자를 곱하는 데 사용됩니다.
+excerpt: 작성 중
 ---
 ---
 작성 중
+
