@@ -1,6 +1,16 @@
 [
     
         {
+        "title"         : "[Git] 9. Git Hub",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/92fe5339-f29e-43dd-9f34-5d5808c077ca",
+        "category"      : "Study > GIT",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/study/git/2023/12/24/GIT_09.html",
+        "date"          : "2023-12-24 00:00:00 +0900",
+        "excerpt"       : "Git Hub의 기초적인 내용"
+        } ,
+    
+        {
         "title"         : "Wallace Tree Multiplier",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86",
         "category"      : "Project > Hardware Project",

@@ -24,7 +24,7 @@
     h1, h2, h3, h4, h5, h6, p, a, blockquote,
     ul, ol, li, u {
         @include font_pretendard_400;
-        @include font_size_S3-5;
+        @include font_size_S4;
         color: $articleColor;
         
         margin-top: 30px; margin-bottom: 30px;
@@ -36,20 +36,24 @@
     // Basic
     h1 {
         @include font_pretendard_600;
-        @include font_size_M4;
+        @include font_size_M5;
         color: $MyOrange;
 
         max-width: max-content;
 
-        margin-top: 60px; margin-bottom: 20px;
+        margin-top: 100px; margin-bottom: 20px;
         padding-bottom: 5px;
 
         border-bottom: 3px solid;
+
+        &:first-of-type {
+            margin-top: 50px;
+        }
     }
     h2 {
         @include font_pretendard_600;
         @include font_size_M3;
-        margin-top: 50px; margin-bottom: 20px;
+        margin-top: 70px; margin-bottom: 20px;
     }
     h3 {
         @include font_pretendard_600;

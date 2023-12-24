@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md"
+                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md"
               }
             }
           },
@@ -166,13 +166,18 @@
   },
   "active": "33828176a70c9f3c",
   "lastOpenFiles": [
+    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+    "_posts/Study/GIT/2023-12-24-GIT_09.md",
+    "_site/study/git/2023/12/24/GIT_09.html",
+    "_site/study/git/2023/12/24",
+    "_posts/Study/GIT/2023-12-04-GIT_07.md",
+    "_posts/Study/GIT/2023-12-04-GIT_08.md",
     "_site/Pasted image 20231218020758.png",
     "Pasted image 20231218020758.png",
     "_site/project/hardware project/2023/11/26/VendingMachine.html",
     "_site/project/hardware project/2023/11/26",
     "_site/project/hardware project/2023/11",
     "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier-1.html",
-    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
     "_site/category/Hardware Note/HW Study Note/index.html",
     "_site/category/Hardware Note/HW Study Note",
     "_categories/Hardware Note/HW Study Note.md",
@@ -187,8 +192,6 @@
     "_categories/Ai Note/Deep Learning.md",
     "_categories/Ai Note/Ai Study Note.md",
     "_site/category/Hardware Note/Hardware Study Note/index.html",
-    "_site/category/Hardware Note/Hardware Study Note",
-    "_site/category/Hardware Note/Ai Study Note 1/index.html",
     "_categories/Ai Note/Ai Note.md",
     "_categories/Hardware Note/Hardware Note.md",
     "_categories/Untitled.md",
@@ -200,9 +203,6 @@
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_05.md",
     "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_04.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_03.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_02.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_06.md",
     "_site/Pasted image 20231217210944.png",
     "Pasted image 20231217210944.png",
     "Pasted image 20231217154548.png",
@@ -210,7 +210,6 @@
     "_site/Pasted image 20231217154555.png",
     "_site/Pasted image 20231217154548.png",
     "_site/post_assets/images/image01.png",
-    "post_assets/images/image01.png",
-    "_site/image01.png"
+    "post_assets/images/image01.png"
   ]
 }
