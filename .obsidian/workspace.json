@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "4f3be78ca83964a5",
+        "id": "e8f0bd7e7b198677",
         "type": "tabs",
         "children": [
           {
-            "id": "33828176a70c9f3c",
+            "id": "8daf3a4be0c60e26",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md",
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md",
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md",
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Study/GIT/2023-12-24-GIT_09.md"
+                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md"
               }
             }
           },
@@ -164,10 +164,11 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "33828176a70c9f3c",
+  "active": "8daf3a4be0c60e26",
   "lastOpenFiles": [
-    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+    "README.md",
     "_posts/Study/GIT/2023-12-24-GIT_09.md",
+    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
     "_site/study/git/2023/12/24/GIT_09.html",
     "_site/study/git/2023/12/24",
     "_posts/Study/GIT/2023-12-04-GIT_07.md",
