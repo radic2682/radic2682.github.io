@@ -12,14 +12,21 @@ function table_close_click(){
     }
 }
 
-const mediaQuery1460 = window.matchMedia('(max-width: 1460px)');
-mediaQuery1460.addListener(() =>{
-    if (mediaQuery1460.matches){
+
+const mediaQuery1470 = window.matchMedia('(max-width: 1470px)');
+function check_matches() {
+    if (mediaQuery1470.matches){
         close_contents_btn();
     } else {
         open_contents_btn();
     }
+}
+
+check_matches();
+mediaQuery1470.addListener(() =>{
+    check_matches();
 });
+
 
 function close_contents_btn(){
     table_contents.style.right = '-300px'

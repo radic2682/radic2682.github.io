@@ -76,6 +76,31 @@
 	font-weight: 600;
 }
 
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@mixin font_omyu_400 {
+	margin: 0; padding: 0;
+	font-family: 'omyu_pretty';
+	font-weight: 400;
+}
+@mixin font_omyu_500 {
+	margin: 0; padding: 0;
+	font-family: 'omyu_pretty';
+	font-weight: 500;
+}
+@mixin font_omyu_600 {
+	margin: 0; padding: 0;
+	font-family: 'omyu_pretty';
+	font-weight: 600;
+}
+
+
+
+
 
 
 
@@ -87,6 +112,8 @@
 @mixin font_size_S3 {font-size: 14px;}
 @mixin font_size_S3-5 {font-size: 15px;}
 @mixin font_size_S4 {font-size: 16px;}
+@mixin font_size_S5 {font-size: 18px;}
+@mixin font_size_S5-5 {font-size: 18px;}
 
 @mixin font_size_M1 {font-size: 20px;}
 @mixin font_size_M2 {font-size: 22px;}

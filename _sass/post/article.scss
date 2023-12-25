@@ -1,6 +1,6 @@
 @mixin article_border_shadow_padding {
     border-radius: 12px;
-    border: 2px solid $MyOrange;
+    border: 2px solid $mainColor;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
     padding: 10px;
 
@@ -23,11 +23,11 @@
 
     h1, h2, h3, h4, h5, h6, p, a, blockquote,
     ul, ol, li, u {
-        @include font_pretendard_400;
-        @include font_size_S4;
+        @include font_omyu_500;
+        @include font_size_M1;
         color: $articleColor;
         
-        margin-top: 30px; margin-bottom: 30px;
+        margin-top: 10px; margin-bottom: 30px;
 
         line-height: 28px;
     }
@@ -37,27 +37,29 @@
     h1 {
         @include font_pretendard_600;
         @include font_size_M5;
-        color: $MyOrange;
+        color: $mainColor;
 
         max-width: max-content;
 
-        margin-top: 100px; margin-bottom: 20px;
-        padding-bottom: 5px;
+        margin-top: 60px; margin-bottom: 20px;
+        padding-top: 20px; padding-bottom: 5px;
 
         border-bottom: 3px solid;
 
         &:first-of-type {
-            margin-top: 50px;
+            margin-top: 30px;
         }
     }
     h2 {
         @include font_pretendard_600;
         @include font_size_M3;
-        margin-top: 50px; margin-bottom: 20px;
+        color: $mainColor;
+        margin-top: 50px; margin-bottom: 10px;
     }
     h3 {
         @include font_pretendard_600;
         @include font_size_M2;
+        color: $mainColor;
         margin-top: 40px; margin-bottom: 16px;
         font-size: 20px;
     }
@@ -68,7 +70,7 @@
         line-height: 28px;
     }
     a {
-        @include font_pretendard_500;
+        @include font_pretendard_600;
         @include font_size_S3;
 
         background-color: #fed9b7;
@@ -100,6 +102,7 @@
     }
     strong {
         @include font_pretendard_600;
+        @include font_size_S4;
     }
     u {
         text-decoration: none;
@@ -111,7 +114,7 @@
     // list
     ul {
         li {
-            margin-top: 10px; margin-bottom: 10px;
+            margin-top: 5px; margin-bottom: 5px;
 
             
             img {
@@ -124,10 +127,8 @@
     }
     
     ol {
-
-        
         li {
-            margin-top: 10px; margin-bottom: 10px;
+            margin-top: 5px; margin-bottom: 5px;
 
             img {
                 width: 28px;
@@ -218,12 +219,14 @@
         .language_label {
             @include font_pretendard_600;
             @include font_size_S4;
+            color: $MyOrange;
+
             width: min-content;
 
-            background-color: #fed9b7;
+            background-color: transparent;
 
             border-radius: 12px 12px 0 0;
-            border: 2px solid #e76f51;
+            border: 2px solid $mainColor;
             border-bottom: none;
             
             margin-left: 15px;

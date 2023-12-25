@@ -94,19 +94,22 @@
             }
         }
 
-        .toc-level-1,
-        .toc-level-2{
-            @include font_pretendard_500;
+        .toc-level-1{
+            @include font_pretendard_600;
             @include font_size_S3;
-            color: $MyOrange;
+            color: $mainColor;
 
             margin-bottom: 8px;
             padding-bottom: 1px;
         }
         .toc-level-2{
+            @include font_pretendard_500;
             @include font_size_S2;
-            margin-left: 10px;
             color: #000000;
+
+            margin-bottom: 8px;
+            padding-bottom: 1px;
+            margin-left: 10px;
         }
     }
 
