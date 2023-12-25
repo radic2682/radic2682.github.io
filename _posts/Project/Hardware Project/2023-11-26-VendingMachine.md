@@ -7,10 +7,12 @@ categories:
   - Project
   - Hardware Project
 tags:
-  - tag1
-  - tag2
-  - tag3
-excerpt: 임베디드 기말 프로젝트로 수행한 IOT Vending Machine
+  - raspberry_pi
+  - firebase
+  - linux
+  - python
+excerpt: 데이터베이스를 이용한 IOT 자판기 설계
+project_rank: "210"
 ---
 ![image](https://github.com/radic2682/radic2682.github.io/assets/11177959/85bc96ec-1115-431d-9ff1-3d1bc5b42bdc)
 

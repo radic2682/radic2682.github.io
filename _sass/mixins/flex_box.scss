@@ -20,3 +20,9 @@
 	justify-content: center;
 }
 
+@mixin flex-row-start-start{
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: start;
+}

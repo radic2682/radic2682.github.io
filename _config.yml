@@ -67,8 +67,10 @@ defaults:
   - scope:
       path: ""
       type: "category"
+      
     values:
       layout: "category"
+      use_math: true
 
 
 # Analytics

@@ -7,10 +7,10 @@ categories:
   - Project
   - Hardware Project
 tags:
-  - tag1
-  - tag2
-  - tag3
-excerpt: Timer를 이용한 슬롯머신을 verilog HDL 언어를 이용하여 설계하였습니다.
+  - verilog
+  - vivado
+excerpt: Timer를 이용한 슬롯머신 설계
+project_rank: "206"
 ---
 
 # 1. 설계 내용

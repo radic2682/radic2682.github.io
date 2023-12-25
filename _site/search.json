@@ -81,13 +81,13 @@
         } ,
     
         {
-        "title"         : "[강화학습] 1. Introduction",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/49ec4f78-fa73-4200-a9de-e50764bb6965",
+        "title"         : "[강화학습] Q-learning",
+        "thumbnail"     : "",
         "category"      : "Ai Note > Machine Learning",
         "tags"          : "tag1, tag2, tag3",
         "url"           : "/ai%20note/machine%20learning/2023/12/25/makeAI_01.html",
         "date"          : "2023-12-25 00:00:00 +0900",
-        "excerpt"       : "퍼지 이론과 시스템"
+        "excerpt"       : "강화학습, Q-learning, Bellman Equation"
         } ,
     
         {
@@ -101,33 +101,53 @@
         } ,
     
         {
+        "title"         : "GitHub Blog (지금 여기!)",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/4cdc557d-b2e3-469c-96d6-6624a9bf1e04",
+        "category"      : "Project > Web Project",
+        "tags"          : "HTML, CSS, JS, GIT, Jekyll, SASS",
+        "url"           : "/project/web%20project/2023/12/13/github_Blog.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "GitHub와 Jekyll을 이용한 블로그 (스킨 사용X)"
+        } ,
+    
+        {
         "title"         : "Wallace Tree Multiplier",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86",
         "category"      : "Project > Hardware Project",
-        "tags"          : "tag1, tag2, tag3",
+        "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/13/Wallace_Tree_Multiplier.html",
         "date"          : "2023-12-13 00:00:00 +0900",
-        "excerpt"       : "고속 곱셈을 위한 병렬 곱셈 알고리즘 중 하나로, 여러 비트로 구성된 두 개의 숫자를 곱하는 데 사용됩니다."
+        "excerpt"       : "병렬 곱셈 알고리즘 이용한 곱셈기 설계"
         } ,
     
         {
         "title"         : "Slot Machine",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/80be7cca-b630-4513-8fc3-98d6cbaff8f3",
         "category"      : "Project > Hardware Project",
-        "tags"          : "tag1, tag2, tag3",
+        "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/13/Slot_Machine.html",
         "date"          : "2023-12-13 00:00:00 +0900",
-        "excerpt"       : "Timer를 이용한 슬롯머신을 verilog HDL 언어를 이용하여 설계하였습니다."
+        "excerpt"       : "Timer를 이용한 슬롯머신 설계"
+        } ,
+    
+        {
+        "title"         : "5-Stage Pipelined Processor (RISC-V)",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a9282af8-8e2e-4a0f-a95a-2e89324b9f36",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "verilog, C",
+        "url"           : "/project/hardware%20project/2023/12/13/5_Stage_Pipelined_Processor.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "Hazard를 고려한 5-stage Pipelined Processor 설계"
         } ,
     
         {
         "title"         : "Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
         "thumbnail"     : "/assets/images/ai_accelerator.png",
         "category"      : "Project > Hardware Project",
-        "tags"          : "tag1, tag2, tag3",
+        "tags"          : "verilog, C, FPGA, vivado, vitis",
         "url"           : "/project/hardware%20project/2023/12/08/AI_accelerator.html",
         "date"          : "2023-12-08 00:00:00 +0900",
-        "excerpt"       : "AI 가속기 설계를 어쩌구 저쩌구"
+        "excerpt"       : "CNN, Fully Connected 연산을 빠르게 수행하는 AI 가속기 설계"
         } ,
     
         {
@@ -221,13 +241,53 @@
         } ,
     
         {
+        "title"         : "[C++] 재귀함수/다중 for문으로 조합 구현하기",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/ff9eab70-28dc-45a3-8e9c-c657a3b8b23f",
+        "category"      : "Study > C & CPP",
+        "tags"          : "",
+        "url"           : "/study/c%20&%20cpp/2023/11/26/combination.html",
+        "date"          : "2023-11-26 00:00:00 +0900",
+        "excerpt"       : "C++에서 재귀함수/다중 for문으로 조합 구현하기"
+        } ,
+    
+        {
         "title"         : "[임베디드] IOT를 접목한 본격적인 자판기 using RaspberryPi",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/85bc96ec-1115-431d-9ff1-3d1bc5b42bdc",
         "category"      : "Project > Hardware Project",
-        "tags"          : "tag1, tag2, tag3",
+        "tags"          : "raspberry_pi, firebase, linux, python",
         "url"           : "/project/hardware%20project/2023/11/26/VendingMachine.html",
         "date"          : "2023-11-26 00:00:00 +0900",
-        "excerpt"       : "임베디드 기말 프로젝트로 수행한 IOT Vending Machine"
+        "excerpt"       : "데이터베이스를 이용한 IOT 자판기 설계"
+        } ,
+    
+        {
+        "title"         : "[C++] 재귀함수로 순열 구현하기",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/4ef97b00-78fa-4fb2-8568-660eed6efc2e",
+        "category"      : "Study > C & CPP",
+        "tags"          : "",
+        "url"           : "/study/c%20&%20cpp/2023/11/25/permutation.html",
+        "date"          : "2023-11-25 00:00:00 +0900",
+        "excerpt"       : "C++에서 재귀함수로 순열 구현하기"
+        } ,
+    
+        {
+        "title"         : "[C++] next_permutation() 함수",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/b463a99f-9d14-4876-b4f9-41a7075a13e5",
+        "category"      : "Study > C & CPP",
+        "tags"          : "",
+        "url"           : "/study/c%20&%20cpp/2023/11/25/next_permutation.html",
+        "date"          : "2023-11-25 00:00:00 +0900",
+        "excerpt"       : "C++에서 next_permutation() 함수"
+        } ,
+    
+        {
+        "title"         : "[C++] 자료구조 정리",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/26a61450-2e65-4e16-bed1-c1a6446d0da2",
+        "category"      : "Study > C & CPP",
+        "tags"          : "",
+        "url"           : "/study/c%20&%20cpp/2023/11/25/CPP_Data_Structure.html",
+        "date"          : "2023-11-25 00:00:00 +0900",
+        "excerpt"       : "C++에서 사용 가능한 자료구조 정리"
         } ,
     
         {

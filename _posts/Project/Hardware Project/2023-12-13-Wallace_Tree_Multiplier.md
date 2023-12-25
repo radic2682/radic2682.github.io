@@ -7,10 +7,10 @@ categories:
   - Project
   - Hardware Project
 tags:
-  - tag1
-  - tag2
-  - tag3
-excerpt: 고속 곱셈을 위한 병렬 곱셈 알고리즘 중 하나로, 여러 비트로 구성된 두 개의 숫자를 곱하는 데 사용됩니다.
+  - verilog
+  - vivado
+excerpt: 병렬 곱셈 알고리즘 이용한 곱셈기 설계
+project_rank: "205"
 ---
 
 # 1. Topic

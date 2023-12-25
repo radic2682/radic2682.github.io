@@ -7,10 +7,13 @@ categories:
   - Project
   - Hardware Project
 tags:
-  - tag1
-  - tag2
-  - tag3
-excerpt: AI 가속기 설계를 어쩌구 저쩌구
+  - verilog
+  - C
+  - FPGA
+  - vivado
+  - vitis
+excerpt: CNN, Fully Connected 연산을 빠르게 수행하는 AI 가속기 설계
+project_rank: "250"
 ---
 
 

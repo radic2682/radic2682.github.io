@@ -573,7 +573,7 @@ body {
   border-radius: 10px;
   width: 25%;
   min-width: 320px;
-  max-width: 400px;
+  max-width: 350px;
   transition: background-color, transform 0.2s ease-in-out;
 }
 .main_box #project_box_wrapper #new_project_box:hover {
@@ -588,6 +588,7 @@ body {
   border-radius: 15px;
   background-color: #F8F9FB;
   width: 100%;
+  min-height: 210px;
 }
 .main_box #project_box_wrapper #new_project_box #imgBox img {
   padding: 10px;
@@ -597,13 +598,13 @@ body {
   max-height: 100%;
   border-radius: 15px;
   display: block;
-  box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 .main_box #project_box_wrapper #new_project_box #box_category {
   width: fit-content;
   padding: 4px 10px;
   margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #1B263B;
@@ -612,35 +613,48 @@ body {
   border-radius: 15px;
 }
 .main_box #project_box_wrapper #new_project_box #box_title {
-  font-size: 16px;
+  font-size: 15px;
   padding: 0;
   margin: 0px;
-  margin-bottom: 10px;
-  font-weight: 600;
+  margin-bottom: 0;
+  font-weight: 700;
   font-family: "Poppins", sans-serif;
   color: #1B263B;
   text-align: left;
   line-height: 24px;
 }
+.main_box #project_box_wrapper #new_project_box #tag_box {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.main_box #project_box_wrapper #new_project_box #tag_box img {
+  height: 24px;
+  width: auto;
+  margin-right: 10px;
+}
 .main_box #project_box_wrapper #new_project_box .description {
+  font-size: 12px;
   padding: 0;
   margin: 0px;
   margin-bottom: 10px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #1B263B;
-  font-size: 14px;
+  color: #66686b;
   text-align: left;
   line-height: 22px;
 }
 .main_box #project_box_wrapper #new_project_box #signature {
   padding: 0;
   margin: 0px;
-  text-align: end;
-  font-weight: 900;
+  text-align: start;
+  font-weight: bold;
   font-family: "Dancing Script", cursive;
   color: #1B263B;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 .main_box #project_box_wrapper #new_project_box a {
   text-decoration: none;
@@ -850,7 +864,7 @@ body {
   border-radius: 10px;
   width: 25%;
   min-width: 320px;
-  max-width: 400px;
+  max-width: 350px;
   transition: background-color, transform 0.2s ease-in-out;
 }
 #category_page #project_box_wrapper #new_project_box:hover {
@@ -865,6 +879,7 @@ body {
   border-radius: 15px;
   background-color: #F8F9FB;
   width: 100%;
+  min-height: 210px;
 }
 #category_page #project_box_wrapper #new_project_box #imgBox img {
   padding: 10px;
@@ -874,13 +889,13 @@ body {
   max-height: 100%;
   border-radius: 15px;
   display: block;
-  box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #category_page #project_box_wrapper #new_project_box #box_category {
   width: fit-content;
   padding: 4px 10px;
   margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #1B263B;
@@ -889,35 +904,48 @@ body {
   border-radius: 15px;
 }
 #category_page #project_box_wrapper #new_project_box #box_title {
-  font-size: 16px;
+  font-size: 15px;
   padding: 0;
   margin: 0px;
-  margin-bottom: 10px;
-  font-weight: 600;
+  margin-bottom: 0;
+  font-weight: 700;
   font-family: "Poppins", sans-serif;
   color: #1B263B;
   text-align: left;
   line-height: 24px;
 }
+#category_page #project_box_wrapper #new_project_box #tag_box {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#category_page #project_box_wrapper #new_project_box #tag_box img {
+  height: 24px;
+  width: auto;
+  margin-right: 10px;
+}
 #category_page #project_box_wrapper #new_project_box .description {
+  font-size: 12px;
   padding: 0;
   margin: 0px;
   margin-bottom: 10px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #1B263B;
-  font-size: 14px;
+  color: #66686b;
   text-align: left;
   line-height: 22px;
 }
 #category_page #project_box_wrapper #new_project_box #signature {
   padding: 0;
   margin: 0px;
-  text-align: end;
-  font-weight: 900;
+  text-align: start;
+  font-weight: bold;
   font-family: "Dancing Script", cursive;
   color: #1B263B;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 #category_page #project_box_wrapper #new_project_box a {
   text-decoration: none;
@@ -1908,7 +1936,7 @@ body {
   border-radius: 10px;
   width: 25%;
   min-width: 320px;
-  max-width: 400px;
+  max-width: 350px;
   transition: background-color, transform 0.2s ease-in-out;
 }
 #search_page #project_box_wrapper #new_project_box:hover {
@@ -1923,6 +1951,7 @@ body {
   border-radius: 15px;
   background-color: #F8F9FB;
   width: 100%;
+  min-height: 210px;
 }
 #search_page #project_box_wrapper #new_project_box #imgBox img {
   padding: 10px;
@@ -1932,13 +1961,13 @@ body {
   max-height: 100%;
   border-radius: 15px;
   display: block;
-  box-shadow: 0px 4px 8px -2px rgba(9, 30, 66, 0.25), 0px 0px 0px 1px rgba(9, 30, 66, 0.08);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 #search_page #project_box_wrapper #new_project_box #box_category {
   width: fit-content;
   padding: 4px 10px;
   margin: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #1B263B;
@@ -1947,35 +1976,48 @@ body {
   border-radius: 15px;
 }
 #search_page #project_box_wrapper #new_project_box #box_title {
-  font-size: 16px;
+  font-size: 15px;
   padding: 0;
   margin: 0px;
-  margin-bottom: 10px;
-  font-weight: 600;
+  margin-bottom: 0;
+  font-weight: 700;
   font-family: "Poppins", sans-serif;
   color: #1B263B;
   text-align: left;
   line-height: 24px;
 }
+#search_page #project_box_wrapper #new_project_box #tag_box {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+#search_page #project_box_wrapper #new_project_box #tag_box img {
+  height: 24px;
+  width: auto;
+  margin-right: 10px;
+}
 #search_page #project_box_wrapper #new_project_box .description {
+  font-size: 12px;
   padding: 0;
   margin: 0px;
   margin-bottom: 10px;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #1B263B;
-  font-size: 14px;
+  color: #66686b;
   text-align: left;
   line-height: 22px;
 }
 #search_page #project_box_wrapper #new_project_box #signature {
   padding: 0;
   margin: 0px;
-  text-align: end;
-  font-weight: 900;
+  text-align: start;
+  font-weight: bold;
   font-family: "Dancing Script", cursive;
   color: #1B263B;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 #search_page #project_box_wrapper #new_project_box a {
   text-decoration: none;
