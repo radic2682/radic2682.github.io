@@ -1156,6 +1156,15 @@ body {
   margin-top: 10px;
   margin-bottom: 30px;
   line-height: 28px;
+  text-align: justify;
+}
+.article center {
+  margin: 0;
+  padding: 0;
+  font-family: "omyu_pretty";
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
 .article h1 {
   margin: 0;
@@ -1198,7 +1207,6 @@ body {
 .article p {
   max-width: 100%;
   width: 100%;
-  line-height: 28px;
 }
 .article a {
   margin: 0;
@@ -1221,7 +1229,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Pretendard-Regular";
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
   background-color: #fed9b7;
   padding: 3px 6px;
@@ -1235,6 +1243,8 @@ body {
   font-size: 16px;
 }
 .article u {
+  max-width: 100%;
+  width: 100%;
   text-decoration: none;
   background: linear-gradient(to top, rgba(246, 225, 153, 0.4) 50%, transparent 60%);
   border-radius: 0px 0px 0px 10px;
@@ -1287,7 +1297,7 @@ body {
 }
 .article blockquote {
   border-left: 3px solid;
-  border-color: #e76f51;
+  border-color: #003049;
   padding-left: 15px;
 }
 .article blockquote p {
@@ -1313,8 +1323,8 @@ body {
   padding: 10px;
   box-sizing: border-box;
   max-width: 100%;
-  margin-top: 20px;
-  margin-bottom: 40px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   display: block;
 }
 .article .highlighter-rouge {

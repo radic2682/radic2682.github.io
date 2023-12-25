@@ -30,6 +30,14 @@
         margin-top: 10px; margin-bottom: 30px;
 
         line-height: 28px;
+
+        text-align: justify
+    }
+
+    center {
+        @include font_omyu_600;
+        @include font_size_M1;
+        margin-bottom: 30px;
     }
 
     // ---------------------------------------------
@@ -66,8 +74,6 @@
     p {
         max-width: 100%;
         width: 100%;
-
-        line-height: 28px;
     }
     a {
         @include font_pretendard_600;
@@ -92,7 +98,7 @@
         font-style: italic;
     }
     code {
-        @include font_pretendard_500;
+        @include font_pretendard_600;
         @include font_size_S3-5;
 
         background-color: #fed9b7;
@@ -105,6 +111,9 @@
         @include font_size_S4;
     }
     u {
+        max-width: 100%;
+        width: 100%;
+
         text-decoration: none;
         background: linear-gradient(to top, rgba(246, 225, 153, 0.4) 50%, transparent 60%);
         border-radius: 0px 0px 0px 10px;
@@ -176,7 +185,7 @@
     // blockquote
     blockquote {
         border-left: 3px solid;
-        border-color: $MyOrange;
+        border-color: $mainColor;
         
         padding-left: 15px;
 
@@ -201,7 +210,7 @@
         @include article_border_shadow_padding;
         max-width: 100%;
 
-        margin-top: 20px; margin-bottom: 40px;
+        margin-top: 10px; margin-bottom: 30px;
 
         display: block;
         // block으로 해야 가운데 정렬됨
