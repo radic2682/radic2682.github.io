@@ -37,8 +37,10 @@
   "expandedSpaces": [
     "/",
     "//_posts",
-    "//_posts/_posts/Project",
-    "//_posts/_posts/Study"
+    "//_posts/_posts/Tips/_posts/Tips/Tools",
+    "//_posts/_posts/Tips/_posts/Tips/Tools",
+    "//_posts/_posts/Hardware Note",
+    "//_posts/_posts/Hardware Note/_posts/Hardware Note/HW study Note"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
@@ -66,7 +68,9 @@
   "rootSpaces": [
     "_posts/Ai Note",
     "_posts/Ai Note/Ai Study Note",
-    "_categories/Hardware Note"
+    "_categories/Hardware Note",
+    "_posts/Hardware Note",
+    "_posts/Hardware Note/HW study Note"
   ],
   "spacesUseAlias": false,
   "fmKeyAlias": "aliases",

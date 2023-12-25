@@ -42,6 +42,23 @@
 
       </div>
 
+      <div class="detail_content">
+        <h3>HW Study Note</h3>
+
+        <div class="dc_box">
+          {% assign sorted_posts = site.posts | sort: 'title' %}
+
+          {% for post in sorted_posts %}
+            {% for category in post.categories %}
+              {% if category == "HW Study Note" %}
+                  <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+      </div>
+
     </div>
   </div>
 </div>

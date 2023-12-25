@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+                "file": "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_05.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +66,7 @@
             }
           },
           {
-            "id": "4bf51db7233baa0c",
+            "id": "b2939b8b32a3522c",
             "type": "leaf",
             "state": {
               "type": "mk-file-view",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+                "file": "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_05.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+                "file": "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_05.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md"
+                "file": "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_05.md"
               }
             }
           },
@@ -166,51 +166,50 @@
   },
   "active": "8daf3a4be0c60e26",
   "lastOpenFiles": [
-    "README.md",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_06.md",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_07.html",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_07.md",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_06-1.html",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_05.html",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_05.md",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_08-1.html",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_08.md",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_08.html",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_06.html",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_04.md",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_04-1.html",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_04.html",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_03-1.html",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_03.md",
+    "임베디드 시스템 필기_14.jpg",
+    "_site/임베디드 시스템 필기_14.jpg",
+    "_site/임베디드 시스템 필기_13.jpg",
+    "_site/임베디드 시스템 필기_12.jpg",
+    "_site/임베디드 시스템 필기_11.jpg",
+    "_site/임베디드 시스템 필기_9.jpg",
+    "_site/임베디드 시스템 필기_15.jpg",
+    "_site/임베디드 시스템 필기_10.jpg",
+    "임베디드 시스템 필기_13.jpg",
+    "임베디드 시스템 필기_12.jpg",
+    "_site/hardware note/hw study note/2023/12/25/Embeded_03.html",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_02.md",
+    "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
+    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_01.md",
+    "_posts/Hardware Note/HW study Note/HW study Note.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
+    "_posts/Hardware Note/Hardware Note.md",
+    "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
+    "_posts/Ai Note/Machine Learning/2023-11-19-Fuzzy_01.md",
+    "_posts/Ai Note/Untitled.md",
+    "_posts/Study/GIT/2023-11-29-GIT_06.md",
+    "_posts/Tips/Tools/2023-12-25-Ana.md",
     "_posts/Study/GIT/2023-12-24-GIT_09.md",
     "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
-    "_site/study/git/2023/12/24/GIT_09.html",
-    "_site/study/git/2023/12/24",
-    "_posts/Study/GIT/2023-12-04-GIT_07.md",
-    "_posts/Study/GIT/2023-12-04-GIT_08.md",
-    "_site/Pasted image 20231218020758.png",
-    "Pasted image 20231218020758.png",
-    "_site/project/hardware project/2023/11/26/VendingMachine.html",
-    "_site/project/hardware project/2023/11/26",
-    "_site/project/hardware project/2023/11",
-    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier-1.html",
-    "_site/category/Hardware Note/HW Study Note/index.html",
-    "_site/category/Hardware Note/HW Study Note",
-    "_categories/Hardware Note/HW Study Note.md",
-    "_site/category/Hardware Note/index.html",
-    "_site/category/Hardware Note.md",
-    "_categories/Study.md",
-    "visiting copy.md",
-    "_categories/Hardware Note.md",
-    "_categories/Project.md",
-    "_categories/Ai Note.md",
-    "_categories/Hardware Note/Hardware Study Note.md",
-    "_categories/Ai Note/Deep Learning.md",
-    "_categories/Ai Note/Ai Study Note.md",
-    "_site/category/Hardware Note/Hardware Study Note/index.html",
-    "_categories/Ai Note/Ai Note.md",
-    "_categories/Hardware Note/Hardware Note.md",
-    "_categories/Untitled.md",
-    "_site/category/Untitled.md",
-    "_categories/Project/Hardware Project.md",
-    "_categories/Project/App Project.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_05.md",
-    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_04.md",
-    "_site/Pasted image 20231217210944.png",
-    "Pasted image 20231217210944.png",
-    "Pasted image 20231217154548.png",
-    "Pasted image 20231217154555.png",
-    "_site/Pasted image 20231217154555.png",
-    "_site/Pasted image 20231217154548.png",
-    "_site/post_assets/images/image01.png",
-    "post_assets/images/image01.png"
+    "_categories/Tips/Tools.md",
+    "_categories/Tips/GIT.md",
+    "_categories/Tips.md",
+    "_categories/Study copy.md",
+    "README.md",
+    "_posts/Study/GIT/2023-12-04-GIT_07.md"
   ]
 }

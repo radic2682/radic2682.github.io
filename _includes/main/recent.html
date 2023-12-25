@@ -17,17 +17,15 @@
             </div>
 
             {% for sub_category in post.categories %}
-              {% if sub_category != 'Project' %}
 
                 {% for selected_category in site.categories %}
                   {% if selected_category.title == sub_category %}
-
-                    <a href="{{selected_category.url}}"><p id="box_category" style="background-color: {{ selected_category.color }};">{{ sub_category }}</p></a>
-                    
+                      {% if selected_category.isSub %}
+                          <a href="{{selected_category.url}}"><p id="box_category" style="background-color: {{ selected_category.color }};">{{ sub_category }}</p></a>
+                      {% endif %}
                   {% endif %}
                 {% endfor %}
 
-              {% endif %}
             {% endfor %}
 
             <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>

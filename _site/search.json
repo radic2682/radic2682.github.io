@@ -1,6 +1,96 @@
 [
     
         {
+        "title"         : "[임베디드] 8. Hardware Hacking",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/509061ac-9bfa-4669-a5c6-efbda4bdd6f4",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_08.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "UART, I2C, SPI, pin control"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 7. Vim Editer",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/ddb27498-38cb-4fd1-91e8-22c3fbf3f04a",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_07.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "Vim Editer"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 6. Raspberry Pi",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/c9d4acda-e050-4da5-a20b-24895d2422e9",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_06.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "Raspberry Pi, Linux System"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 5. Cortex M3",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/f00c25f6-2905-4547-8c32-bc656db42b65",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_05.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "Cortex M3"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 4. ARM Assembly Programming",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/6ce4005b-ea82-4791-b21a-9d3e56a7f181",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_04.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "ARM Aseembly, indexing"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 3. ARM Architecture",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/09d1d9a2-93fb-49c8-80c0-62c70d84c846",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_03.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "ARM Register, CPSR, Instruction features"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 2. Organization & Implemention",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/8787f4ea-1ab4-40c1-af9c-6402f369a069",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_02.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "ARM Operation, Organization, Stages"
+        } ,
+    
+        {
+        "title"         : "[임베디드] 1. Introduction",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/92534b81-bd6c-4c01-ac61-074af7892563",
+        "category"      : "Hardware Note > HW Study Note",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_01.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "Instruction Set"
+        } ,
+    
+        {
+        "title"         : "[강화학습] 1. Introduction",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/49ec4f78-fa73-4200-a9de-e50764bb6965",
+        "category"      : "Ai Note > Machine Learning",
+        "tags"          : "tag1, tag2, tag3",
+        "url"           : "/ai%20note/machine%20learning/2023/12/25/makeAI_01.html",
+        "date"          : "2023-12-25 00:00:00 +0900",
+        "excerpt"       : "퍼지 이론과 시스템"
+        } ,
+    
+        {
         "title"         : "[Git] 9. Git Hub",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/92fe5339-f29e-43dd-9f34-5d5808c077ca",
         "category"      : "Study > GIT",
@@ -31,7 +121,7 @@
         } ,
     
         {
-        "title"         : "[인공지능 가속기 설계] Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
+        "title"         : "Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
         "thumbnail"     : "/assets/images/ai_accelerator.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "tag1, tag2, tag3",
