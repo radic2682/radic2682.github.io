@@ -9,6 +9,7 @@ const top_nav_bar = document.querySelector('#top_nav_bar');
 
 const post_back = document.querySelector('#post_page .backg');
 const cate_back = document.querySelector('#category_page .backg');
+const search_back = document.querySelector('#search_page .backg');
 const cate_wave = document.querySelector('#category_page .wave');
 
 let sidebar_Open = true;
@@ -36,6 +37,7 @@ function close_menu(){
 
     post_back?.style.setProperty('border-radius', '0', 'important');
     cate_back?.style.setProperty('border-radius', '0', 'important');
+    search_back?.style.setProperty('border-radius', '0', 'important');
     cate_wave?.style.setProperty('border-radius', '0', 'important');
     
     sidebar_Open = false;

@@ -11,7 +11,8 @@
         position: absolute;
         top: 0;
         height: calc(20vh + 100px);
-        max-height: 340px;
+
+        height: 300px;
         
         width: 100%;
         z-index: 0;
@@ -142,6 +143,7 @@
         display: none;
         position: fixed;
         flex-direction: column;
+        justify-content: space-between;
 
         z-index: 1000;
         left: 0;
@@ -180,8 +182,8 @@
             @include flex-row-center-center;
             margin: 0 50px;
 
-            height: 700px;
-            min-height: 700px;
+            height: 50vh;
+            min-height: 50vh;
 
             .left, .right {
                 width: 40px;
