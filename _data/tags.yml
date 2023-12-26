@@ -14,6 +14,10 @@
   img:      <img width="48" height="48" src="https://img.icons8.com/color/48/javascript--v1.png" alt="javascript--v1"/>
   category: Language
 
+- name:     kotlin
+  img:      <img width="48" height="48" src="https://img.icons8.com/color/48/kotlin.png" alt="kotlin"/>
+  category: Language
+
 
 
 - name:     firebase
@@ -36,6 +40,10 @@
   img:      <img width="96" height="96" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/96/external-jekyll-a-simple-blog-aware-static-site-generator-for-personal-project-logo-shadow-tal-revivo.png" alt="external-jekyll-a-simple-blog-aware-static-site-generator-for-personal-project-logo-shadow-tal-revivo"/>
   category: Web & App & MarkUp
 
+- name:     android_studio
+  img:      <img width="48" height="48" src="https://img.icons8.com/fluency/48/android-studio--v2.png" alt="android-studio--v2"/>
+  category: Web & App & MarkUp
+
 
 
 
@@ -55,6 +63,9 @@
   img:      <img src="/assets/images/FPGA_logo.png" alt="image"/>
   category: Hardware
 
+- name:     oscilloscope
+  img:      <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-oscilloscope-engineering-flaticons-lineal-color-flat-icons-2.png" alt="external-oscilloscope-engineering-flaticons-lineal-color-flat-icons-2"/>
+  category: Hardware
 
 
 

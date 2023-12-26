@@ -11,6 +11,7 @@ tags:
   - vivado
 excerpt: 병렬 곱셈 알고리즘 이용한 곱셈기 설계
 project_rank: "205"
+sticker: emoji//1f4aa
 ---
 
 # 1. Topic

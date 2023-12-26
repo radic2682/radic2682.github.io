@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "mode": "source",
                 "source": false
               }
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md"
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md"
               }
             }
           },
@@ -165,50 +166,51 @@
   },
   "active": "3c4f1e43d1e0bfda",
   "lastOpenFiles": [
-    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
-    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
-    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
-    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
-    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
-    "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
-    "_site/project/hardware project/2023/12/13/5_Stage_Pipelined_Processor.html",
-    "_site/project/hardware project/2023/12/13/5_Stage_Pipelined_Processor-1.html",
-    "_site/project/hardware project/2023/12/13/Wallace_Tree_Multiplier-1.html",
-    "_site/project/web project/2023/12/13/github_Blog.html",
-    "_site/project/web project/2023/12/13",
-    "_site/project/web project/2023/12",
-    "_site/project/web project/2023",
-    "_site/project/web project",
-    "_site/project/2023/12/13/github_Blog.html",
+    "_site/project/etc project/2023/12/13/Generation_and_Transmission_Planning.html",
+    "_site/project/etc project/2023/12/13",
+    "_site/project/etc project/2023/12",
+    "_site/project/etc project/2023",
+    "_site/project/etc project",
+    "_site/project/2023/12/13/Generation_and_Transmission_Planning.html",
     "_site/project/2023/12/13",
+    "_site/project/2023/12",
+    "_site/project/2023",
+    "_site/project/app project/2023/12/13/Generation_and_Transmission_Planning.html",
+    "_site/project/app project/2023/12/13/Mechu-1.html",
+    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
+    "_posts/Project/App Project/2023-12-13-Mechu.md",
+    "_posts/Project/etc Project/etc Project.md",
+    "_categories/Project/etc Project.md",
+    "_categories/Project/Web Project copy.md",
+    "_posts/Project/Hardware Project/Hardware Project.md",
+    "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
+    "_posts/Project/App Project/App Project.md",
+    "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
+    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
+    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+    "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
+    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier.md",
+    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
+    "Pasted image 20231227002153.png",
+    "Pasted image 20231227001737.png",
+    "_site/Pasted image 20231227001737.png",
+    "_site/Pasted image 20231227001004.png",
+    "Pasted image 20231227001004.png",
+    "_site/Pasted image 20231227000131.png",
+    "Pasted image 20231227000131.png",
+    "_site/Pasted image 20231226235807.png",
+    "Pasted image 20231226235807.png",
+    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+    "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
     "_posts/Study/C & CPP/2023-11-26-combination.md",
     "_categories/Project/Ai Project.md",
-    "_categories/Project/Web Project copy.md",
     "_categories/Project/Web Project.md",
     "_categories/Project/Hardware Project copy.md",
     "_posts/Study/C & CPP/2023-11-25-permutation.md",
     "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
     "_posts/Ai Note/Ai Note.md",
     "_posts/Study/C & CPP/2023-11-25-next_permutation.md",
-    "_posts/Study/C & CPP/2023-11-25-CPP_Data_Structure.md",
-    "_posts/Study/GIT/GIT.md",
-    "_site/assets/images/FPGA_logo.png",
-    "assets/images/FPGA_logo.png",
-    "_site/assets/images/verilog_logo.png",
-    "assets/images/verilog_logo.png",
-    "_site/assets/images/Pasted image 20231225221906.png",
-    "assets/images/Pasted image 20231225221906.png",
-    "_site/Pasted image 20231225221906.png",
-    "Pasted image 20231225221906.png",
-    "_site/assets/images/Pasted image 20231225221613.png",
-    "assets/images/Pasted image 20231225221613.png",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_05.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_06.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_07.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_08.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_04.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_03.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_02.md",
-    "_posts/Hardware Note/HW study Note/2023-12-25-Embeded_01.md"
+    "_site/assets/images/FPGA_logo.png"
   ]
 }

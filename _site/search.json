@@ -1,6 +1,26 @@
 [
     
         {
+        "title"         : "Cortex-M0 SOC Design _Multi Function mini Robot",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/ef47ba0c-6720-4c32-8813-23bbc372342a",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "verilog, vivado",
+        "url"           : "/project/hardware%20project/2023/12/27/soc_multi_func.html",
+        "date"          : "2023-12-27 00:00:00 +0900",
+        "excerpt"       : "Partial Product를 줄인 고성능 곱셈기 설계"
+        } ,
+    
+        {
+        "title"         : "Radix-8 Booth Encoding Multiplier using TDM",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a7ae8090-2037-4638-92a5-89f9e73790c0",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "verilog, vivado",
+        "url"           : "/project/hardware%20project/2023/12/27/Booth_multiplier.html",
+        "date"          : "2023-12-27 00:00:00 +0900",
+        "excerpt"       : "Partial Product를 줄인 고성능 곱셈기 설계"
+        } ,
+    
+        {
         "title"         : "[임베디드] 8. Hardware Hacking",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/509061ac-9bfa-4669-a5c6-efbda4bdd6f4",
         "category"      : "Hardware Note > HW Study Note",
@@ -101,6 +121,16 @@
         } ,
     
         {
+        "title"         : "Generation and Transmission Planning",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/09e32ed8-8ca9-4db5-a149-72f19c8323dd",
+        "category"      : "Project > etc Project",
+        "tags"          : "oscilloscope",
+        "url"           : "/project/etc%20project/2023/12/13/Generation_and_Transmission_Planning.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "전력 계통 설계"
+        } ,
+    
+        {
         "title"         : "GitHub Blog (지금 여기!)",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/4cdc557d-b2e3-469c-96d6-6624a9bf1e04",
         "category"      : "Project > Web Project",
@@ -108,6 +138,16 @@
         "url"           : "/project/web%20project/2023/12/13/github_Blog.html",
         "date"          : "2023-12-13 00:00:00 +0900",
         "excerpt"       : "GitHub와 Jekyll을 이용한 블로그 (스킨 사용X)"
+        } ,
+    
+        {
+        "title"         : "8_bit Breadboard Computer",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a20b4b8f-0125-47a2-ac37-0c5eb7b3cb67",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "oscilloscope",
+        "url"           : "/project/hardware%20project/2023/12/13/breadboard_Computer.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "브레드보드 위에 LS시리즈 Logic 칩으로 만든 컴퓨터"
         } ,
     
         {
@@ -141,8 +181,18 @@
         } ,
     
         {
+        "title"         : "Mechu! - Menu Selection App",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/f76808a3-5328-46fd-90ca-0c44efc386e7",
+        "category"      : "Project > App Project",
+        "tags"          : "kotlin, android_studio",
+        "url"           : "/project/app%20project/2023/12/13/Mechu.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "병렬 곱셈 알고리즘 이용한 곱셈기 설계"
+        } ,
+    
+        {
         "title"         : "Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
-        "thumbnail"     : "/assets/images/ai_accelerator.png",
+        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/4c0efdb0-a8ae-4299-bb35-95cb792191ea",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, C, FPGA, vivado, vitis",
         "url"           : "/project/hardware%20project/2023/12/08/ai_accelerator.html",

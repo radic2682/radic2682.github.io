@@ -13,6 +13,7 @@ tags:
   - python
 excerpt: 데이터베이스를 이용한 IOT 자판기 설계
 project_rank: "210"
+sticker: emoji//1f4aa
 ---
 ![image](https://github.com/radic2682/radic2682.github.io/assets/11177959/85bc96ec-1115-431d-9ff1-3d1bc5b42bdc)
 

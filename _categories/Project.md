@@ -13,6 +13,7 @@ children:
     - App Project
     - Web Project
     - Ai Project
+    - etc Project
     
 # 메인 아이콘
 icon: <img width="96" height="96" src="https://img.icons8.com/external-goofy-color-kerismaker/96/external-Project-graphic-design-goofy-color-kerismaker.png" alt="external-Project-graphic-design-goofy-color-kerismaker"/>

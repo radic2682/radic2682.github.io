@@ -11,6 +11,7 @@ tags:
   - vivado
 excerpt: Timer를 이용한 슬롯머신 설계
 project_rank: "206"
+sticker: emoji//1f4aa
 ---
 
 # 1. 설계 내용
