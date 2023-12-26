@@ -89,11 +89,18 @@
         flex-direction: column;
     }
 
+    #post_page #postModal .main_img {
+        margin: 0 15px;
+        min-height: 300px;
+    }
 
+    #post_page #postModal .all_img {
+        margin: 30px;
+    }
 
-
-
-
+    #post_page #postModal .all_img img {
+        height: 70px;
+    }
 
 
 
