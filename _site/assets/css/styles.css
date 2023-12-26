@@ -586,7 +586,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  background-color: #F8F9FB;
+  background-color: transparent;
   width: 100%;
   min-height: 210px;
 }
@@ -877,7 +877,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  background-color: #F8F9FB;
+  background-color: transparent;
   width: 100%;
   min-height: 210px;
 }
@@ -1949,7 +1949,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  background-color: #F8F9FB;
+  background-color: transparent;
   width: 100%;
   min-height: 210px;
 }
