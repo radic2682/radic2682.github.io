@@ -13,7 +13,7 @@ tags:
   - vivado
   - vitis
 excerpt: CNN, Fully Connected 연산을 빠르게 수행하는 AI 가속기 설계
-project_rank: "250"
+project_rank: "900"
 sticker: emoji//1f4aa
 ---
 ![image](https://github.com/radic2682/radic2682.github.io/assets/11177959/4c0efdb0-a8ae-4299-bb35-95cb792191ea)

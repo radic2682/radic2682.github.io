@@ -10,7 +10,7 @@ tags:
   - verilog
   - vivado
 excerpt: Timer를 이용한 슬롯머신 설계
-project_rank: "206"
+project_rank: "300"
 sticker: emoji//1f4aa
 ---
 
