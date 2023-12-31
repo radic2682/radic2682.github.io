@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "9fb3fb30032ea44d",
+        "id": "693a44cf28fe43a0",
         "type": "tabs",
         "children": [
           {
-            "id": "3c4f1e43d1e0bfda",
+            "id": "a55625172304ed9f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
+                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
+                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
+                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md"
+                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md"
               }
             }
           },
@@ -164,32 +164,39 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "3c4f1e43d1e0bfda",
+  "active": "a55625172304ed9f",
   "lastOpenFiles": [
+    "_posts/Study/C & CPP/2023-11-26-TEST.md",
+    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+    "assets/post_images/Pasted.md",
+    "_site/assets/post_images/Pasted.md",
+    "_site/assets/post_images/Pasted image 20240101012942.png",
+    "assets/post_images/Pasted image 20240101012942.png",
+    "_site/study/c & cpp/2023/11/26/TEST.html",
+    "_site/study/c & cpp/2023/11/26/combination-1.html",
+    "_site/assets/post_images/post_images.html",
+    "_site/assets/post_images",
+    "assets/post_images/post_images.md",
+    "assets/post_images",
+    "_site/assets/post_imagses/post_imagses.html",
+    "_site/assets/post_imagses",
+    "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
+    "assets/post_imagses/post_imagses.md",
+    "assets/post_imagses",
+    "_posts/Ai Note/Machine Learning/2024-01-01-test_01.md",
+    "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
     "_site/ai note/machine learning/2024/01/01/test_01-1.html",
     "_site/assets/post_images/Pasted image 20240101010307.png",
     "assets/post_images/Pasted image 20240101010307.png",
-    "_posts/Ai Note/Machine Learning/2024-01-01-test_01.md",
-    "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
     "_site/assets/post_images/Pasted image 20240101010211.png",
     "assets/post_images/Pasted image 20240101010211.png",
     "_site/assets/post_images/Pasted image 20240101010124.png",
     "assets/post_images/Pasted image 20240101010124.png",
     "_site/Pasted image 20240101010022.png",
     "Pasted image 20240101010022.png",
-    "_site/assets/post_images/post_images.html",
-    "_site/assets/post_images",
-    "assets/post_images/post_images.md",
-    "assets/post_images",
     "assets/Untitled.md",
     "_site/assets/Untitled.md",
     "_site/ai note/machine learning/2024/01/01/test_01.html",
-    "_site/ai note/machine learning/2024/01/01",
-    "_site/ai note/machine learning/2024/01",
-    "_site/ai note/machine learning/2024",
-    "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
-    "assets/js/convert_img_CDN.js",
-    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
     "_posts/Project/App Project/2023-12-13-Mechu.md",
     "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
     "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
@@ -200,17 +207,10 @@
     "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
     "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
     "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
-    "_site/project/etc project/2023/12/13/Generation_and_Transmission_Planning.html",
-    "_site/project/etc project/2023/12/13",
     "_posts/Project/etc Project/etc Project.md",
     "_categories/Project/etc Project.md",
     "_categories/Project/Web Project copy.md",
     "_posts/Project/Hardware Project/Hardware Project.md",
-    "_posts/Project/App Project/App Project.md",
-    "Pasted image 20231227002153.png",
-    "Pasted image 20231227001737.png",
-    "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
-    "_posts/Study/C & CPP/2023-11-26-combination.md",
-    "_categories/Project/Ai Project.md"
+    "_posts/Project/App Project/App Project.md"
   ]
 }

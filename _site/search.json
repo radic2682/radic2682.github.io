@@ -1,26 +1,6 @@
 [
     
         {
-        "title"         : "test_01",
-        "thumbnail"     : "/assets/post_images/Pasted image 20240101010124.png",
-        "category"      : "Ai Note > Machine Learning",
-        "tags"          : "tag1, tag2, tag3",
-        "url"           : "/ai%20note/machine%20learning/2024/01/01/test_01.html",
-        "date"          : "2024-01-01 00:00:00 +0900",
-        "excerpt"       : "강화학습, Q-learning, Bellman Equation"
-        } ,
-    
-        {
-        "title"         : "test_01",
-        "thumbnail"     : "/assets/post_images/Pasted image 20240101010307.png",
-        "category"      : "Ai Note > Machine Learning",
-        "tags"          : "tag1, tag2, tag3",
-        "url"           : "/ai%20note/machine%20learning/2024/01/01/test_01-1.html",
-        "date"          : "2024-01-01 00:00:00 +0900",
-        "excerpt"       : "강화학습, Q-learning, Bellman Equation"
-        } ,
-    
-        {
         "title"         : "Cortex-M0 SOC Design _Multi Function mini Robot",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/ef47ba0c-6720-4c32-8813-23bbc372342a",
         "category"      : "Project > Hardware Project",
