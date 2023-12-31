@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
+                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "836dcf25d688f4a9",
@@ -95,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
+                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
+                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -135,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md"
+                "file": "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md"
               }
             }
           },
@@ -167,6 +166,28 @@
   },
   "active": "3c4f1e43d1e0bfda",
   "lastOpenFiles": [
+    "_site/ai note/machine learning/2024/01/01/test_01-1.html",
+    "_site/assets/post_images/Pasted image 20240101010307.png",
+    "assets/post_images/Pasted image 20240101010307.png",
+    "_posts/Ai Note/Machine Learning/2024-01-01-test_01.md",
+    "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
+    "_site/assets/post_images/Pasted image 20240101010211.png",
+    "assets/post_images/Pasted image 20240101010211.png",
+    "_site/assets/post_images/Pasted image 20240101010124.png",
+    "assets/post_images/Pasted image 20240101010124.png",
+    "_site/Pasted image 20240101010022.png",
+    "Pasted image 20240101010022.png",
+    "_site/assets/post_images/post_images.html",
+    "_site/assets/post_images",
+    "assets/post_images/post_images.md",
+    "assets/post_images",
+    "assets/Untitled.md",
+    "_site/assets/Untitled.md",
+    "_site/ai note/machine learning/2024/01/01/test_01.html",
+    "_site/ai note/machine learning/2024/01/01",
+    "_site/ai note/machine learning/2024/01",
+    "_site/ai note/machine learning/2024",
+    "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
     "assets/js/convert_img_CDN.js",
     "_posts/Project/Web Project/2023-12-13-github_Blog.md",
     "_posts/Project/App Project/2023-12-13-Mechu.md",
@@ -181,14 +202,6 @@
     "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
     "_site/project/etc project/2023/12/13/Generation_and_Transmission_Planning.html",
     "_site/project/etc project/2023/12/13",
-    "_site/project/etc project/2023/12",
-    "_site/project/etc project/2023",
-    "_site/project/etc project",
-    "_site/project/2023/12/13/Generation_and_Transmission_Planning.html",
-    "_site/project/2023/12/13",
-    "_site/project/2023/12",
-    "_site/project/2023",
-    "_site/project/app project/2023/12/13/Generation_and_Transmission_Planning.html",
     "_posts/Project/etc Project/etc Project.md",
     "_categories/Project/etc Project.md",
     "_categories/Project/Web Project copy.md",
@@ -196,22 +209,8 @@
     "_posts/Project/App Project/App Project.md",
     "Pasted image 20231227002153.png",
     "Pasted image 20231227001737.png",
-    "_site/Pasted image 20231227001737.png",
-    "_site/Pasted image 20231227001004.png",
-    "Pasted image 20231227001004.png",
-    "_site/Pasted image 20231227000131.png",
-    "Pasted image 20231227000131.png",
-    "_site/Pasted image 20231226235807.png",
-    "Pasted image 20231226235807.png",
     "_posts/Project/Hardware Project/2023-12-08-AI_accelerator.md",
     "_posts/Study/C & CPP/2023-11-26-combination.md",
-    "_categories/Project/Ai Project.md",
-    "_categories/Project/Web Project.md",
-    "_categories/Project/Hardware Project copy.md",
-    "_posts/Study/C & CPP/2023-11-25-permutation.md",
-    "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
-    "_posts/Ai Note/Ai Note.md",
-    "_posts/Study/C & CPP/2023-11-25-next_permutation.md",
-    "_site/assets/images/FPGA_logo.png"
+    "_categories/Project/Ai Project.md"
   ]
 }
