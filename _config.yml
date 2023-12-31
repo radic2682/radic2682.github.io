@@ -88,7 +88,7 @@ analytics:
 # will be added to all image (site avatar & posts' images) paths starting with '/'
 #
 # e.g. 'https://cdn.com'
-img_cdn: https://cdn.jsdelivr.net/gh/pioneergu/pioneergu.github.io@master
+img_cdn: https://cdn.jsdelivr.net/gh/radic2682/radic2682.github.io@master
 
 
 
