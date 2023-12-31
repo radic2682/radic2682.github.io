@@ -165,8 +165,9 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b2939b8b32a3522c",
+  "active": "3c4f1e43d1e0bfda",
   "lastOpenFiles": [
+    "assets/js/convert_img_CDN.js",
     "_posts/Project/Web Project/2023-12-13-github_Blog.md",
     "_posts/Project/App Project/2023-12-13-Mechu.md",
     "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
