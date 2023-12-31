@@ -16,7 +16,7 @@ jobs:
       - name: Replace Image URLs
         run: |
           cd _site # Jekyll이 빌드된 디렉토리로 이동합니다.
-          sed -i 's|/images/|https://cdn.jsdelivr.net/gh/사용자이름/블로그-리포지토리/images/|g' *.html
+          sed -i 's|/images/|https://cdn.jsdelivr.net/gh/radic2682/radic2682.github.io/images/|g' *.html
           git add *.html
           git commit -m "Update image URLs to jsDelivr CDN"
           git push
