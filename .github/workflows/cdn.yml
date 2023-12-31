@@ -47,17 +47,12 @@ jobs:
           echo '' >> replace-urls.js
           echo 'walk(directory);' >> replace-urls.js
 
-          # 스크립트 실행
-          node replace-urls.js
-
-          # 변경된 파일을 Git에 추가하고 커밋합니다.
+      - name: Commit and Push Changes
+        run: |
           git config --global user.email "ash8663@naver.com"
           git config --global user.name "An Sun Hong"
-
+          
+          # 변경된 파일을 Git에 추가하고 커밋합니다.
           git add _site/
           git commit -m "Update image URLs to jsDelivr CDN"
           git push
-
-
-
-
