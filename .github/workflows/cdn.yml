@@ -19,5 +19,3 @@ jobs:
           git add _site/
           git commit -m "Update image URLs to jsDelivr CDN"
           git push
-
-          
