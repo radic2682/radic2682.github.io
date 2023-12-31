@@ -1,0 +1,22 @@
+name: Update Image URLs to jsDelivr CDN
+
+on:
+  push:
+    paths:
+      - 'images/*' # 이미지 파일이 있는 디렉토리 경로를 설정합니다.
+
+jobs:
+  update-cdn:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Replace Image URLs
+        run: |
+          cd _site # Jekyll이 빌드된 디렉토리로 이동합니다.
+          sed -i 's|/images/|https://cdn.jsdelivr.net/gh/사용자이름/블로그-리포지토리/images/|g' *.html
+          git add *.html
+          git commit -m "Update image URLs to jsDelivr CDN"
+          git push
