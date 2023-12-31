@@ -16,6 +16,8 @@ jobs:
       - name: Replace Image URLs
         run: |
           find _site/ -name "*.html" -exec sed -i 's|/images/|https://cdn.jsdelivr.net/gh/radic2682/radic2682.github.io/images/|g' {} +
+          git config --global user.email "ash8663@gmail.com"
+          git config --global user.name "radic2682"
           git add _site/
           git commit -m "Update image URLs to jsDelivr CDN"
           git push
