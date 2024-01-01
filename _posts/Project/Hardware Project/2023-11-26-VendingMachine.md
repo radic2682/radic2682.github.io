@@ -1,6 +1,6 @@
 ---
 title: "[임베디드] IOT를 접목한 본격적인 자판기 using RaspberryPi"
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/85bc96ec-1115-431d-9ff1-3d1bc5b42bdc
+thumbnail: https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/[%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C]%20IOT%EB%A5%BC%20%EC%A0%91%EB%AA%A9%ED%95%9C%20%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8%20%EC%9E%90%ED%8C%90%EA%B8%B0%20using%20RaspberryPi/292665970-85bc96ec-1115-431d-9ff1-3d1bc5b42bdc.png
 layout: post
 author: Sun Hong
 categories:

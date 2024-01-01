@@ -1,6 +1,6 @@
 ---
 title: Radix-8 Booth Encoding Multiplier using TDM
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/a7ae8090-2037-4638-92a5-89f9e73790c0
+thumbnail: https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Radix-8%20Booth%20Encoding%20Multiplier%20using%20TDM/292887819-a7ae8090-2037-4638-92a5-89f9e73790c0.png
 layout: post
 author: Sun Hong
 categories:

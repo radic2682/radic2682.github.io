@@ -1,6 +1,6 @@
 ---
 title: Wallace Tree Multiplier
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86
+thumbnail: https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Wallace%20Tree%20Multiplier/290131177-3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86.png
 layout: post
 author: Sun Hong
 categories:

@@ -1,18 +1,28 @@
 [
     
         {
+        "title"         : "깃허브 블로그 이미지 로딩 속도 개선하기 [ GitHub As a CDN ]",
+        "thumbnail"     : "https://gaac.vercel.app/assets/images/mascot.png",
+        "category"      : "Tips > GitHub & Blog",
+        "tags"          : "",
+        "url"           : "/tips/github%20&%20blog/2024/01/01/github_blog_cdn.html",
+        "date"          : "2024-01-01 00:00:00 +0900",
+        "excerpt"       : "GitHub As a CDN을 사용해서 블로그 이미지 로딩 속도 개선"
+        } ,
+    
+        {
         "title"         : "Cortex-M0 SOC Design _Multi Function mini Robot",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/ef47ba0c-6720-4c32-8813-23bbc372342a",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Cortex-M0%20SOC%20Design%20_Multi%20Function%20mini%20Robot/292888089-ef47ba0c-6720-4c32-8813-23bbc372342a.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/27/soc_multi_func.html",
         "date"          : "2023-12-27 00:00:00 +0900",
-        "excerpt"       : "Partial Product를 줄인 고성능 곱셈기 설계"
+        "excerpt"       : "Cortex-M0 프로세서를 포함하는 SOC 설계"
         } ,
     
         {
         "title"         : "Radix-8 Booth Encoding Multiplier using TDM",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a7ae8090-2037-4638-92a5-89f9e73790c0",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Radix-8%20Booth%20Encoding%20Multiplier%20using%20TDM/292887819-a7ae8090-2037-4638-92a5-89f9e73790c0.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/27/Booth_multiplier.html",
@@ -122,7 +132,7 @@
     
         {
         "title"         : "Generation and Transmission Planning",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/09e32ed8-8ca9-4db5-a149-72f19c8323dd",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Generation%20and%20Transmission%20Planning/292891276-09e32ed8-8ca9-4db5-a149-72f19c8323dd.png",
         "category"      : "Project > etc Project",
         "tags"          : "oscilloscope",
         "url"           : "/project/etc%20project/2023/12/13/Generation_and_Transmission_Planning.html",
@@ -132,7 +142,7 @@
     
         {
         "title"         : "GitHub Blog (지금 여기!)",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/4cdc557d-b2e3-469c-96d6-6624a9bf1e04",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/GitHub%20Blog%20(%EC%A7%80%EA%B8%88%20%EC%97%AC%EA%B8%B0!)/292766187-4cdc557d-b2e3-469c-96d6-6624a9bf1e04.png",
         "category"      : "Project > Web Project",
         "tags"          : "HTML, CSS, JS, GIT, Jekyll, SASS",
         "url"           : "/project/web%20project/2023/12/13/github_Blog.html",
@@ -142,7 +152,7 @@
     
         {
         "title"         : "8_bit Breadboard Computer",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a20b4b8f-0125-47a2-ac37-0c5eb7b3cb67",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/8_bit%20Breadboard%20Computer/292888576-a20b4b8f-0125-47a2-ac37-0c5eb7b3cb67.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "oscilloscope",
         "url"           : "/project/hardware%20project/2023/12/13/breadboard_Computer.html",
@@ -152,7 +162,7 @@
     
         {
         "title"         : "Wallace Tree Multiplier",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Wallace%20Tree%20Multiplier/290131177-3b3dbeb3-f95b-4992-bcf2-3a8c3d363d86.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/13/Wallace_Tree_Multiplier.html",
@@ -162,7 +172,7 @@
     
         {
         "title"         : "Slot Machine",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/80be7cca-b630-4513-8fc3-98d6cbaff8f3",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Slot%20Machine/290142797-80be7cca-b630-4513-8fc3-98d6cbaff8f3.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/13/Slot_Machine.html",
@@ -172,7 +182,7 @@
     
         {
         "title"         : "5-Stage Pipelined Processor (RISC-V)",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/a9282af8-8e2e-4a0f-a95a-2e89324b9f36",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/5-Stage%20Pipelined%20Processor%20(RISC-V)/292766748-a9282af8-8e2e-4a0f-a95a-2e89324b9f36.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, C",
         "url"           : "/project/hardware%20project/2023/12/13/5_Stage_Pipelined_Processor.html",
@@ -182,7 +192,7 @@
     
         {
         "title"         : "Mechu! - Menu Selection App",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/f76808a3-5328-46fd-90ca-0c44efc386e7",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Mechu!%20-%20Menu%20Selection%20App/292889211-f76808a3-5328-46fd-90ca-0c44efc386e7.png",
         "category"      : "Project > App Project",
         "tags"          : "kotlin, android_studio",
         "url"           : "/project/app%20project/2023/12/13/Mechu.html",
@@ -192,7 +202,7 @@
     
         {
         "title"         : "Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/4c0efdb0-a8ae-4299-bb35-95cb792191ea",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Artificial%20Intelligence%20Accelerator%20Design%20(Using%20Zynq-7000%20FPGA%2C%20CDMA%2C%20AXI)/292884372-4c0efdb0-a8ae-4299-bb35-95cb792191ea.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, C, FPGA, vivado, vitis",
         "url"           : "/project/hardware%20project/2023/12/08/ai_accelerator.html",
@@ -302,7 +312,7 @@
     
         {
         "title"         : "[임베디드] IOT를 접목한 본격적인 자판기 using RaspberryPi",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/85bc96ec-1115-431d-9ff1-3d1bc5b42bdc",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/[%EC%9E%84%EB%B2%A0%EB%94%94%EB%93%9C]%20IOT%EB%A5%BC%20%EC%A0%91%EB%AA%A9%ED%95%9C%20%EB%B3%B8%EA%B2%A9%EC%A0%81%EC%9D%B8%20%EC%9E%90%ED%8C%90%EA%B8%B0%20using%20RaspberryPi/292665970-85bc96ec-1115-431d-9ff1-3d1bc5b42bdc.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "raspberry_pi, firebase, linux, python",
         "url"           : "/project/hardware%20project/2023/11/26/VendingMachine.html",

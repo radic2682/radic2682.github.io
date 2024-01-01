@@ -1,6 +1,6 @@
 ---
 title: Slot Machine
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/80be7cca-b630-4513-8fc3-98d6cbaff8f3
+thumbnail: https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Slot%20Machine/290142797-80be7cca-b630-4513-8fc3-98d6cbaff8f3.png
 layout: post
 author: Sun Hong
 categories:

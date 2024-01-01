@@ -1,6 +1,6 @@
 ---
 title: Artificial Intelligence Accelerator Design (Using Zynq-7000 FPGA, CDMA, AXI)
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/4c0efdb0-a8ae-4299-bb35-95cb792191ea
+thumbnail: https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Artificial%20Intelligence%20Accelerator%20Design%20(Using%20Zynq-7000%20FPGA%2C%20CDMA%2C%20AXI)/292884372-4c0efdb0-a8ae-4299-bb35-95cb792191ea.png
 layout: post
 author: Sun Hong
 categories:

@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "693a44cf28fe43a0",
+        "id": "54f1a17dd0396d73",
         "type": "tabs",
         "children": [
           {
-            "id": "a55625172304ed9f",
+            "id": "f0a08e965652625f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+                "file": "_posts/Project/App Project/2023-12-13-Mechu.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+                "file": "_posts/Project/App Project/2023-12-13-Mechu.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+                "file": "_posts/Project/App Project/2023-12-13-Mechu.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Web Project/2023-12-13-github_Blog.md"
+                "file": "_posts/Project/App Project/2023-12-13-Mechu.md"
               }
             }
           },
@@ -164,53 +164,53 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "a55625172304ed9f",
+  "active": "f0a08e965652625f",
   "lastOpenFiles": [
-    "_posts/Study/C & CPP/2023-11-26-TEST.md",
+    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
     "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
+    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
+    "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
+    "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
+    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier.md",
+    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
+    "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
+    "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
+    "_posts/Study/C & CPP/2023-11-26-combination.md",
+    "Paste.md",
+    "_site/Paste.md",
+    "_site/Pasted image 20240101232155.png",
+    "Pasted image 20240101232155.png",
+    "_site/tips/github & blog/2024/01/01/github_blog_cdn.html",
+    "_site/tips/github & blog/2024/01/01",
+    "_site/tips/github & blog/2024/01",
+    "_site/tips/github & blog/2024",
+    "_site/tips/github & blog/2023/11/26/combination-1.html",
+    "_site/tips/github & blog/2023/11/26",
+    "_site/tips/github & blog/2023/11",
+    "_site/tips/github & blog/2023",
+    "_site/tips/github & blog",
+    "_site/tips/2023/11/26/combination-1.html",
+    "_posts/Study/C & CPP/C & CPP.md",
+    "_categories/Tips/GitHub & Blog.md",
+    "_categories/Tips/Tools copy.md",
+    "assets/post_images/image-20240101014410254.png",
+    "assets/post_images/Pasted image 20240101012942.png",
+    "assets/post_images/image-20240101014452421.png",
+    "_posts/Study/C & CPP/2023-11-26-TEST.md",
     "assets/post_images/Pasted.md",
     "_site/assets/post_images/Pasted.md",
     "_site/assets/post_images/Pasted image 20240101012942.png",
-    "assets/post_images/Pasted image 20240101012942.png",
-    "_site/study/c & cpp/2023/11/26/TEST.html",
-    "_site/study/c & cpp/2023/11/26/combination-1.html",
-    "_site/assets/post_images/post_images.html",
-    "_site/assets/post_images",
     "assets/post_images/post_images.md",
-    "assets/post_images",
-    "_site/assets/post_imagses/post_imagses.html",
-    "_site/assets/post_imagses",
     "_posts/Ai Note/Machine Learning/2023-12-25-makeAI_01.md",
     "assets/post_imagses/post_imagses.md",
-    "assets/post_imagses",
     "_posts/Ai Note/Machine Learning/2024-01-01-test_01.md",
     "_posts/Ai Note/Machine Learning/2024-01-01-test_01 1.md",
-    "_site/ai note/machine learning/2024/01/01/test_01-1.html",
     "_site/assets/post_images/Pasted image 20240101010307.png",
     "assets/post_images/Pasted image 20240101010307.png",
     "_site/assets/post_images/Pasted image 20240101010211.png",
     "assets/post_images/Pasted image 20240101010211.png",
-    "_site/assets/post_images/Pasted image 20240101010124.png",
-    "assets/post_images/Pasted image 20240101010124.png",
-    "_site/Pasted image 20240101010022.png",
-    "Pasted image 20240101010022.png",
-    "assets/Untitled.md",
-    "_site/assets/Untitled.md",
-    "_site/ai note/machine learning/2024/01/01/test_01.html",
-    "_posts/Project/App Project/2023-12-13-Mechu.md",
-    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
-    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
-    "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
-    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
-    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier.md",
-    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
-    "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
-    "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
-    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
-    "_posts/Project/etc Project/etc Project.md",
-    "_categories/Project/etc Project.md",
-    "_categories/Project/Web Project copy.md",
-    "_posts/Project/Hardware Project/Hardware Project.md",
-    "_posts/Project/App Project/App Project.md"
+    "assets/Untitled.md"
   ]
 }

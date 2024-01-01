@@ -31,6 +31,12 @@
             color: #003049;
             font-size: 2.2rem;
             margin-bottom: 10px;
+
+            -webkit-text-fill-color: rgba(0,0,0,0);
+            -webkit-box-decoration-break: clone;
+            background: linear-gradient(140deg, #D2A8FF 12.09%, #F778BA 42.58%, #FF7B72 84.96%);
+            -webkit-background-clip: text;
+            background-clip: text;
         }
         h2{
             text-align: center;
@@ -61,7 +67,8 @@
             justify-content: center;
             align-items: center;
         
-            margin-bottom: 3vh;
+            margin: 10px;
+            margin-bottom: 30px;
         
             border-radius: 20px;
         

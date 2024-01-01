@@ -1,6 +1,6 @@
 ---
 title: 5-Stage Pipelined Processor (RISC-V)
-thumbnail: https://github.com/radic2682/radic2682.github.io/assets/11177959/a9282af8-8e2e-4a0f-a95a-2e89324b9f36
+thumbnail: https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/5-Stage%20Pipelined%20Processor%20(RISC-V)/292766748-a9282af8-8e2e-4a0f-a95a-2e89324b9f36.png
 layout: post
 author: Sun Hong
 categories:
