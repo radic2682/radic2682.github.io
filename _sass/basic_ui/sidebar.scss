@@ -200,7 +200,13 @@
     }
 
 
-
+    #count {
+        .set_ele{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
 
 
     #user_panel {

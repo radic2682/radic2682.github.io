@@ -7,35 +7,43 @@
     <h2>These are the activities I've been working on so far.</h2>
   </div>
   <div class="main_content">
+    
     <div class="detail_content">
+
       <h3>Education</h3>
+
       <p>B.S. @Dankook University, School of Electronics and Electrical Engineering</p>
     </div>
+
     <div class="detail_content">
       <h3>Awards and Honors</h3>
-      <p>Sungkyunkwan University Engineering Innovation Center. Creative Comprehensive Design Competition (Nov. 2021)</p>
+
+      {% for activity in site.data.activities %}
+        {% if activity.classification == "Awards and Honors" %}
+          {% for n in activity.name %} <p>{{n}}</p> {% endfor %}
+        {% endif %}
+      {% endfor %}
     </div>
+
     <div class="detail_content">
       <h3>External activities</h3>
-      <p>College Student Code-it Coding Camp 5th (an Outstanding Activist)</p>
-      <p>Comento Course - Designing Semiconductor Circuits (CHIPs) with Eyes</p>
+
+      {% for activity in site.data.activities %}
+        {% if activity.classification == "External activities" %}
+          {% for n in activity.name %} <p>{{n}}</p> {% endfor %}
+        {% endif %}
+      {% endfor %}
     </div>
+
     <div class="detail_content">
       <h3>Taking a lecture</h3>
-      <p>IDEC_ Deep Learning Foundation and Design(Jul. 2022)</p>
-      <p>IDEC_ Verilog HDL Basic and Deep Learning Neural Network Design(Jul. 2022)</p>
-      <p>IDEC_ Embedded System Design Based on FPGA(Aug. 2022)</p>
-      <p>IDEC_ Embedded Memory (SRAM) Foundation(Jan. 2023)</p>
-      <p>IDEC_ Artificial Intelligence Acceleration Processor(Feb. 2023)</p>
-      <p>IDEC_ CUDA-based GPU programming foundation(Jul. 2023)</p>
-      <p>IDEC_ Layout Design for Full Custom IC Design(Jul. 2023)</p>
-      <p>Udemy_ 객체지향 프로그래밍 및 설계(Java)</p>
-      <p>Udemy_ Android 12 및 Kotlin 개발 완전 정복</p>
-      <p>Udemy_ Git & Github 실무 활용 완벽 가이드</p>
-      <p>Udemy_ The Web Developer 부트캠프 2023</p>
-      <p>Udemy_ High-Level Synthesis for FPGA, Part 1-Combinational Circuits</p>
-      <p>인프런_ 설계독학맛비's 실전 FPGA를 이용한 HW 가속기 설계</p>
-      <p>인프런_ 설계독학맛비's 실전 AI HW 설계를 위한 바이블, CNN 연산 완전정복</p>
+
+      {% for activity in site.data.activities %}
+        {% if activity.classification == "Taking a lecture" %}
+          {% for n in activity.name %} <p>{{n}}</p> {% endfor %}
+        {% endif %}
+      {% endfor %}
     </div>
+
   </div>
 </div>

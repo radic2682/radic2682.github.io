@@ -37,17 +37,12 @@
   "expandedSpaces": [
     "/",
     "//_posts/_posts/Ai Note",
-    "//_posts/_posts/Project",
     "//assets",
     "//_posts",
     "//_posts/_posts/Hardware Note",
     "//_posts/_posts/Tips",
     "//_posts/_posts/Study",
-    "//assets/assets/post_images",
-    "//_posts/_posts/Project/_posts/Project/Hardware Project",
-    "//_posts/_posts/Project/_posts/Project/Web Project",
-    "//_posts/_posts/Project/_posts/Project/etc Project",
-    "//_posts/_posts/Project/_posts/Project/App Project"
+    "//assets/assets/post_images"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
