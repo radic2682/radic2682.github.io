@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
+                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
+                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
+                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md"
+                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md"
               }
             }
           },
@@ -164,12 +164,12 @@
       "command-palette:명령어 팔레트 열기": false
     }
   },
-  "active": "b2939b8b32a3522c",
+  "active": "1bc6a8cd13f9f702",
   "lastOpenFiles": [
+    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
     "_site/Pasted image 20240103011548.png",
     "Pasted image 20240103011548.png",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
-    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_r8.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_r4.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_ㄱ8.html",
@@ -199,7 +199,6 @@
     "uploads/스크린샷 2024-01-01 232805.png",
     "uploads/스크린샷 2024-01-01 232154.png",
     "_categories/Tips/GitHub & Blog.md",
-    "_site/assets/post_images/Pasted image 20240101012942.png",
     "assets/post_images/post_images.md",
     "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
     "_posts/Project/Web Project/2023-12-13-github_Blog.md",
