@@ -36,13 +36,10 @@
   "deleteFileOption": "trash",
   "expandedSpaces": [
     "/",
-    "//_posts/_posts/Ai Note",
-    "//assets",
+    "//assets/assets/post_images",
     "//_posts",
-    "//_posts/_posts/Hardware Note",
-    "//_posts/_posts/Tips",
-    "//_posts/_posts/Study",
-    "//assets/assets/post_images"
+    "//_posts/_posts/Project",
+    "//_posts/_posts/Project/_posts/Project/Hardware Project"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
@@ -77,7 +74,8 @@
     "_posts/Project/etc Project",
     "assets/post_images",
     "assets/post_imagses",
-    "assets/post_images"
+    "assets/post_images",
+    "_posts/Study/Electron"
   ],
   "spacesUseAlias": false,
   "fmKeyAlias": "aliases",
