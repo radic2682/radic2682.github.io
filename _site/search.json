@@ -498,6 +498,16 @@
         "url"           : "/ai%20note/ai%20study%20note/2023/11/19/Fuzzy_01.html",
         "date"          : "2023-11-19 00:00:00 +0900",
         "excerpt"       : "퍼지 이론과 시스템"
+        } ,
+    
+        {
+        "title"         : "Kogge-Stone Adder using higher-valency Cell",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/kogge_stone/4.jpg",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "verilog, vivado",
+        "url"           : "/project/hardware%20project/2023/01/06/koggeStone.html",
+        "date"          : "2023-01-06 00:00:00 +0900",
+        "excerpt"       : "higher-valency Cell을 이용한 고성능 Kogge-Stone Adder 설계"
         } 
     
 ]

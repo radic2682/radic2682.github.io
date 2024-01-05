@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
+                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
+                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
+                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md"
+                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md"
               }
             }
           },
@@ -166,30 +166,34 @@
   },
   "active": "1bc6a8cd13f9f702",
   "lastOpenFiles": [
+    "_site/project/hardware project/2023/01/06/koggeStone.html",
+    "_site/project/hardware project/2023/01/06",
+    "_site/project/hardware project/2023/01",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
+    "_site/project/hardware project/2023/12/27/Booth_multiplier_r4-1.html",
+    "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
+    "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
+    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
+    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
+    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
+    "_posts/Project/App Project/2023-12-13-Mechu.md",
     "_site/Pasted image 20240103011548.png",
     "Pasted image 20240103011548.png",
-    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_r8.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_r4.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_ㄱ8.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_ㄱ8-1.html",
-    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
-    "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
     "_posts/Study/Electron/2024-01-02-Electron_01.md",
     "_posts/Study/Electron/2024-01-02-Electron_02.md",
     "_site/study/electron/2024/01/02/Electron_02.html",
     "_site/study/electron/2024/01/02/Electron_01-1.html",
     "_site/study/electron/2024/01/02/Electron_01.html",
-    "_site/study/electron/2024/01/02",
-    "_site/study/electron/2024/01",
-    "_site/study/electron/2024",
     "_posts/Study/GIT/GIT.md",
     "_posts/Study/Untitled.md",
     "_posts/Study/Electron/Electron.md",
     "_categories/Study/Electron.md",
     "_categories/Study/GIT copy.md",
-    "_posts/Project/App Project/2023-12-13-Mechu.md",
     "_site/uploads/스크린샷 2024-01-01 232913.png",
     "_site/uploads/스크린샷2024-01-01__232805.png",
     "_site/uploads/스크린샷 2024-01-01 232805.png",
@@ -205,11 +209,8 @@
     "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
     "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
     "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
-    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
-    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
     "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
     "_posts/Study/C & CPP/2023-11-26-combination.md",
-    "Paste.md",
-    "_site/Paste.md"
+    "Paste.md"
   ]
 }

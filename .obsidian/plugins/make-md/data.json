@@ -39,7 +39,8 @@
     "//assets/assets/post_images",
     "//_posts",
     "//_posts/_posts/Project",
-    "//_posts/_posts/Project/_posts/Project/Hardware Project"
+    "//_posts/_posts/Project/_posts/Project/Hardware Project",
+    "//_posts/_posts/Project/_posts/Project/App Project"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",
