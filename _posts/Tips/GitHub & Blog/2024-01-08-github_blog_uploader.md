@@ -74,7 +74,7 @@ pip install pyperclip
 
 ## 결과 사용
 
-![[Pasted image 20240108233936.png]]
+![](https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/919TI6zdZeywxonl1jvx.png)
 
 그러면 위와 같이 업로드가 완료되었다는 말이 뜨게 됩니다.
 이미지를 저장한 경로가 뜨며, <u>자동으로 복사</u>됩니다. ( 아무 곳에 붙여 넣으세요. )
