@@ -1,16 +1,6 @@
 [
     
         {
-        "title"         : "[Electron] 02. Main Process",
-        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/electron_02/electron_02.png",
-        "category"      : "Study > Electron",
-        "tags"          : "",
-        "url"           : "/study/electron/2024/01/02/Electron_02.html",
-        "date"          : "2024-01-02 00:00:00 +0900",
-        "excerpt"       : "---"
-        } ,
-    
-        {
         "title"         : "[Electron] 01. 기본 설정",
         "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/electron_01/electron.png",
         "category"      : "Study > Electron",

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+                "file": "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+                "file": "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+                "file": "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md"
+                "file": "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md"
               }
             }
           },
@@ -166,12 +166,18 @@
   },
   "active": "1bc6a8cd13f9f702",
   "lastOpenFiles": [
+    "Pasted image 20240108233936.png",
+    "Pasted image 20240108233657.png",
+    "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
+    "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
+    "_posts/Study/Electron/2024-01-02-Electron_01.md",
+    "_posts/Study/Electron/2024-01-02-Electron_02.md",
+    "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
     "_site/project/hardware project/2023/01/06/koggeStone.html",
     "_site/project/hardware project/2023/01/06",
     "_site/project/hardware project/2023/01",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_r4-1.html",
-    "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
     "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
     "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
     "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
@@ -184,11 +190,8 @@
     "_site/project/hardware project/2023/12/27/Booth_multiplier_r4.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_ㄱ8.html",
     "_site/project/hardware project/2023/12/27/Booth_multiplier_ㄱ8-1.html",
-    "_posts/Study/Electron/2024-01-02-Electron_01.md",
-    "_posts/Study/Electron/2024-01-02-Electron_02.md",
     "_site/study/electron/2024/01/02/Electron_02.html",
     "_site/study/electron/2024/01/02/Electron_01-1.html",
-    "_site/study/electron/2024/01/02/Electron_01.html",
     "_posts/Study/GIT/GIT.md",
     "_posts/Study/Untitled.md",
     "_posts/Study/Electron/Electron.md",
@@ -201,7 +204,6 @@
     "uploads/스크린샷2024-01-01__232805.png",
     "uploads/스크린샷 2024-01-01 232913.png",
     "uploads/스크린샷 2024-01-01 232805.png",
-    "uploads/스크린샷 2024-01-01 232154.png",
     "_categories/Tips/GitHub & Blog.md",
     "assets/post_images/post_images.md",
     "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
@@ -209,8 +211,6 @@
     "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
     "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
     "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
-    "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
-    "_posts/Study/C & CPP/2023-11-26-combination.md",
-    "Paste.md"
+    "_posts/Study/C & CPP/2023-11-26-combination.md"
   ]
 }
