@@ -18,6 +18,8 @@ sticker: emoji//1f4aa
 자세한 설명은 Radix-4에 있습니다.
 (설계 방법이 크게 다르지 않습니다.)
 
+[Radix-4 설명 보러가기](https://radic2682.github.io/project/hardware%20project/2023/12/27/Booth_multiplier_r4.html)
+
 코드는 깃허브에서 보실 수 있습니다.
 
 [깃허브에서 보기](https://github.com/radic2682/radix-8_Booth_Multiplier.git)

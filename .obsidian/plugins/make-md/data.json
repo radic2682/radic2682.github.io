@@ -39,8 +39,9 @@
     "//assets/assets/post_images",
     "//_posts/_posts/Study/_posts/Study/Electron",
     "//_posts",
-    "//_posts/_posts/Tips",
-    "//_posts/_posts/Tips/_posts/Tips/GitHub & Blog"
+    "//_posts/_posts/Hardware Note/_posts/Hardware Note/HW study Note",
+    "//_posts/_posts/Project",
+    "//_posts/_posts/Project/_posts/Project/Hardware Project"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",

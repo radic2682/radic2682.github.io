@@ -14,7 +14,7 @@
   gtag('config', 'G-XNNPBKM8PX');
 </script>
 
-<title>[Git] 3. Commit 추가 사항들</title>
+<title>깃허브 블로그 이미지 업로드 프로그램 [ GitHub As a CDN ]</title>
 
 <!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
@@ -44,6 +44,31 @@
 
 
 <!-- Math -->
+
+	<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+      }
+    });
+    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+        alert("Math Processing Error: "+message[1]);
+    });
+    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+        alert("Math Processing Error: "+message[1]);
+    });
+</script>
+
+<script type="text/javascript" async
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 
 <meta property="og:image" content="https://github.com/radic2682/radic2682.github.io/assets/11177959/c461f83d-b4bc-4998-badd-cfc7d5945817">
@@ -1256,25 +1281,37 @@
             
                 
                     
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
                         
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
-                
                     
                 
                     
@@ -1286,8 +1323,8 @@
                     
                         
 
-                        <div class="postpage_category_v" style="background-color: #E4EEDE;">
-                            <p><a href="/category/Study/GIT/">GIT</a></p>
+                        <div class="postpage_category_v" style="background-color: #BEE8E8;">
+                            <p><a href="/category/Tips/GitHub%20&%20Blog/">GitHub & Blog</a></p>
                         </div>
 
                         
@@ -1300,78 +1337,93 @@
                     
                 
             
-                
-                    
-                
-                    
-                
-            
-                
-                    
-                
-                    
-                
-            
 
-            <h1>[Git] 3. Commit 추가 사항들</h1>
+            <h1>깃허브 블로그 이미지 업로드 프로그램 [ GitHub As a CDN ]</h1>
 
             <div class="mini_box_wAd">
                 <div class="mini_box_writer">
                     <img width="96" height="96" src="https://img.icons8.com/color/96/user-typing-using-typewriter.png" alt="user-typing-using-typewriter"/>
                     <p>Sun Hong</p>	
                 </div>
-                <p class="date">2023년 11월 27일</p>
+                <p class="date">2024년 01월 08일</p>
             </div>
         </div>
 
         <div id="body">
 
             <div class="article">
-                <p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/cf3c852d-ffd5-4718-9e91-08068377b8e6" alt="image" /></p>
+                <p>제가 직접 제작한 프로그램으로 <code class="language-plaintext highlighter-rouge">Python</code>을 사용합니다.</p>
 
-<h1 id="1-atomic-commits">1. Atomic Commits</h1>
+<p>먼저, 아래의 게시물로 가서 <code class="language-plaintext highlighter-rouge">GitHub As a CDN</code>가 설정된 상태여야 합니다.</p>
 
-<p><code class="language-plaintext highlighter-rouge">Atomic Commits</code>은 소프트웨어 개발에서 사용되는 개념으로, <u>한 번의 커밋에서 하나의 독립적인 변경 사항만을 포함</u>하는 것을 의미합니다. “Atomic”은 원자적인 변경이라는 뜻이며, 이는 커밋이 마치 하나의 원자처럼 분할할 수 없는 단위로 간주되어야 함을 나타냅니다.</p>
+<p><a href="https://radic2682.github.io/tips/github%20&amp;%20blog/2024/01/01/github_blog_cdn.html">게시물</a></p>
+
+<h1 id="1-모듈-설치">1. 모듈 설치</h1>
+<p>Python에서 사용하는 모듈은 아래와 같습니다. 터미널에 입력해서 설치해주세요.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip install requests
+pip install Pillow
+pip install pyperclip
+</code></pre></div></div>
+
+<h1 id="2-프로그램-다운로드-및-기본-설정">2. 프로그램 다운로드 및 기본 설정</h1>
+<p>아래 Github 링크로 가서 <code class="language-plaintext highlighter-rouge">main.py</code>를 받아줍니다.</p>
+
+<p><a href="https://github.com/radic2682/github_img_uploader_python.git">다운로드</a></p>
+
+<h2 id="json-파일-생성">json 파일 생성</h2>
+<p><code class="language-plaintext highlighter-rouge">main.py</code> 파일을 파이썬 실행 환경에서 실행해줍니다.<br />
+그러면 아래와 같은 문구가 나오고 <code class="language-plaintext highlighter-rouge">main.py</code>가 있는 폴더에 <code class="language-plaintext highlighter-rouge">personal_data.json</code>파일이 생성됩니다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/MNZX0gaJuDOrrCtkw1Ds.png" alt="이미지" /></p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/ePa2gaz9FberFxP7ouQ9.png" alt="이미지" /></p>
+
+<h2 id="json-파일-수정">json 파일 수정</h2>
+<p><code class="language-plaintext highlighter-rouge">personal_data.json</code>파일 내부<br />
+<img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/MZFpbHOIGL70xyR8L42l.png" alt="이미지" /></p>
+
+<p><code class="language-plaintext highlighter-rouge">github_user_name</code> : 깃허브 닉네임<br />
+<code class="language-plaintext highlighter-rouge">github_token</code> : 깃허브에서 발급한 토큰 ( 구글에 깃허브 토큰을 검색하시면 방법이 나옵니다.)<br />
+<code class="language-plaintext highlighter-rouge">gaac_repo_name</code> : 사진을 업로드 하고 싶은 repository로 <u>GitHub As a CDN에서 선택한 repository로 반드시 해야 합니다.</u></p>
+
+<h1 id="3-사용-방법">3. 사용 방법</h1>
+<p>위에서 설정을 마쳤으면, 사용할 준비가 되었습니다~</p>
+
+<p><code class="language-plaintext highlighter-rouge">main.py</code> 파일을 파이썬 실행 환경에서 다시 실행해줍니다.</p>
+
+<h2 id="폴더-선택">폴더 선택</h2>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/DFcpeC2zldPwOysMIG7t.png" alt="이미지" /></p>
+
+<p>위와 같이 지정한 repository의 폴더를 전부 보여주는데, 원하는 폴더를 <code class="language-plaintext highlighter-rouge">숫자</code>로 선택해줍니다.</p>
+
+<h2 id="업로드">업로드</h2>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/CKpKUrAkVXNjnY2R0x6T.png" alt="이미지" /></p>
+
+<p>그러면 위와 같이 나오게 됩니다.</p>
+
+<p>두 가지 사용 방법이 있습니다.</p>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">가독성 향상</code>: 각 커밋이 한 가지 변경 사항만을 포함하면 코드 변화를 추적하고 이해하기 쉽습니다. 이는 팀원들이나 나중에 코드를 검토하거나 유지보수할 때 도움이 됩니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">롤백 용이성</code>: 하나의 원자적인 변경 사항이 실패하면 해당 변경 사항만 롤백할 수 있습니다. 전체 커밋이 실패하는 경우보다 문제 해결이 빠릅니다.</li>
-  <li><code class="language-plaintext highlighter-rouge">협업의 편의성</code>: 여러 명의 개발자가 협업할 때, Atomic Commits를 사용하면 각자의 작업을 조율하고 통합하는 데 도움이 됩니다.</li>
+  <li>스크린샷을 찍고 Enter!</li>
+  <li>원하는 파일을 Crtl + C한 후 Enter!</li>
 </ul>
 
-<h1 id="2-commit-message">2. Commit Message</h1>
+<p>원하는 이미지를 복사한 경우, 여러 개를 한번에 올리는 기능도 지원합니다.</p>
 
-<p>Git Docs에 따르면 <u>현재시제의 메세지를 쓸 것을 권장</u>합니다. (명령어를 사용하여 do, make, create ..)<br />
--&gt; <u>오래된 관례로 꼭 따르지 않아도 됨</u>.<br />
--&gt; 자신에게 주어진 환경에 맞게 사용 (회사에서는 회사 내규에 따라…)</p>
+<h2 id="결과-사용">결과 사용</h2>
 
-<h1 id="3-git-log">3. Git Log</h1>
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/919TI6zdZeywxonl1jvx.png" alt="" /></p>
 
-<p><code class="language-plaintext highlighter-rouge">&gt;git log</code></p>
+<p>그러면 위와 같이 업로드가 완료되었다는 말이 뜨게 됩니다.<br />
+이미지를 저장한 경로가 뜨며, <u>자동으로 복사</u>됩니다. ( 아무 곳에 붙여 넣으세요. )</p>
 
-<p><code class="language-plaintext highlighter-rouge">&gt;git log --oneline</code><br />
-log를 한 줄로 깔끔하게 보여줌</p>
+<p>=&gt; 이때, 복사된 경로는 마크다운 형식으로 복사되어 바로 붙여넣으면 됩니다 :)</p>
 
-<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/3af39331-145d-4e42-8b49-348810dd82de" alt="image" /></p>
+<p>=&gt; 결과가 뜨고 대기 상태가 되어, 계속해서 이미지를 업로드 할 수 있습니다~^^</p>
 
-<h1 id="4-amend-실수-수정">4. –amend 실수 수정</h1>
-
-<p><code class="language-plaintext highlighter-rouge">git commit --amend</code><br />
-바로 직전의 commit을 수정할 수 있음<br />
-(<u>수정 사항을 stage에 올리고 위 명령어를 입력하면 적용</u>)</p>
-
-<h1 id="5-파일-무시하기">5. 파일 무시하기</h1>
-
-<p>일부 공개되기 싫거나 숨기고 싶은 파일을 깃으로 추적하지 않도록 설정하는 것<br />
-(ex. 보안키, 언어의 라이브러리 파일들, OS 전용 파일, …)</p>
-
-<p>repository안에 <code class="language-plaintext highlighter-rouge">.gitignore</code> 파일을 만들어 추적하고 싶지 않은 목록을 만들어서 사용</p>
-
-<p><img src="https://github.com/radic2682/radic2682.github.io/assets/11177959/5a2f965f-7e40-4504-ac8a-583ca0facaca" alt="image" /></p>
-
-<p>아래 사이트에서 무시할 파일에 대한 리스트를 얻을 수 있습니다.</p>
-
-<p><a href="https://www.toptal.com/developers/gitignore">gitignore.io</a></p>
 
             </div>
             <td></td>
