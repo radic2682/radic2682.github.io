@@ -14,7 +14,7 @@ tags:
   - Jekyll
   - SASS
 excerpt: GitHub와 Jekyll을 이용한 블로그 (스킨 사용X)
-project_rank: "150"
+project_rank: "190"
 sticker: emoji//1f636-200d-1f32b-fe0f
 ---
 ![image](https://github.com/radic2682/radic2682.github.io/assets/11177959/4cdc557d-b2e3-469c-96d6-6624a9bf1e04)

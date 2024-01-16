@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md"
+                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md"
               }
             }
           },
@@ -166,10 +166,13 @@
   },
   "active": "1bc6a8cd13f9f702",
   "lastOpenFiles": [
+    "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
+    "_posts/Project/etc Project/2023-12-13-dc_control.md",
+    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
+    "_posts/Project/App Project/2023-12-13-Mechu.md",
+    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
     "_site/project/etc project/2023/12/13/differential_amplifier.html",
     "_site/project/etc project/2023/12/13/dc_control-1.html",
-    "_posts/Project/etc Project/2023-12-13-dc_control.md",
-    "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
     "_site/Pasted image 20240117030602.png",
     "Pasted image 20240117030602.png",
     "_site/Pasted image 20240117025853.png",
@@ -180,7 +183,6 @@
     "Pasted image 20240117025507.png",
     "Pasted image 20240108233936.png",
     "_site/project/etc project/2023/12/13/dc_control.html",
-    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
     "_site/project/etc project/2023/12/13/control.html",
     "_site/project/etc project/2023/12/13/Generation_and_Transmission_Planning-1.html",
     "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
@@ -196,7 +198,6 @@
     "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
     "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
-    "_site/tips/github & blog/2024/01/08/github_blog_uploader.html",
     "_site/Pasted image 20240108233936.png",
     "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
     "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
@@ -204,7 +205,6 @@
     "_posts/Study/Electron/2024-01-02-Electron_02.md",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
     "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
-    "_posts/Project/App Project/2023-12-13-Mechu.md",
     "_posts/Study/GIT/GIT.md",
     "_posts/Study/Untitled.md",
     "_posts/Study/Electron/Electron.md",

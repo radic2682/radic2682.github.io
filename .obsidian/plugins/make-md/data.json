@@ -41,7 +41,9 @@
     "//_posts",
     "//_posts/_posts/Hardware Note/_posts/Hardware Note/HW study Note",
     "//_posts/_posts/Project",
-    "//_posts/_posts/Project/_posts/Project/etc Project"
+    "//_posts/_posts/Project/_posts/Project/etc Project",
+    "//_posts/_posts/Project/_posts/Project/App Project",
+    "//_posts/_posts/Project/_posts/Project/Web Project"
   ],
   "expandFolderOnClick": true,
   "menuTriggerChar": "/",

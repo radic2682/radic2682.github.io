@@ -9,7 +9,7 @@ categories:
 tags:
   - matlab
 excerpt: 서보 모터를 안정화시키기 위한 PID 제어기 설계
-project_rank: "100"
+project_rank: "150"
 sticker: emoji//1f9b4
 ---
 # 1. 설계 주제
