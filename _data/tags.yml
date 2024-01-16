@@ -18,6 +18,10 @@
   img:      <img width="48" height="48" src="https://img.icons8.com/color/48/kotlin.png" alt="kotlin"/>
   category: Language
 
+- name:     matlab
+  img:      <img width="96" height="96" src="https://img.icons8.com/fluency/96/matlab.png" alt="matlab"/>
+  category: Language
+
 
 
 - name:     firebase
@@ -66,6 +70,16 @@
 - name:     oscilloscope
   img:      <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-oscilloscope-engineering-flaticons-lineal-color-flat-icons-2.png" alt="external-oscilloscope-engineering-flaticons-lineal-color-flat-icons-2"/>
   category: Hardware
+
+- name:     arduino
+  img:      <img width="96" height="96" src="https://img.icons8.com/color/96/arduino.png" alt="arduino"/>
+  category: Hardware
+
+- name:     circuit
+  img:      <img width="96" height="96" src="https://img.icons8.com/color/96/circuit.png" alt="circuit"/>
+  category: Hardware
+
+
 
 
 

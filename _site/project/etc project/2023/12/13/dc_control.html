@@ -1,0 +1,1643 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNPBKM8PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNNPBKM8PX');
+</script>
+
+<title>DC 모터의 위치 제어기 설계</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Dancing+Script:wght@400;500;600;700&family=Dongle:wght@300;400;700&family=Gugi&family=Karla:wght@200;300;400;500;600;700;800&family=Katibeh&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XNNPBKM8PX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XNNPBKM8PX');
+</script>
+
+
+<!-- Naver Search Adviser -->
+<meta name="naver-site-verification" content="13447803628be075605281680bfa7ae08734c2b3" />
+
+
+<!-- Math -->
+
+
+<meta property="og:image" content="https://github.com/radic2682/radic2682.github.io/assets/11177959/c461f83d-b4bc-4998-badd-cfc7d5945817">
+<meta property="og:title" content="traumhaft">
+<meta property="og:description" content="Sun Hong의 개인 블로그 - 방가방가">
+
+  </head>
+
+  <body>
+
+    <div id="sidebar">
+      <div class="menu_close_btn">
+    <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/x.png" alt="x" onclick="menu_close_click()"/>
+</div>
+
+<div class="profile">
+    <div class="profile_pic">
+        <img src="/assets/images/me.png" alt="It's me">
+    </div>
+    <p>Sun Hong</p>
+</div>
+
+
+
+<div class="contact sidebar_box">
+    <h1>Contact Me</h1>
+    <div class="mail contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/fluency/96/mail--v1.png" alt="mail--v1"/>
+        <a href="matilto:32182479@dankook.ac.kr">32182479@dankook.ac.kr</a>
+    </div>
+    <div class="linkedin contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/linkedin.png" alt="linkedin"/>	
+        <a href="https://www.linkedin.com/in/sunhong-an/">Linked In</a>
+    </div>
+    <div class="notion contact_box">
+        <img width="64" height="64" src="https://img.icons8.com/cute-clipart/64/notion.png" alt="notion"/>	
+        <a href="https://www.notion.so/Sun-Hong-78ee5a443bfd49aab679d33f8c0697ef?pvs=4/">Portfolio</a>
+    </div>
+    <div class="github contact_box">
+        <img width="96" height="96" src="https://img.icons8.com/color/96/github.png" alt="github"/>
+        <a href="https://github.com/radic2682">Github</a>
+    </div>
+</div>
+
+
+<div id="category" class="sidebar_box">
+    <h1>Category<span class="count">54</span></h1>
+    <ul class="menu_list">
+        
+    
+        
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+                
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="96" height="96" src="https://img.icons8.com/external-goofy-color-kerismaker/96/external-Project-graphic-design-goofy-color-kerismaker.png" alt="external-Project-graphic-design-goofy-color-kerismaker"/>
+                    <a href="/category/Project/">Project</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="64" height="64" src="https://img.icons8.com/wired/64/processor.png" alt="processor"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/Hardware Project/" class="">Hardware Project<span class="count_m">11</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/iphone14-pro.png" alt="iphone14-pro"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/App Project/" class="">App Project<span class="count_m">1</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="100" height="100" src="https://img.icons8.com/ios/100/web.png" alt="web"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/Web Project/" class="">Web Project<span class="count_m">1</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="96" height="96" src="https://img.icons8.com/windows/96/artificial-intelligence.png" alt="artificial-intelligence"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/Ai Project/" class="">Ai Project<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="64" height="64" src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/64/external-more-multimedia-kiranshastry-lineal-kiranshastry.png" alt="external-more-multimedia-kiranshastry-lineal-kiranshastry"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Project/etc Project/" class="">etc Project<span class="count_m">3</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="53" height="53" src="https://img.icons8.com/external-vectorslab-outline-color-vectorslab/53/external-brain-processor-machine-learning-vectorslab-outline-color-vectorslab.png" alt="external-brain-processor-machine-learning-vectorslab-outline-color-vectorslab"/>
+                    <a href="/category/Ai%20Note/">Ai Note</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="68" height="68" src="https://img.icons8.com/external-smashingstocks-mixed-smashing-stocks/68/external-deep-learning-science-smashingstocks-mixed-smashing-stocks.png" alt="external-deep-learning-science-smashingstocks-mixed-smashing-stocks"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Deep Learning/" class="">Deep Learning<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/machine-learning.png" alt="machine-learning"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Machine Learning/" class="">Machine Learning<span class="count_m">1</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                        <img width="80" height="80" src="https://img.icons8.com/dotty/80/note.png" alt="note"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Ai%20Note/Ai Study Note/" class="">Ai Study Note<span class="count_m">12</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="64" height="64" src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/external-hardware-technology-ecommerce-flaticons-lineal-color-flat-icons.png" alt="external-hardware-technology-ecommerce-flaticons-lineal-color-flat-icons"/>
+                    <a href="/category/Hardware%20Note/">Hardware Note</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/goodnotes.png" alt="goodnotes"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Hardware%20Note/HW Study Note/" class="">HW Study Note<span class="count_m">8</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="64" height="64" src="https://img.icons8.com/dusk/64/saving-book.png" alt="saving-book"/>
+                    <a href="/category/Study/">Study</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="48" height="48" src="https://img.icons8.com/badges/48/c-plus-plus-logo.png" alt="c-plus-plus-logo"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/C & CPP/" class="">C & CPP<span class="count_m">4</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/genealogy.png" alt="genealogy"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/Algorithm/" class="">Algorithm<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="50" height="50" src="https://img.icons8.com/ios/50/git.png" alt="git"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/GIT/" class="">GIT<span class="count_m">10</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="64" height="64" src="https://img.icons8.com/external-creatype-outline-colourcreatype/64/external-electron-science-education-outline-creatype-outline-colourcreatype.png" alt="external-electron-science-education-outline-creatype-outline-colourcreatype"/>
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Study/Electron/" class="">Electron<span class="count_m">1</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+
+            
+    
+    
+            
+    
+            
+    
+            <div class="cat_box">
+                <li class="cat_title">
+                    <img width="64" height="64" src="https://img.icons8.com/external-flatart-icons-lineal-color-flatarticons/64/external-idea-user-interface-flatart-icons-lineal-color-flatarticons.png" alt="external-idea-user-interface-flatart-icons-lineal-color-flatarticons"/>
+                    <a href="/category/Tips/">Tips</a>
+                </li>
+        
+                
+                    <ul class="cat_part">
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="96" height="96" src="https://img.icons8.com/windows/96/maintenance.png" alt="maintenance"/>
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Tips/Tools/" class="">Tools<span class="count_m">0</span></a>
+                            </li>
+                        
+    
+                            
+    
+                            
+    
+                            <li>
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                
+                                    
+                                        <img width="100" height="100" src="https://img.icons8.com/ios/100/blog.png" alt="blog"/>
+                                    
+                                
+                                    
+                                
+    
+                                
+                                
+    
+                                <a href="/category/Tips/GitHub & Blog/" class="">GitHub & Blog<span class="count_m">2</span></a>
+                            </li>
+                        
+                    </ul>
+                
+            </div>
+    
+        
+    </ul>
+</div>
+
+
+
+
+
+
+
+
+
+<div id="user_panel" class="sidebar_box">
+    <h1>User Panel</h1>
+    <div class="set_ele">
+        <a href="/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/home.png" alt="home"/>
+        </a>
+        <a href="/visiting/">
+            <img src="/assets/images/logo_dragon_64x64.png" alt="Dragon">
+        </a>
+        <a href="/search/">
+            <img width="40" height="40" src="https://img.icons8.com/office/40/search--v1.png" alt="search--v1"/>
+        </a>
+    </div>
+</div>
+
+
+<div id="control_panel" class="sidebar_box">
+    <h1>Control Panel</h1>
+    <div class="set_ele">
+        <a href="https://gaac.vercel.app/">
+            <img width="96" height="96" src="https://gaac.vercel.app/assets/images/mascot.png" alt="image--v1"/>
+        </a>
+        <a href="https://analytics.google.com/analytics/">
+            <img width="96" height="96" src="https://img.icons8.com/fluency/96/analytics--v1.png" alt="analytics--v1"/>
+        </a>
+        <a href="https://search.google.com/u/2/search-console?resource_id=https%3A%2F%2Fradic2682.github.io%2F">
+            <img width="64" height="64" src="https://img.icons8.com/external-bearicons-outline-color-bearicons/64/external-Search-website-bearicons-outline-color-bearicons.png" alt="external-Search-website-bearicons-outline-color-bearicons"/>
+        </a>
+        <a href="https://searchadvisor.naver.com/console/board">
+            <img width="64" height="64" src="https://img.icons8.com/external-wanicon-two-tone-wanicon/64/external-search-seo-and-web-wanicon-two-tone-wanicon.png" alt="external-search-seo-and-web-wanicon-two-tone-wanicon"/>
+        </a>
+    </div>
+</div>
+
+<!-- <div id="count" class="sidebar_box">
+    <h1>Count</h1>
+    <div class="set_ele">
+        <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fradic2682.github.io&count_bg=%2391B0DD&title_bg=%2318253A&icon=&icon_color=%23580000&title=hits&edge_flat=false"/></a>
+    </div>
+</div> -->
+
+
+<button id="sidebar_on_off_btn">
+    <img width="64" height="64" src="/assets/images/icon_menu.png" alt="menu" onclick="menu_tag_click()"/>
+</button>
+
+
+    </div>
+
+    <div class="all_wrapper">
+      <div id="sidebar_area"></div>
+
+      <div id="content_area">
+
+        <div id="content_area_wrapper">
+
+          <div id="top_area">
+            <div id="scoll_bar"></div>
+            <div id="top_nav_bar">
+              <a href="/"><img src="/assets/images/logoB.png" alt="Home" class="logo"></a>
+              <a href="/search/"><img id="top_search" src="/assets/images/icon_search_l.png" alt="Search"></a>
+            </div>
+          </div>
+  
+          <div id="content"> <div id="post_page">
+    <div class="backg"></div>
+    <div class="catShelter">
+        <div class="window">
+            <img class="castle" src="/assets/images/castle.png" alt="castle">
+            <div class="kitty">
+                <div class="ear"></div>
+            </div>
+            <div class="moon"></div>
+            <div class="star"></div>
+        </div>
+    </div>
+
+    <div class="post_wapper">
+        <div id="head">
+
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                        
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                        
+
+                        <div class="postpage_category_v" style="background-color: #F1E0F4;">
+                            <p><a href="/category/Project/etc%20Project/">etc Project</a></p>
+                        </div>
+
+                        
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+
+            <h1>DC 모터의 위치 제어기 설계</h1>
+
+            <div class="mini_box_wAd">
+                <div class="mini_box_writer">
+                    <img width="96" height="96" src="https://img.icons8.com/color/96/user-typing-using-typewriter.png" alt="user-typing-using-typewriter"/>
+                    <p>Sun Hong</p>	
+                </div>
+                <p class="date">2023년 12월 13일</p>
+            </div>
+        </div>
+
+        <div id="body">
+
+            <div class="article">
+                <h1 id="1-설계-주제">1. 설계 주제</h1>
+<p>DC 모터의 위치 제어기 설계</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/image01.png" alt="" /></p>
+
+<center>그림 1. 서보모터 전달함수 모델</center>
+
+<p>위 그림 1은 설계에 사용할 서보모터의 전달함수 모델이다. 여기서 <code class="language-plaintext highlighter-rouge">am</code>은 600, <code class="language-plaintext highlighter-rouge">bm</code>은 30이다. <code class="language-plaintext highlighter-rouge">Ω0</code>는 모터의 속도이며 이 모터의 속도에 적분기가 붙어 최종적으로 모터의 위치 <code class="language-plaintext highlighter-rouge">θ0</code>가 출력되는 시스템이다. 이 시스템에 제어기를 붙여 제어한다.</p>
+
+<h1 id="2-설계-제한-요소">2. 설계 제한 요소</h1>
+
+<p>1) 경제적 제한 조건: 모터에 인가되는 증폭기의 용량을 가능한 적게 하여 비용을 낮게 한다. (K값을 가능한 적게)</p>
+
+<p>2) 생산성과 내구성: 가능한 빠른 시간 내에 목표치(스텝 입력)에 도달하도록 해야 한다. 또한, 모터를 가능한 오래 사용할 수 있는 제어기를 설계해야 한다. (ocillation은 가능한 적게, 즉, settling time이 적게)</p>
+
+<p>3) 폐루프의 dominant pole의 damping ratio는 0.4~0.7사이의 값이어야 하며, settling time은 1/30sec보다 작아야 한다.</p>
+
+<p>4) 가능한 phase margin(최소한 40도 이상)이 커야 한다.</p>
+
+<p>5) 경제적 제한 요소와 생산성과 내구성이 서로 갈등 관계이면 각각의 비용을 가정(가정한 이유를 설명)하고 이에 비용을 최소화할 수 있도록 한다.</p>
+
+<h1 id="3-설계-과정">3. 설계 과정</h1>
+
+<h2 id="1-제어기-결정">1) 제어기 결정</h2>
+<p>현재 주어진 plant의 전달함수는 다음과 같이 쓸 수 있다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/JAiJqmvCpsv8BBOheURl.png" alt="이미지" /></p>
+
+<center>그림 2. 서보모터 전달함수</center>
+
+<p>분모의 차수는 2차인데, 만약 PI 적분기나, PID 적분기를 추가하게 된다는 분모의 차수는 3차를 넘어간다. 이렇게 설계를 하면 3차 이상인 시스템을 2차로 근사를 하여 파라미터를 구해야 한다. 그렇기에 설계의 편의성을 위해 PD 제어로 제어하는 것을 선택하게 됐다. 또한, PD 제어기를 사용하여 제어함으로써 시스템의 안정도를 개선하고 좋은 동적 응답(과도 응답 속도가 증가하고, 오버슈트가 줄어듦)의 효과를 얻을 수 있다.</p>
+
+<p>아래는 PD 제어기를 포함한 시스템 모델을 나타내었다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/uYxxgGYsRlb9lMqQh4kd.png" alt="이미지" /></p>
+
+<center>그림 3. 시스템 모델</center>
+
+<h2 id="2-파라미터-설정">2) 파라미터 설정</h2>
+
+<h3 id="damping-factor">damping factor</h3>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/UjvBPlPYOrJUNKB26TDD.png" alt="이미지" /></p>
+
+<h3 id="ωn">ωn</h3>
+<p><code class="language-plaintext highlighter-rouge">ωn</code>은 주어진 settling time으로부터 구할 수 있다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/bnfYLa6T6KJNx5H7FJxH.png" alt="이미지" /></p>
+
+<p>정리하면 <code class="language-plaintext highlighter-rouge">ωn</code>은 <code class="language-plaintext highlighter-rouge">ξ</code>에 대한 식으로 정리를 할 수 있다. 즉,<code class="language-plaintext highlighter-rouge">ξ</code>를 정하면 <code class="language-plaintext highlighter-rouge">ωn</code>도 정해진다.</p>
+
+<h3 id="po">P.O.</h3>
+<p>P.O.는 <code class="language-plaintext highlighter-rouge">ξ</code>에 대해 나타낼 수 있으며, <code class="language-plaintext highlighter-rouge">ξ</code>를 대입했을 때 다음과 같은 범위로 주어진다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/PZSsDdDItSvaoB5ZdZSq.png" alt="이미지" /></p>
+
+<h3 id="kp-kd">Kp, Kd</h3>
+<p>Kp와 Kd는 2차 시스템의 식을 정리함으로써 구할 수 있다. 위 그림3의 시스템을 정리해보면 다음과 같다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/B5tDCffeAEzXZ9O1amcn.png" alt="이미지" /></p>
+
+<p>Kd는 <code class="language-plaintext highlighter-rouge">ξ</code>, <code class="language-plaintext highlighter-rouge">ωn</code>에 대해서 나타낼 수 있으며, Kp는 <code class="language-plaintext highlighter-rouge">ωn</code>에 대해서 나타낼 수 있다.</p>
+
+<p>위 파라미터들은 <code class="language-plaintext highlighter-rouge">ξ</code>를 결정함으로써 전부 결정할 수 있다는 것을 알 수 있었다. 아래 그림 4는 <code class="language-plaintext highlighter-rouge">ξ</code>를 변화시켰을 때, 각 파라미터의 범위를 엑셀을 이용하여 구한 것이다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/1exenIvnOskzJhQnPIJe.png" alt="이미지" /></p>
+
+<center>그림 4. 파라미터의 범위</center>
+
+<p>여기서 Kp/Kd는 Kp 범위를 Kd 범위로 나눠줌으로써 구할 수 있다.</p>
+
+<h2 id="3-root-locus을-이용한-이득-구하기">3) Root Locus을 이용한 이득 구하기</h2>
+
+<p>Root locus는 어떤 시스템의 파라미터가 변화할 때 이에 따라 반응하는 시스템의 pole 위치 변화를 그래프 형태로 묘사한 것을 말한다. 여기서 파라미터는 K 이득을 말한다. 2차 시스템에서 이득은 Kd와 Kp 2개가 존재하기에 하나의 값은 고정을 해야 한다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">ξ</code>를 임의로 설정하고, Kp/Kd를 임의로 설정하여 Root locus에서 만족하는 점을 찾으면 시스템의 Kd 이득을 찾을 수 있다. Root locus로 Kp를 찾는 것이 아닌 Kd를 찾는 이유는 그림 5의 정리된 식을 보면 알 수 있다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/KA8oIqIrBdXsiAIHhoT2.png" alt="이미지" /></p>
+
+<center>그림 5. 시스템의 closed loop 전달함수</center>
+
+<p>Root locus를 이용할 때, 구하려는 이득을 앞으로 빼는데, 위 그림 5를 보면 Kd를 분수 밖으로 뺄 수 있기에 Kd의 이득을 먼저 찾기로 한다. 물론 Kp/Kd와 Kd가 결정되면 Kp도 자동으로 얻을 수 있다.</p>
+
+<p>우선 Damping Factor가 0.55일 때, Kp/Kd를 그림 4의 범위 226.682보다 큰 230으로 설정하여 시뮬레이션을 하였다. 그 결과는 그림 6과 같다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/xZUUg6gNwX1yC7LJE6eS.png" alt="이미지" /></p>
+
+<center>그림 6. Damping Factor= 0.55, Kp/Kd= 230의 근궤적</center>
+
+<p>Root locus 그림에서 설정한 damping factor = 0.55의 값의 점을 찾으면 이득을 알 수 있다. 이때의 이득은 0.354이고 이는 Kd의 이득이다. 이때, P.O.가 다음을 만족함을 알 수 있다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/UheMQ5odGDm8lYJJEcpQ.png" alt="이미지" /></p>
+
+<h2 id="4-조건에-맞는지-확인하기">4) 조건에 맞는지 확인하기</h2>
+
+<p>위 3)에서 구한 Kd를 넣고 bode plot과 step 입력에 대한 출력을 구한다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/170cWklMycvd2S72Wtdz.png" alt="이미지" /></p>
+
+<center>그림 7. Damping Factor= 0.55, Kp/Kd= 230의 bode plot, step입력에 대한 출력</center>
+
+<p>그림 7을 보면 초기에 설정한 settling time 0.033333에 간신히 들어온 것을 알 수 있었고 phase margin이 40도 이상으로 만족함을 알 수 있다</p>
+
+<p>Root locus와 bode plot, step 입력에 대한 출력을 내보내는 matlab의 코드는 다음 그림 8과 같다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/2k3tIzkObzz56O6Utalf.png" alt="이미지" /></p>
+
+<center>그림 8. Damping Factor= 0.55, Kp/Kd= 230의 matlab 코드</center>
+
+<p>변수 KpDivKd는 Kp/Kd를 의미하며 damping factor와 같이 초기에 설정해주는 값이다.</p>
+
+<p>Kd는 이득으로, Root locus를 출력할 때는 1로 둔다. Root locus에서 이득을 구하면 그 값을 넣어주어 step과 bode plot을 얻을 수 있다.</p>
+
+<p>motor는 plant의 전달함수로 적분기를 포함한 전달함수이며, controller는 PD제어기를 나타내는 전달함수이다.</p>
+
+<p>motor와 controller를 직렬로 연결한 전달함수는 open_sys이며, 이는 Root locus를 구할 때 사용하는 전달함수이다.</p>
+
+<p>open_sys를 feedback 함수로 연결함으로써 close_sys, Closed loop 전달함수를 얻을 수 있었다.</p>
+
+<p>figure(1), figure(2), figure(3)는 각각의 그림을 따로 뽑기 위해 설정하였다.</p>
+
+<p>그 후, step()을 이용해 step 입력을 줬을 때의 출력, bodeplot()을 이용해 bode plot, rlocus()를 이용해 Root locus의 그림을 얻을 수 있었다.</p>
+
+<p>stepinfo()는 RiseTime, SettlingTime과 같은 파라미터를 보기 위해 사용하였다.</p>
+
+<p>그 외에 grid 설정, 그림 저장을 위한 saveas() 함수를 사용하였다.</p>
+
+<h2 id="5-최적의-조건-구하기">5) 최적의 조건 구하기</h2>
+
+<p>위 4)번에서 만족하는 결과를 찾을 수 있었지만, 최적의 설계를 위해 여러 값들을 넣어 시뮬레이션하였다. 아래 그림 9는 시뮬레이션 결과를 정리한 표이다. 이 표가 나오는 과정은 3)~4) 과정을 반복하였다. 자세한 그림과 코드, 과정은 6. 첨부에 포함하였다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/3mtU3RAwCLx8gBoAtZKR.png" alt="이미지" /><br />
+<img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/RTaEUgD5tqvbpBkhv2r2.png" alt="이미지" /></p>
+
+<center>그림 9. Damping Factor, Kp/Kd의 변화에 따른 값 변화</center>
+
+<p>우선 damping factor는 0.7로 선정하였다. 선정한 이유는 아래 그림 10과 같다. <code class="language-plaintext highlighter-rouge">ξ</code>가 커질수록 시스템의 overshoot가 작아지기에 가장 overshoot가 적고 ocillation이 적은 0.7을 택하였다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/0IsXIjgt7UhIFnxM6p3p.png" alt="이미지" /></p>
+
+<center>그림 10. Damping Factor 변화에 따른 overshoot 변화</center>
+
+<p>damping factor가 0.7일 때, K와 settling Time은 서로 갈등 관계에 있다. 즉, 경제적 제한 요소와 생산성과 내구성이 서로 갈등 관계에 놓여 있다고 할 수 있다. 그렇기 때문에 서로의 타협점을 찾아야만 했다.</p>
+
+<h3 id="k에-따른-비용-산출">K에 따른 비용 산출</h3>
+
+<p>K는 이득이다. 즉, 앰프를 이용하여 만들어 내야 한다. 많이 쓰이는 op-amp 중에서 LM741칩을 사용한다고 가정한다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/LrLozt2BDbFXsJhyGOTj.png" alt="이미지" /></p>
+
+<center>그림 11. LM741칩의 Gain</center>
+
+<p>이 칩은 최소 50의 gain, 최대 200의 gain을 얻을 수 있다. Kd에 하나, Kp에 하나 사용한다고 생각하면 된다. 이 칩의 가격은 아마존에서 20개에 $12.52(\16,927)이다. 즉, 하나당 846원이며 2개가 필요하니 1,692원이 필요하다. 비용을 최소화하면서 큰 이득을 얻으려면 Kp, Kd는 200보다 작은 이득을 이용해야 한다. 만약 200을 넘어가게 된다면 추가적인 gain을 얻기 위해 칩이 하나 더 사용되어야 한다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/oN47McpfBiVvXOJlRWYu.png" alt="이미지" /></p>
+
+<center>그림 12. LM741칩의 가격</center>
+
+<h3 id="생산성과-내구성에-따른-비용-산출">생산성과 내구성에 따른 비용 산출</h3>
+
+<p>서보 모터는 표면 온도 80도에서 운전을 할 경우 최대 50,000시간이 사용이 가능하다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/lLDfdqJLOwPwFGNPwSPl.png" alt="이미지" /></p>
+
+<center>그림 13. 서보 모터의 수명</center>
+
+<p>서보 모터는 디바이스마트의 아래와 같은 모터를 이용한다고 했을 때 6,500원이 든다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/nvDWLNbT0MnRmdSnDbFd.png" alt="이미지" /></p>
+
+<center>그림 14. 서보 모터의 가격</center>
+
+<h3 id="비용-산출">비용 산출</h3>
+
+<p>위의 결과를 토대로 비용을 산출해보면 다음과 같다.</p>
+
+<p>최대 운전 시간은 20,000시간으로 가정하였다.</p>
+
+<p>op-amp의 비용: 1,692원</p>
+
+<p>모터의 비용: 6,500원</p>
+
+<p>여기서 K를 더 키워 op-amp를 더 사용한다면 op-amp의 비용이 증가하므로, 최적의 값은 op-amp를 Kp, kd에 하나씩 이용하는 것이다. 또한, 이득은 각각 200보다 작아야 한다. 이를 바탕으로 산출하면 다음과 같은 값을 선정할 수 있었다.</p>
+
+<h2 id="6-최종-설계-결과">6) 최종 설계 결과</h2>
+
+<p>최종 설계를 한 결과에 대한 파라미터는 아래 그림 15와 같다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/JIsyJBuUbNy20aBi8zba.png" alt="이미지" /></p>
+
+<center>그림 15. 최종 파라미터</center>
+
+<p>그에 따른 bode plot, step 입력에 대한 출력의 결과는 다음 그림 16과 같다.</p>
+
+<p>settling Time은 0.0144으로 0.03보다 작으므로 조건을 충족한다. 또한, damping Factor도 0.7로 조건을 만족하며, phase margin은 128도로 40도보다 크다. K는 비용과 생산성과 내구성을 고려하여 적절한 값을 만족했다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/81iR8atII0YYwRrOVRZC.png" alt="이미지" /></p>
+
+<center>그림 16. Damping Factor= 0.7, Kp/Kd= 260의 bode plot, step입력에 대한 출력</center>
+
+<h1 id="4-고찰">4. 고찰</h1>
+<p>DC모터의 위치 제어기를 PD Controller를 이용하여 설계하였다. 각 파라미터를 설정하여 값을 지정하였고 그 과정에서 Root locus, Bode Plot, Step입력을 이용하였다. 그 결과 주어진 설계 제한 요소의 settling Time, damping Factor, phase margin을 모두 충족하는 결과를 얻을 수 있었다. 경제적 제한 요소와 생산성과 내구성 간에 갈등 관계가 발생하였으며 비용을 고려하여 설계를 하였다.</p>
+
+<p>만약, K(비용) 대비 settling Time(생산성과 내구성)의 관계에 대해서만 고려해 값을 산출했더라면 아래와 같았을 것이다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/aWzlyeqpFt5snI1Qo6CX.png" alt="이미지" /></p>
+
+<center>그림 17. Kp/Kd와 settling Time의 관계</center>
+
+<p>그림 17의 구간별 감소율을 보면 점점 감소율이 적어지는 것을 보인다. 이는 K가 커질수록, 즉 비용이 증가할수록 그 비용대비 얻는 성능이 적다는 것이다. 그렇기에 비용대비 큰 감소율을 보이는 구간 140-160과 160-180에는 비용을 투자할 가치가 있다는 생각을 하였다. 그래서 Kp/Kd는 180을 택하였다.</p>
+
+<p>최종 설계를 한 결과에 대한 파라미터는 아래 그림 18과 같다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/cE4BLWX9ygejQSjwgiQw.png" alt="이미지" /></p>
+
+<center>그림 18. 최종 파라미터</center>
+
+<p>그에 따른 bode plot, step 입력에 대한 출력의 결과는 다음 그림 19와 같다.</p>
+
+<p>settling Time은 0.0216으로 0.03보다 작으므로 조건을 충족한다. 또한, damping Factor도 0.7로 조건을 만족하며, phase margin은 129도로 40도보다 크다. K는 비용과 생산성과 내구성을 고려하여 적절한 값을 만족했다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/qGscgB0Y1Ck4LnUx8Ll5.png" alt="이미지" /></p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/R3s6nU7yiG0PAspM68cV.png" alt="이미지" /></p>
+
+<center>그림 19. Damping Factor= 0.7, Kp/Kd= 180의 bode plot, step입력에 대한 출력</center>
+
+<h1 id="5-참고자료">5. 참고자료</h1>
+
+<p>LM741 데이터 시트<br />
+https://www.ti.com/lit/ds/symlink/lm741.pdf</p>
+
+<p>모터의 수명을 좌우하는 것은?<br />
+https://inaom.tistory.com/552</p>
+
+<p>Texas Instrumen UA741CP OP Amp<br />
+https://www.amazon.com/Texas-Instrumen-UA741CP-General-Purpose/dp/B01KO48D5K/ref=sr_1_3?keywords=ic+741&amp;qid=1668714216&amp;sr=8-3</p>
+
+<p>서보모터<br />
+https://www.devicemart.co.kr/goods/search?keyword_log_flag=Y&amp;search_text=%EC%84%9C%EB%B3%B4%EB%AA%A8%ED%84%B0&amp;q=%EC%84%9C%EB%B3%B4%EB%AA%A8%ED%84%B0&amp;x=18&amp;y=19</p>
+
+<p>PID PID Controller, Proportional Integral Derivative Controller PID 제어기<br />
+http://www.ktword.co.kr/test/view/view.php?m_temp1=4670</p>
+
+
+            </div>
+            <td></td>
+            <!-- <div class="tag_title">
+            </div>
+
+            <div class="tag_label">
+            </div> -->
+
+            <div class="comment_box">
+                <script src="https://utteranc.es/client.js"
+                        repo="radic2682/radic2682.github.io"
+                        issue-term="pathname"
+                        theme="github-light"
+                        crossorigin="anonymous"
+                        async>
+                </script>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- HTML -->
+    <div id="postModal">
+        <div class="menu_close_btn">
+            <img width="64" height="64" src="https://img.icons8.com/sf-black-filled/64/x.png" alt="x" onclick="closeModal()"/>
+        </div>
+
+        <div class="main_img">
+            <img class="left" width="96" height="96" src="https://img.icons8.com/fluency/96/left.png" alt="left" onclick="leftModal()"/>
+            <div></div>
+            <img class="right" width="96" height="96" src="https://img.icons8.com/fluency/96/right.png" alt="right" onclick="rightModal()"/>
+        </div>
+        <div class="all_img"></div>
+    </div>
+
+</div>
+
+<div class="table_contents">
+    <div class="table_contents_btn" onclick="table_close_click()"><p>C</p></div>
+    <p class="table_title">Contents</p>
+    <div class="table_content_inner"></div>
+</div>
+
+
+
+
+<script src="/assets/js/add_img_in_li.js"></script>
+<script src="/assets/js/add_language_in_codeBlock.js"></script>
+<script src="/assets/js/tableContents.js"></script>
+<script src="/assets/js/postModal.js"></script>
+ </div>
+          
+          <div class="page_footer">
+    <p>© Copyright 2023 Sun Hong</p>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="/assets/js/srollbar.js"></script>
+    <script src="/assets/js/top_nav.js"></script>
+    <script src="/assets/js/sidebar.js"></script>
+    
+    
+  </body>
+</html>
+

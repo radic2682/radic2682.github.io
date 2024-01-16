@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
                 "mode": "source",
                 "source": false
               }
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
+                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Project/Hardware Project/2023-01-06-koggeStone.md"
+                "file": "_posts/Project/etc Project/2023-12-13-differential_amplifier.md"
               }
             }
           },
@@ -166,50 +166,51 @@
   },
   "active": "1bc6a8cd13f9f702",
   "lastOpenFiles": [
+    "_site/project/etc project/2023/12/13/differential_amplifier.html",
+    "_site/project/etc project/2023/12/13/dc_control-1.html",
+    "_posts/Project/etc Project/2023-12-13-dc_control.md",
+    "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
+    "_site/Pasted image 20240117030602.png",
+    "Pasted image 20240117030602.png",
+    "_site/Pasted image 20240117025853.png",
+    "Pasted image 20240117025853.png",
+    "_site/Pasted image 20240117025658.png",
+    "Pasted image 20240117025658.png",
+    "_site/Pasted image 20240117025507.png",
+    "Pasted image 20240117025507.png",
+    "Pasted image 20240108233936.png",
+    "_site/project/etc project/2023/12/13/dc_control.html",
+    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
+    "_site/project/etc project/2023/12/13/control.html",
+    "_site/project/etc project/2023/12/13/Generation_and_Transmission_Planning-1.html",
+    "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
+    "_posts/Project/Hardware Project/2024-01-17-kurung.md",
+    "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
+    "_site/project/hardware project/2024/01/17/kurung.html",
+    "_site/project/hardware project/2024/01/17",
+    "_site/project/hardware project/2024/01",
+    "_site/project/hardware project/2024",
+    "_site/project/hardware project/2023/11/26/VendingMachine-1.html",
+    "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
     "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
     "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
-    "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
     "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
     "_site/tips/github & blog/2024/01/08/github_blog_uploader.html",
-    "_site/tips/github & blog/2024/01/08",
-    "_site/project/hardware project/2023/12/08/ai_accelerator.html",
     "_site/Pasted image 20240108233936.png",
     "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
-    "Spaces/Home",
-    "Spaces",
-    "Pasted image 20240108233936.png",
-    "Pasted image 20240108233657.png",
     "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
     "_posts/Study/Electron/2024-01-02-Electron_01.md",
     "_posts/Study/Electron/2024-01-02-Electron_02.md",
-    "_site/project/hardware project/2023/01/06/koggeStone.html",
-    "_site/project/hardware project/2023/01/06",
-    "_site/project/hardware project/2023/01",
     "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
-    "_site/project/hardware project/2023/12/27/Booth_multiplier_r4-1.html",
     "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
     "_posts/Project/App Project/2023-12-13-Mechu.md",
-    "_site/Pasted image 20240103011548.png",
-    "Pasted image 20240103011548.png",
-    "_site/project/hardware project/2023/12/27/Booth_multiplier_r8.html",
     "_posts/Study/GIT/GIT.md",
     "_posts/Study/Untitled.md",
     "_posts/Study/Electron/Electron.md",
     "_categories/Study/Electron.md",
     "_categories/Study/GIT copy.md",
-    "_site/uploads/스크린샷 2024-01-01 232913.png",
-    "_site/uploads/스크린샷2024-01-01__232805.png",
-    "_site/uploads/스크린샷 2024-01-01 232805.png",
-    "_site/uploads/스크린샷 2024-01-01 232154.png",
-    "uploads/스크린샷2024-01-01__232805.png",
     "_categories/Tips/GitHub & Blog.md",
-    "assets/post_images/post_images.md",
-    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
-    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
-    "_posts/Project/Hardware Project/2023-12-13-Slot_Machine.md",
-    "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
-    "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
-    "_posts/Study/C & CPP/2023-11-26-combination.md"
+    "assets/post_images/post_images.md"
   ]
 }

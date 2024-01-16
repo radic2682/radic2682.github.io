@@ -1,6 +1,16 @@
 [
     
         {
+        "title"         : "자동소화장치 쿠릉 - 성균관대학교 창의적 종합설계 경진대회",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/kurung/023246.png",
+        "category"      : "Project > Hardware Project",
+        "tags"          : "oscilloscope, arduino",
+        "url"           : "/project/hardware%20project/2024/01/17/kurung.html",
+        "date"          : "2024-01-17 00:00:00 +0900",
+        "excerpt"       : "화재 대비 자동 소화 장치 설계"
+        } ,
+    
+        {
         "title"         : "깃허브 블로그 이미지 업로드 프로그램 [ GitHub As a CDN ]",
         "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/github_blog_uploader/DFcpeC2zldPwOysMIG7t.png",
         "category"      : "Tips > GitHub & Blog",
@@ -32,7 +42,7 @@
     
         {
         "title"         : "Cortex-M0 SOC Design _Multi Function mini Robot",
-        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Cortex-M0%20SOC%20Design%20_Multi%20Function%20mini%20Robot/292888089-ef47ba0c-6720-4c32-8813-23bbc372342a.png",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/292888089-ef47ba0c-6720-4c32-8813-23bbc372342a.png",
         "category"      : "Project > Hardware Project",
         "tags"          : "verilog, vivado",
         "url"           : "/project/hardware%20project/2023/12/27/soc_multi_func.html",
@@ -158,6 +168,26 @@
         "url"           : "/study/git/2023/12/24/GIT_09.html",
         "date"          : "2023-12-24 00:00:00 +0900",
         "excerpt"       : "Git Hub의 기초적인 내용"
+        } ,
+    
+        {
+        "title"         : "Simetrix를 이용한 차동 증폭기 설계",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/differential_amplifier/tH0GYZZWd7ihC310Tvqx.png",
+        "category"      : "Project > etc Project",
+        "tags"          : "circuit",
+        "url"           : "/project/etc%20project/2023/12/13/differential_amplifier.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "PMOS, NMOS를 이용한 차동 증폭기 설계"
+        } ,
+    
+        {
+        "title"         : "DC 모터의 위치 제어기 설계",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/dc_control/IFGvqPvwmRK5bxkNQ7MY.png",
+        "category"      : "Project > etc Project",
+        "tags"          : "matlab",
+        "url"           : "/project/etc%20project/2023/12/13/dc_control.html",
+        "date"          : "2023-12-13 00:00:00 +0900",
+        "excerpt"       : "서보 모터를 안정화시키기 위한 PID 제어기 설계"
         } ,
     
         {
