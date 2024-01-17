@@ -11,11 +11,9 @@
             "id": "1bc6a8cd13f9f702",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "mk-space",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
-                "mode": "source",
-                "source": false
+                "path": "_posts/Hardware Note/Microprocessor Note"
               }
             }
           }
@@ -78,7 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 337.5
   },
   "right": {
     "id": "836dcf25d688f4a9",
@@ -94,7 +92,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +108,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,9 +129,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md"
-              }
+              "state": {}
             }
           },
           {
@@ -166,13 +160,41 @@
   },
   "active": "1bc6a8cd13f9f702",
   "lastOpenFiles": [
-    "_posts/Project/etc Project/2023-12-13-differential_amplifier.md",
-    "_posts/Project/etc Project/2023-12-13-dc_control.md",
-    "_posts/Project/Web Project/2023-12-13-github_Blog.md",
-    "_posts/Project/App Project/2023-12-13-Mechu.md",
-    "_posts/Project/etc Project/2023-12-13-Generation_and_Transmission_Planning.md",
-    "_site/project/etc project/2023/12/13/differential_amplifier.html",
-    "_site/project/etc project/2023/12/13/dc_control-1.html",
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_05.md",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_05.html",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_04_2-1.html",
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_04_2.md",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_04_2.html",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_04_(2).html",
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_04_1.md",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_04_1.html",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_04-1.html",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_04.html",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_03-1.html",
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_03.md",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_03.html",
+    "_site/hardware note/microprocessor note/2024/01/18/microprocessor_02-1.html",
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_02.md",
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_01.md",
+    "_posts/Hardware Note/Microprocessor Note/Microprocessor Note.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_09.md",
+    "_posts/Hardware Note/Embeded Note/Untitled.md",
+    "_categories/Hardware Note/Microprocessor Note.md",
+    "_categories/Hardware Note/SoC Note copy.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_08.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_02.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_07.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_06.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_05.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_04.md",
+    "_posts/Hardware Note/SoC Note/2024-01-18-soc_03.md",
+    "_posts/Hardware Note/Embeded Note/2023-12-25-Embeded_01.md",
+    "_posts/Hardware Note/Embeded Note/2023-12-25-Embeded_08.md",
+    "_posts/Hardware Note/SoC Note/SoC Note.md",
+    "_categories/Hardware Note/SoC Note.md",
+    "_categories/Hardware Note/Embeded Note copy.md",
+    "_posts/Hardware Note/Embeded Note/2023-12-25-Embeded_07.md",
+    "_posts/Hardware Note/Embeded Note/2023-12-25-Embeded_06.md",
     "_site/Pasted image 20240117030602.png",
     "Pasted image 20240117030602.png",
     "_site/Pasted image 20240117025853.png",
@@ -182,35 +204,6 @@
     "_site/Pasted image 20240117025507.png",
     "Pasted image 20240117025507.png",
     "Pasted image 20240108233936.png",
-    "_site/project/etc project/2023/12/13/dc_control.html",
-    "_site/project/etc project/2023/12/13/control.html",
-    "_site/project/etc project/2023/12/13/Generation_and_Transmission_Planning-1.html",
-    "_posts/Project/Hardware Project/2023-12-27-soc_multi_func.md",
-    "_posts/Project/Hardware Project/2024-01-17-kurung.md",
-    "_posts/Project/Hardware Project/2023-12-13-breadboard_Computer.md",
-    "_site/project/hardware project/2024/01/17/kurung.html",
-    "_site/project/hardware project/2024/01/17",
-    "_site/project/hardware project/2024/01",
-    "_site/project/hardware project/2024",
-    "_site/project/hardware project/2023/11/26/VendingMachine-1.html",
-    "_posts/Project/Hardware Project/2023-01-06-koggeStone.md",
-    "_posts/Project/Hardware Project/2023-11-26-VendingMachine.md",
-    "_posts/Project/Hardware Project/2023-12-08-ai_accelerator.md",
-    "_posts/Project/Hardware Project/2023-12-13-5_Stage_Pipelined_Processor.md",
-    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r8.md",
-    "_site/Pasted image 20240108233936.png",
-    "_posts/Tips/GitHub & Blog/2024-01-08-github_blog_uploader.md",
-    "_posts/Tips/GitHub & Blog/2024-01-01-github_blog_cdn.md",
-    "_posts/Study/Electron/2024-01-02-Electron_01.md",
-    "_posts/Study/Electron/2024-01-02-Electron_02.md",
-    "_posts/Project/Hardware Project/2023-12-27-Booth_multiplier_r4.md",
-    "_posts/Project/Hardware Project/2023-12-13-Wallace_Tree_Multiplier.md",
-    "_posts/Study/GIT/GIT.md",
-    "_posts/Study/Untitled.md",
-    "_posts/Study/Electron/Electron.md",
-    "_categories/Study/Electron.md",
-    "_categories/Study/GIT copy.md",
-    "_categories/Tips/GitHub & Blog.md",
-    "assets/post_images/post_images.md"
+    "_site/Pasted image 20240108233936.png"
   ]
 }

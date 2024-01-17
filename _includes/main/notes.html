@@ -43,14 +43,14 @@
       </div>
 
       <div class="detail_content">
-        <h3>HW Study Note</h3>
+        <h3>Embeded Note</h3>
 
         <div class="dc_box">
           {% assign sorted_posts = site.posts | sort: 'title' %}
 
           {% for post in sorted_posts %}
             {% for category in post.categories %}
-              {% if category == "HW Study Note" %}
+              {% if category == "Embeded Note" %}
                   <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
               {% endif %}
             {% endfor %}
@@ -59,6 +59,41 @@
 
       </div>
 
+      <div class="detail_content">
+        <h3>SoC Note</h3>
+
+        <div class="dc_box">
+          {% assign sorted_posts = site.posts | sort: 'title' %}
+
+          {% for post in sorted_posts %}
+            {% for category in post.categories %}
+              {% if category == "SoC Note" %}
+                  <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+      </div>
+
+      <div class="detail_content">
+        <h3>Microprocessor Note</h3>
+
+        <div class="dc_box">
+          {% assign sorted_posts = site.posts | sort: 'title' %}
+
+          {% for post in sorted_posts %}
+            {% for category in post.categories %}
+              {% if category == "Microprocessor Note" %}
+                  <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
+        </div>
+
+      </div>
+
+      
     </div>
   </div>
 </div>

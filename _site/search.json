@@ -1,6 +1,146 @@
 [
     
         {
+        "title"         : "[시스템온칩] 9. SoC Prgraming using C",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/oOesYoJISD61y0lihGfs.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_09.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "stack and heap, Accessing peripherals"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 8. Interrupt Mechanism",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/mv9TPlCnG4OZ1yODBOlc.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_08.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Polling vs. Interrupt, Pre-emption, Interrupt Controller"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 7. AMBA 3 AHB-lite Bus Architecture",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/UepCQIrFu00Tp8tFikuX.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_07.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "AMBA 3 AHB-lite Bus Architecture"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 6. Instruction Set",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/3QohqKXIo2oeiP6WN5s6.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_06.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Thumb/Cortex-M0 Instruction Set"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 5. Cortex-M0",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/c7GkTs5PRZPdVaHwsuL1.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_05.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "ARM Processor, Registers, Memory Map"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 4. 프로세서 개념과 설계",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/hoUe8Q7VI0dUQY4u2E48.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_04.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "컴퓨터 구성 요소, CPU Time"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 3. SoC Design",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/9pYgB4uHYk2T5TC60FRV.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_03.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "SoC Design Framework, Flow"
+        } ,
+    
+        {
+        "title"         : "[시스템온칩] 2. Design Methodology",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/MmOAGUIPMPFcSxM7tVTt.jpg",
+        "category"      : "Hardware Note > SoC Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/soc%20note/2024/01/18/soc_02.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Design Methodology"
+        } ,
+    
+        {
+        "title"         : "[마이크로프로세서] 5. AMBA APB",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/OXejWuMAgourbc7jqAy2.jpg",
+        "category"      : "Hardware Note > Microprocessor Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/microprocessor%20note/2024/01/18/microprocessor_05.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "AMBA3 APB Protocol"
+        } ,
+    
+        {
+        "title"         : "[마이크로프로세서] 4. (2) PL Crossbar BUS",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/gTTFyIBrN3TVjgGpqMiv.jpg",
+        "category"      : "Hardware Note > Microprocessor Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/microprocessor%20note/2024/01/18/microprocessor_04_2.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "PL301 Structure, Arbitation Scheme"
+        } ,
+    
+        {
+        "title"         : "[마이크로프로세서] 4. (1) AMBA AXI",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/IfloL9YlKjJcrcv2TpAD.jpg",
+        "category"      : "Hardware Note > Microprocessor Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/microprocessor%20note/2024/01/18/microprocessor_04_1.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "AMBA3 AXI Protocol, Burst, Transfer, Ordering"
+        } ,
+    
+        {
+        "title"         : "[마이크로프로세서] 3. Datapath Functional Units",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/2e4z6EDK41lzFw2ggYnU.jpg",
+        "category"      : "Hardware Note > Microprocessor Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/microprocessor%20note/2024/01/18/microprocessor_03.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Comparators, Shifters, Carry Save Adder, Booth Multiplier"
+        } ,
+    
+        {
+        "title"         : "[마이크로프로세서] 2. Adder",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/wjHmEsgq7rWRnwyqMRTY.jpg",
+        "category"      : "Hardware Note > Microprocessor Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/microprocessor%20note/2024/01/18/microprocessor_02.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Propagation, Generation, Kill, Tree Adder"
+        } ,
+    
+        {
+        "title"         : "[마이크로프로세서] 1. CMOS",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/Km7NoTwnN95vFkykQspj.jpg",
+        "category"      : "Hardware Note > Microprocessor Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/microprocessor%20note/2024/01/18/microprocessor_01.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "CMOS, Compund Gate, Inverter, Facrication, Layout"
+        } ,
+    
+        {
         "title"         : "자동소화장치 쿠릉 - 성균관대학교 창의적 종합설계 경진대회",
         "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/kurung/023246.png",
         "category"      : "Project > Hardware Project",
@@ -72,80 +212,80 @@
     
         {
         "title"         : "[임베디드] 8. Hardware Hacking",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/509061ac-9bfa-4669-a5c6-efbda4bdd6f4",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/i97wSeOM0fjWY4DUzbaU.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_08.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_08.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "UART, I2C, SPI, pin control"
         } ,
     
         {
         "title"         : "[임베디드] 7. Vim Editer",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/ddb27498-38cb-4fd1-91e8-22c3fbf3f04a",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/r2NCICuLW8vcYZsBJwLg.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_07.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_07.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "Vim Editer"
         } ,
     
         {
         "title"         : "[임베디드] 6. Raspberry Pi",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/c9d4acda-e050-4da5-a20b-24895d2422e9",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/YUlXPqeykyIIWrU7cRvg.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_06.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_06.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "Raspberry Pi, Linux System"
         } ,
     
         {
         "title"         : "[임베디드] 5. Cortex M3",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/f00c25f6-2905-4547-8c32-bc656db42b65",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/RwE9R3Y3B8RPkkTy6tRL.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_05.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_05.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "Cortex M3"
         } ,
     
         {
         "title"         : "[임베디드] 4. ARM Assembly Programming",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/6ce4005b-ea82-4791-b21a-9d3e56a7f181",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/BpCtKHtPR6Qjaag2FypG.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_04.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_04.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "ARM Aseembly, indexing"
         } ,
     
         {
         "title"         : "[임베디드] 3. ARM Architecture",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/09d1d9a2-93fb-49c8-80c0-62c70d84c846",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/6IiNjxS0hGYfRnXjeeVl.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_03.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_03.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "ARM Register, CPSR, Instruction features"
         } ,
     
         {
         "title"         : "[임베디드] 2. Organization & Implemention",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/8787f4ea-1ab4-40c1-af9c-6402f369a069",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/ntf3DeAIbF1FTHMs7QHf.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_02.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_02.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "ARM Operation, Organization, Stages"
         } ,
     
         {
         "title"         : "[임베디드] 1. Introduction",
-        "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/92534b81-bd6c-4c01-ac61-074af7892563",
-        "category"      : "Hardware Note > HW Study Note",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/dp8rlBzdhkZD0xRvJJ1W.jpg",
+        "category"      : "Hardware Note > Embeded Note",
         "tags"          : "tag1, tag2, tag3",
-        "url"           : "/hardware%20note/hw%20study%20note/2023/12/25/Embeded_01.html",
+        "url"           : "/hardware%20note/embeded%20note/2023/12/25/Embeded_01.html",
         "date"          : "2023-12-25 00:00:00 +0900",
         "excerpt"       : "Instruction Set"
         } ,
