@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
                 "mode": "source",
                 "source": false
               }
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 337.5
+    "width": 240.5
   },
   "right": {
     "id": "836dcf25d688f4a9",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md"
+                "file": "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_06.md"
               }
             }
           },
@@ -166,6 +166,28 @@
   },
   "active": "d980ace6d3c5ffe6",
   "lastOpenFiles": [
+    "_site/인공지능 시스템 필기_53.jpg",
+    "_site/인공지능 시스템 필기_52.jpg",
+    "_site/인공지능 시스템 필기_51.jpg",
+    "_site/인공지능 시스템 필기_50.jpg",
+    "_site/인공지능 시스템 필기_49.jpg",
+    "_site/인공지능 시스템 필기_48.jpg",
+    "인공지능 시스템 필기_53.jpg",
+    "인공지능 시스템 필기_52.jpg",
+    "인공지능 시스템 필기_51.jpg",
+    "인공지능 시스템 필기_50.jpg",
+    "인공지능 시스템 필기_49.jpg",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_05.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_04.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_03.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_02.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Neuro_01.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_06.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_01.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_02.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_03.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_04.md",
+    "_posts/Ai Note/Ai Study Note/2023-11-19-Fuzzy_05.md",
     "_posts/Hardware Note/Computer Structure Note/2024-01-18-computerS_06.md",
     "_site/hardware note/computer structure note/2024/01/18/computerS_06.html",
     "_posts/Hardware Note/Computer Structure Note/2024-01-18-computerS_05.md",
@@ -189,27 +211,6 @@
     "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_05.md",
     "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_04_2.md",
     "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_04_1.md",
-    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_03.md",
-    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_02.md",
-    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_01.md",
-    "_posts/Hardware Note/Microprocessor Note/Microprocessor Note.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_09.md",
-    "_categories/Hardware Note/Microprocessor Note.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_08.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_02.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_07.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_06.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_05.md",
-    "_posts/Hardware Note/SoC Note/2024-01-18-soc_04.md",
-    "_site/Pasted image 20240117030602.png",
-    "Pasted image 20240117030602.png",
-    "_site/Pasted image 20240117025853.png",
-    "Pasted image 20240117025853.png",
-    "_site/Pasted image 20240117025658.png",
-    "Pasted image 20240117025658.png",
-    "_site/Pasted image 20240117025507.png",
-    "Pasted image 20240117025507.png",
-    "Pasted image 20240108233936.png",
-    "_site/Pasted image 20240108233936.png"
+    "_posts/Hardware Note/Microprocessor Note/2024-01-18-microprocessor_03.md"
   ]
 }
