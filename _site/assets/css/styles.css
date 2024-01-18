@@ -357,9 +357,7 @@ body {
   margin-left: 10px;
   text-decoration: none;
   color: #000;
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 13px;
+  font-size: 12px;
 }
 #sidebar #category .cat_box .cat_part li img {
   width: 18px;

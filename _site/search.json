@@ -141,6 +141,66 @@
         } ,
     
         {
+        "title"         : "[컴퓨터구조] 6. Multiprocessor",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/oKzNIjlIltEB0u01BB7l.jpg",
+        "category"      : "Hardware Note > Computer Structure Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/computer%20structure%20note/2024/01/18/computerS_06.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Shared Memory Multiprocessor, Critical-section, Network"
+        } ,
+    
+        {
+        "title"         : "[컴퓨터구조] 5. Storage and other I/O",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/7VH17PwjNQbzMAcbbD1Y.jpg",
+        "category"      : "Hardware Note > Computer Structure Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/computer%20structure%20note/2024/01/18/computerS_05.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Dependability, Register Map, Polling, Interrupt, DMA, RAID"
+        } ,
+    
+        {
+        "title"         : "[컴퓨터구조] 4. Virtual Memory",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/OlTv84lCWpDkrMOmbZFf.jpg",
+        "category"      : "Hardware Note > Computer Structure Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/computer%20structure%20note/2024/01/18/computerS_04.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Paging, Page Table, TLB"
+        } ,
+    
+        {
+        "title"         : "[컴퓨터구조] 3. Memory Herachy",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/SBbHnZHSD3hogoSMqmbV.jpg",
+        "category"      : "Hardware Note > Computer Structure Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/computer%20structure%20note/2024/01/18/computerS_03.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Memory Herachy, Temporal/Spatial Localities, Cache"
+        } ,
+    
+        {
+        "title"         : "[컴퓨터구조] 2. Pipelining",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/RRMOIV8qg9ZpIvfU2i68.jpg",
+        "category"      : "Hardware Note > Computer Structure Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/computer%20structure%20note/2024/01/18/computerS_02.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "5-stage Pipeline Processor, Hazard, Prediction"
+        } ,
+    
+        {
+        "title"         : "[컴퓨터구조] 1. Introduction",
+        "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Hardware_notes/b3FLjofFELthAdouAweg.jpg",
+        "category"      : "Hardware Note > Computer Structure Note",
+        "tags"          : "",
+        "url"           : "/hardware%20note/computer%20structure%20note/2024/01/18/computerS_01.html",
+        "date"          : "2024-01-18 00:00:00 +0900",
+        "excerpt"       : "Instraction Set Architecture"
+        } ,
+    
+        {
         "title"         : "자동소화장치 쿠릉 - 성균관대학교 창의적 종합설계 경진대회",
         "thumbnail"     : "https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/kurung/023246.png",
         "category"      : "Project > Hardware Project",
@@ -664,7 +724,7 @@
         "title"         : "[Fuzzy System] 1. Introduction",
         "thumbnail"     : "https://github.com/radic2682/radic2682.github.io/assets/11177959/49ec4f78-fa73-4200-a9de-e50764bb6965",
         "category"      : "Ai Note > Ai Study Note",
-        "tags"          : "tag1, tag2, tag3",
+        "tags"          : "",
         "url"           : "/ai%20note/ai%20study%20note/2023/11/19/Fuzzy_01.html",
         "date"          : "2023-11-19 00:00:00 +0900",
         "excerpt"       : "퍼지 이론과 시스템"
