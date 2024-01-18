@@ -1632,6 +1632,1042 @@
             <div class="article">
                 <p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/292888089-ef47ba0c-6720-4c32-8813-23bbc372342a.png" alt="image" /></p>
 
+<h1 id="1-설계-조건">1. 설계 조건</h1>
+
+<p>팀별로 원하는 다양한 주제를 선택하여 Digilent 사의 Basys3 보드를 이용한 시스템을 구현한다. AHB-Lite Verilog 모듈을 결합하여 팀별만의 컴퓨터 시스템을 작성한다. 임베디드 시스템에 어셈블리어 혹은 C 언어로 프로그램 또한 작성하여 컴퓨터 시스템이 수행되어야 한다. 해당 입력은 슬라이딩 스위치, 버튼, 그리고 조도 센서 및 본인이 원하는 모듈을 결합하면 다양한 입력이 가능하며 출력 또한 LED 출력 및 7-segment 출력, VGA 출력, Analog 출력 및 본인이 원하는 모듈을 결합하면 다양한 출력 형태가 가능하다.</p>
+
+<h1 id="2-설계-주제">2. 설계 주제</h1>
+
+<p>이번 프로젝트의 주요 주제로는 크게 두 가지로 나뉘며 다기능 카운터, 계산기와 UART 통신을 통한 작은 로봇 제어로 이루어져있다. 우선 아래의 그림 1은 프로젝트에 사용된 Basys3 보드의 핀과 주변장치에 대한 설명이며 보드에 내장되어있는 LED 15개, SW개, KEY 스위치 5개와 Pmod JA, JB를 사용하여 프로젝트를 구성하였다. 또한 Pmod JA는 UART 통신을 하여 외부의 다른 프로세서와 통신을 할 수 있도록 만들어졌다. Pmod JB는 GPIO로 사용하여 JB1-4는 Input, JB7-10은 Output으로 사용할 수 있도록 구성을 했으며, 실제로는 JB1에 LED를 연결하여 JB7 핀만 사용하도록 구성하였다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/0Pzigd4v4DpN0wKxMinq.png" alt="이미지" /></p>
+
+<center>그림 1 Basys3에 내장된 장치를 통한 구현 기능 및 Pmod를 사용한 주변 장치 제어</center>
+
+<p>또한 위에서 언급하였듯이 이번 프로젝트에서는 UART 통신을 하여 외부의 프로세서와 통신 및 제어를 하게 되며 32bit, 3.3V 프로세서인 ESP32-WROOM-32D을 사용하였다. ESP32-WROOM-32D에 2개의 서보모터를 부착하여 간단한 로봇을 제작하였으며 이를 Basys3에서 데이터를 받아 동작을 제어하도록 제작하였으며 아래는 최종적으로 Basys3에 ESP32-WROOM-32D 및 다른 주변 장치를 연결한 회로이다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/WLMYAFQN2DhjDdQQGtk9.png" alt="이미지" /></p>
+
+<center>그림 2 Basys3에 Pmod를 통해 연결한 최종 프로젝트 회로도</center>
+
+<h1 id="3-기능">3. 기능</h1>
+
+<p>설계된 결과물은 크게 다기능 카운터, 계산기와 UART 통신을 통한 작은 로봇 제어의 두 가지 기능으로 나뉜다. 이에 따라 두 가지 기능으로 나눠서 설명하였다.</p>
+
+<h2 id="1-uart-통신을-통한-작은-로봇-제어">1) UART 통신을 통한 작은 로봇 제어</h2>
+
+<p>ESP32-WROOM-32D에 연결된 2개의 서보모터로 구성된 로봇을 Basys3가 제어하기 위해 UART 통신을 사용하였고 이는 Pmod의 JA2, JA3 Pin을 통해 UART 통신을 구성하였다. 아래의 그림 3의 Basys3의 Interface Specification 참고 매뉴얼을 보면 알 수 있듯이 JA2를 TX, JA3를 RX로 연결하여 UART 통신을 할 수 있었다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/AeM42imnjzQV3b4BTQZ5.png" alt="이미지" /></p>
+
+<center>그림 3 래퍼런스 매뉴얼의 Pmod 자료</center>
+
+<p>ESP32-WROOM-32D는 Basys3에서 로봇의 동작 여부를 전달받으면 이에 따라 ESP32_Servo.h를 통해 연결된 서보 모터를 제어하여 로봇을 동작하게 된다. 이때, Basys3에 내장되어 있는 SW4를 로봇 제어 신호로 사용하여 Switch의 활성화 여부에 따라 로봇의 동작 여부가 결정되게 된다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/V5GSnNGFxWe000vRdcii.png" alt="이미지" /></p>
+
+<p>그림 4 180도 회전의 서보 모터를 사용하여 구성한 소형 로봇</p>
+
+<p>위의 그림 4를 참고하여 서보 모터 로봇을 구성하였으며 ESP32-WROOM-32D의 전원이 인가되면 앞다리와 뒷다리의 서보 모터가 회전 가능한 각도인 180도 중 절반인 90도로 조절되어 중립 상태를 유지하게 된다. 이후 어느 정도의 안정될 시간을 거친 후, 앞다리 역할을 하는 서보 모터가 왼쪽으로 20도 회전한 후 다시 오른쪽으로 40도 회전하여 양방향으로 총 40도로 움직인다. 뒷다리도 앞다리와 동일하게 동작하며 순차적으로 서보 모터를 동작하여 앞으로 진행할 수 있게 된다.</p>
+
+<h2 id="2-다기능-카운터-계산기">2) 다기능 카운터, 계산기</h2>
+
+<p>SW[0]~SW[4]의 입력은 시스템의 mode를 결정한다.</p>
+
+<p>SW[0]이 선택되면 업카운터로 동작을 하며 HW Timer를 통해 값이 하나씩 증가한다. 이때, up-key를 사용하면 Timer를 초기화할 수 있다.</p>
+
+<p>SW[1]이 선택되면 스탑워치로 동작을 하며 HW Timer를 통해 값이 하나씩 감소한다. left-key를 통해 값을 십의 자리 단위로 증가시킬 수 있고, right-key를 통해 값을 십의 자리 단위로 감소시킬 수 있다. 또한, down-key를 통해 스탑워치를 시작하고 일시정지할 수 있다. 이때, up-key를 사용하면 스탑워치를 초기화할 수 있다. 스탑워치가 카운트다운을 해서 0에 도달하면 JB7핀을 통해 LED가 점멸하게 된다.</p>
+
+<p>SW[2]이 선택되면 랜덤 숫자 발생기/곱셈기로 동작을 하며 4자리의 난수를 받아와 디스플레이시켜주거나 SW[9:5]와 SW[15:10]을 곱해서 디스플레이 해준다. 이때, 랜덤 숫자 발생기, 곱셈기 모드를 변경하는 방법은 middle-key를 누를 때마다 변경된다.</p>
+
+<p>SW[3]이 선택되면 덧셈기/뺄셈기로 동작을 하며 SW[9:5]와 SW[15:10]을 더하거나 빼서 디스플레이 해준다. 이때, 덧셈과 뺄셈 모드를 변경하는 방법은 middle-key를 누를 때마다 변경된다.</p>
+
+<p>SW[4]가 선택되면 로봇컨트롤로 사용되며 스위치가 ON이 되면 로봇이 전진한다.</p>
+
+<h1 id="4-설계-과정">4. 설계 과정</h1>
+
+<h2 id="1-hw-구성">1) H/W 구성</h2>
+
+<h3 id="basys_masterxdc">Basys_Master.xdc</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Switches
+set_property PACKAGE_PIN V17 [get_ports {sw[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[0]}]
+                          ː
+set_property PACKAGE_PIN T1 [get_ports {sw[14]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {sw[14]}]
+set_property PACKAGE_PIN R2 [get_ports RESET]					
+	set_property IOSTANDARD LVCMOS33 [get_ports RESET]
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># LEDs
+set_property PACKAGE_PIN U16 [get_ports {LED[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {LED[0]}]
+                          ː
+set_property PACKAGE_PIN L1 [get_ports {LED[15]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {LED[15]}]
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#7 segment display
+set_property PACKAGE_PIN W7 [get_ports {seg[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {seg[0]}]
+                          ː
+set_property PACKAGE_PIN U7 [get_ports {seg[6]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {seg[6]}]
+
+set_property PACKAGE_PIN V7 [get_ports dp]							
+	set_property IOSTANDARD LVCMOS33 [get_ports dp]
+
+set_property PACKAGE_PIN U2 [get_ports {an[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {an[0]}]
+                          ː
+set_property PACKAGE_PIN W4 [get_ports {an[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {an[3]}]
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Buttons
+set_property PACKAGE_PIN T18 [get_ports KEY[0]]						
+	set_property IOSTANDARD LVCMOS33 [get_ports KEY[0]]
+                          ː
+ set_property PACKAGE_PIN U18 [get_ports KEY[4]]						
+	set_property IOSTANDARD LVCMOS33 [get_ports KEY[4]]
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Pmod Header JA
+set_property PACKAGE_PIN L2 [get_ports JATx]					
+	set_property IOSTANDARD LVCMOS33 [get_ports JATx]
+set_property PACKAGE_PIN J2 [get_ports JARx]					
+	set_property IOSTANDARD LVCMOS33 [get_ports JARx]
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Pmod Header JB
+set_property PACKAGE_PIN A14 [get_ports {JBI[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JBI[0]}]
+                          ː
+set_property PACKAGE_PIN B16 [get_ports {JBI[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JBI[3]}]
+
+set_property PACKAGE_PIN A15 [get_ports {JBO[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JBO[0]}]
+                          ː
+set_property PACKAGE_PIN C16 [get_ports {JBO[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JBO[3]}]
+</code></pre></div></div>
+
+<p>프로젝트에서 사용할 Switch와 LED, 7Segment, KEY, JA Pmod, JB Pmod를 보드의 핀과 연결해주기 위해 xdc파일을 다음과 같이 수정하였다. 주석 처리가 되어 있는 핀을 활성화함으로써 핀을 사용한다. 또한 JA Pmod에서 JA2, JA3 핀은 각각 JATx, JARx로 수정하여 UART 통신에 사용한다.</p>
+
+<h3 id="사용-모듈">사용 모듈</h3>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/vtyno7sINANCyGDBg6tc.png" alt="이미지" /></p>
+
+<center>그림 5 사용 모듈</center>
+
+<h3 id="버스-모듈-정의">버스 모듈 정의</h3>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">AHBLITE_SYS</span><span class="p">(</span>    
+    <span class="c1">//CLOCKS &amp; RESET</span>
+    <span class="kt">input</span>  <span class="kt">wire</span> <span class="n">CLK</span><span class="p">,</span>
+    <span class="kt">input</span>  <span class="kt">wire</span> <span class="n">RESET</span><span class="p">,</span>
+    
+    <span class="c1">//TO BOARD LEDs</span>
+    <span class="kt">output</span> 	<span class="kt">wire</span>	<span class="p">[</span><span class="mi">15</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">LED</span><span class="p">,</span>
+    
+    <span class="c1">// SW</span>
+    <span class="kt">input</span>   <span class="kt">wire</span>    <span class="p">[</span><span class="mi">14</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>  <span class="n">sw</span><span class="p">,</span>
+    
+    <span class="c1">// KEY</span>
+    <span class="kt">input</span>   <span class="kt">wire</span>  <span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>  <span class="n">KEY</span><span class="p">,</span>
+    
+    <span class="c1">// SEG</span>
+    <span class="kt">output</span>  <span class="kt">wire</span>  <span class="p">[</span><span class="mi">6</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>  <span class="n">seg</span><span class="p">,</span>
+    <span class="kt">output</span>  <span class="kt">wire</span>  <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>  <span class="n">an</span><span class="p">,</span>
+    <span class="kt">output</span>  <span class="kt">wire</span>         <span class="n">dp</span><span class="p">,</span>
+    
+    <span class="c1">// UART</span>
+    <span class="kt">input</span> <span class="kt">wire</span>           <span class="n">JARx</span><span class="p">,</span>
+    <span class="kt">output</span> <span class="kt">wire</span>          <span class="n">JATx</span><span class="p">,</span>
+
+    <span class="c1">// GPIO JB</span>
+    <span class="kt">input</span> <span class="kt">wire</span>  <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>   <span class="n">JBI</span><span class="p">,</span>
+    <span class="kt">output</span> <span class="kt">wire</span>  <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span>   <span class="n">JBO</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Basys3 보드의 UART 통신을 구성하기 위해 버스 모듈에서 UART의 input, output을 위와 같이 정의해준다. 이는 xdc파일에서 수정한 Pmod 포트들과 연결이 되고 서로 이름이 같아야 한다.</p>
+
+<h3 id="내부-신호-정의">내부 신호 정의</h3>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//SELECT SIGNALS</span>
+
+<span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">MUX_SEL</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_MEM</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_GPIO</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_KEY</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_SEG</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_TIMER</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_UART</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="n">HSEL_GPIO_JB</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>위는 SELECT SIGNALS을 정의한 코드이며 위와 같이 wire를 SLAVE READ DATA, SLAVE HREADYOUT 또한 정의하였고 DCD, MUX에 연결해주었다. 이는 항상 하던 과정으로 생략한다.</p>
+
+<h3 id="인터럽트-신호-정의">인터럽트 신호 정의</h3>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">wire</span>          <span class="n">KEY_IRQ</span><span class="p">;</span>
+<span class="kt">wire</span>          <span class="n">TIMER_IRQ</span><span class="p">;</span>
+<span class="kt">wire</span>          <span class="n">UART_IRQ</span><span class="p">;</span>
+
+<span class="c1">//CM0-DS INTERRUPT SIGNALS  </span>
+<span class="k">assign</span> 			  <span class="n">IRQ</span> <span class="o">=</span> <span class="o">{</span><span class="mb">13'b0000_0000_0000_000</span><span class="p">,</span> <span class="n">KEY_IRQ</span><span class="p">,</span> <span class="n">UART_IRQ</span><span class="p">,</span> <span class="n">TIMER_IRQ</span><span class="o">}</span><span class="p">;</span>
+<span class="k">assign</span> 			  <span class="n">LED</span><span class="p">[</span><span class="mi">15</span><span class="p">]</span> <span class="o">=</span> <span class="n">LOCKUP</span><span class="p">;</span>
+
+<span class="k">assign</span> 	      <span class="n">HRESETn</span> <span class="o">=</span> <span class="o">~</span><span class="n">RESET</span><span class="p">;</span>   
+</code></pre></div></div>
+
+<p>인터럽트 신호는 Key, Timer, UART로부터 발생하며 데이터를 처리하기 때문에 이를 16비트 IRQ로 정의하여 인터럽트 신호를 받을 수 있도록 하였다.</p>
+
+<h3 id="인터럽트-추가된-모듈-설명">인터럽트 추가된 모듈 설명</h3>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AHBGPIO</span> <span class="n">uAHBGPIO</span><span class="p">(</span>
+	<span class="c1">//AHBLITE Signals</span>
+	<span class="p">.</span><span class="n">HSEL</span><span class="p">(</span><span class="n">HSEL_GPIO</span><span class="p">),</span>
+                          <span class="err">ː</span>
+	
+	<span class="p">.</span><span class="n">HRDATA</span><span class="p">(</span><span class="n">HRDATA_GPIO</span><span class="p">),</span> 
+	<span class="p">.</span><span class="n">HREADYOUT</span><span class="p">(</span><span class="n">HREADYOUT_GPIO</span><span class="p">),</span>
+	
+    <span class="p">.</span><span class="n">GPIOIN</span><span class="p">(</span><span class="o">{</span><span class="mb">1'b0</span><span class="p">,</span> <span class="n">sw</span><span class="p">[</span><span class="mi">14</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span><span class="o">}</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">GPIOOUT</span><span class="p">(</span><span class="n">LED</span><span class="p">[</span><span class="mi">14</span><span class="o">:</span><span class="mi">0</span><span class="p">])</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>Basys3에 내장되어 있는 SW와 LED를 사용하기 위해 GPIO 모듈을 정의하였다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AHBGPIO</span> <span class="n">uAHBGPIOJB</span><span class="p">(</span>
+	<span class="c1">//AHBLITE Signals</span>
+	<span class="p">.</span><span class="n">HSEL</span><span class="p">(</span><span class="n">HSEL_GPIO_JB</span><span class="p">),</span>
+                          <span class="err">ː</span>
+	
+	<span class="p">.</span><span class="n">HRDATA</span><span class="p">(</span><span class="n">HRDATA_GPIO_JB</span><span class="p">),</span> 
+	<span class="p">.</span><span class="n">HREADYOUT</span><span class="p">(</span><span class="n">HREADYOUT_GPIO_JB</span><span class="p">),</span>
+	
+    <span class="p">.</span><span class="n">GPIOIN</span><span class="p">(</span><span class="o">{</span><span class="mb">12'b0</span><span class="p">,</span> <span class="n">JBI</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span><span class="o">}</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">GPIOOUT</span><span class="p">(</span><span class="n">JBO</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">])</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>JB Pmod의 핀을 GPIO핀으로 사용하여 외부 장치에 입력을 받고 출력을 보낼 수 있도록 설정하였다. 각 입력과 출력은 4bit 신호로 사용하였으며, 이번 프로젝트에서는 출력 1bit만 사용한다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AHB2KEY2</span> <span class="n">uAHB2KEY2</span> <span class="p">(</span>
+	<span class="c1">//AHBLITE Signals</span>
+	<span class="p">.</span><span class="n">HSEL</span><span class="p">(</span><span class="n">HSEL_KEY</span><span class="p">),</span>
+                          <span class="err">ː</span>
+	
+	<span class="p">.</span><span class="n">HRDATA</span><span class="p">(</span><span class="n">HRDATA_KEY</span><span class="p">),</span>   
+	<span class="p">.</span><span class="n">HREADYOUT</span><span class="p">(</span><span class="n">HREADYOUT_KEY</span><span class="p">),</span>
+	<span class="c1">//Sideband Signals</span>
+	<span class="p">.</span><span class="n">KEY_IRQ</span><span class="p">(</span><span class="n">KEY_IRQ</span><span class="p">),</span>
+	<span class="p">.</span><span class="n">KEY</span><span class="p">(</span><span class="n">KEY</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>KEY를 사용하기 위해서 모듈을 버스에 붙였다. KEY에서 발생한 인터럽트 신호를 받기 위해서 인터럽트 신호도 연결되어 있다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">//AHBLite Slave</span>
+
+<span class="n">AHBTIMER</span> <span class="n">uAHBTIMER</span> <span class="p">(</span>
+
+<span class="c1">//AHBLITE Signals</span>
+
+<span class="p">.</span><span class="n">HSEL</span><span class="p">(</span><span class="n">HSEL_TIMER</span><span class="p">),</span>
+
+<span class="err">ː</span>
+
+<span class="p">.</span><span class="n">HRDATA</span><span class="p">(</span><span class="n">HRDATA_TIMER</span><span class="p">),</span>
+
+<span class="p">.</span><span class="n">HREADYOUT</span><span class="p">(</span><span class="n">HREADYOUT_TIMER</span><span class="p">),</span>
+
+<span class="c1">//Sideband Signals</span>
+
+<span class="p">.</span><span class="n">timer_irq</span><span class="p">(</span><span class="n">TIMER_IRQ</span><span class="p">)</span>
+
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>시스템에서 사용하는 업카운터와 스탑워치를 사용하기 위해서 타이머 모듈을 버스에 붙였다. 또한, 인터럽트 처리를 위한 신호가 연결되어 있다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">AHBUART</span> <span class="n">uAHBUART</span> <span class="p">(</span>
+	<span class="c1">//AHBLITE Signals</span>
+	<span class="p">.</span><span class="n">HSEL</span><span class="p">(</span><span class="n">HSEL_UART</span><span class="p">),</span>
+                          <span class="err">ː</span>
+	
+	<span class="p">.</span><span class="n">HRDATA</span><span class="p">(</span><span class="n">HRDATA_UART</span><span class="p">),</span>   
+	<span class="p">.</span><span class="n">HREADYOUT</span><span class="p">(</span><span class="n">HREADYOUT_UART</span><span class="p">),</span>
+	<span class="c1">//Sideband Signals</span>
+	<span class="p">.</span><span class="n">JARx</span><span class="p">(</span><span class="n">JARx</span><span class="p">),</span>
+	<span class="p">.</span><span class="n">JATx</span><span class="p">(</span><span class="n">JATx</span><span class="p">),</span>
+	<span class="p">.</span><span class="n">uart_irq</span><span class="p">(</span><span class="n">UART_IRQ</span><span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
+<p>UART를 통해 외부의 로봇과 통신을 하기 위해서 버스에 UART 모듈을 붙였다. 신호는 Rx, Tx를 사용하며 이는 JA Pmod와 연결이 되어 있다. 또한, 인터럽트 처리를 위한 신호가 연결되어 있다.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">BAUDGEN</span>
+<span class="p">(</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">clk</span><span class="p">,</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="n">resetn</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="kt">wire</span> <span class="n">baudtick</span>
+<span class="p">);</span>
+
+
+<span class="kt">reg</span> <span class="p">[</span><span class="mi">21</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">count_reg</span><span class="p">;</span>
+<span class="kt">wire</span> <span class="p">[</span><span class="mi">21</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">count_next</span><span class="p">;</span>
+
+<span class="c1">//Counter</span>
+<span class="k">always</span> <span class="o">@</span> <span class="p">(</span><span class="kt">posedge</span> <span class="n">clk</span><span class="p">,</span> <span class="kt">negedge</span> <span class="n">resetn</span><span class="p">)</span>
+  <span class="k">begin</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">resetn</span><span class="p">)</span>
+      <span class="n">count_reg</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">else</span>
+      <span class="n">count_reg</span> <span class="o">&lt;=</span> <span class="n">count_next</span><span class="p">;</span>
+<span class="k">end</span>
+
+
+<span class="c1">//Baudrate  = 19200 = 50Mhz/(163*16)</span>
+<span class="k">assign</span> <span class="n">count_next</span> <span class="o">=</span> <span class="p">((</span><span class="n">count_reg</span> <span class="o">==</span> <span class="mi">162</span><span class="p">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">count_reg</span> <span class="o">+</span> <span class="mb">1'b1</span><span class="p">);</span>
+
+<span class="k">assign</span> <span class="n">baudtick</span> <span class="o">=</span> <span class="p">((</span><span class="n">count_reg</span> <span class="o">==</span> <span class="mi">162</span><span class="p">)</span> <span class="o">?</span> <span class="mb">1'b1</span> <span class="o">:</span> <span class="mb">1'b0</span><span class="p">);</span>
+
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>또한 AHBUART 하위 파일 중 BAUDGEN 모듈을 살펴보면 UART 통신에 있어 중요한 통신 속도가 기재되어 있는 것을 확인할 수 있다. 코드 중간에 Baudrate에 주석이 존재하며 여기서 통신 속도를 19200으로 설정하였다는 안내가 있어 이를 바탕으로 ESP32-WROOM-32D과의 원활한 UART 통신이 가능하다.</p>
+
+<h3 id="key-모듈-수정">KEY 모듈 수정</h3>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">AHB2KEY2</span><span class="p">(</span>
+                          <span class="err">ː</span>
+  <span class="kt">input</span> <span class="kt">wire</span> <span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">KEY</span>
+    <span class="p">);</span>
+
+                          <span class="err">ː</span>
+
+  <span class="kt">reg</span>  <span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">keyout</span><span class="p">;</span>        <span class="c1">//key output</span>
+
+                          <span class="err">ː</span>
+
+  <span class="c1">// sequential part</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">HCLK</span> <span class="kt">or</span> <span class="kt">negedge</span> <span class="n">HRESETn</span><span class="p">)</span>
+  <span class="k">begin</span>
+	 <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">HRESETn</span><span class="p">)</span>
+   <span class="k">begin</span>
+     <span class="n">keyout</span> <span class="o">&lt;=</span> <span class="mb">5'b0</span><span class="p">;</span>
+     <span class="n">key_pushed</span> <span class="o">&lt;=</span> <span class="mb">1'b0</span><span class="p">;</span>
+   <span class="k">end</span>
+   <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">key_pushed</span> <span class="o">==</span> <span class="mb">1'b0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">KEY</span> <span class="o">!=</span> <span class="mb">5'b0</span><span class="p">))</span>
+   <span class="k">begin</span>
+     <span class="n">keyout</span> <span class="o">&lt;=</span> <span class="n">KEY</span><span class="p">;</span>
+     <span class="n">key_pushed</span> <span class="o">&lt;=</span> <span class="mb">1'b1</span><span class="p">;</span> 
+   <span class="k">end</span>
+   <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">KEY</span> <span class="o">==</span> <span class="mb">5'b0</span><span class="p">)</span> 
+   <span class="k">begin</span>
+     <span class="n">keyout</span> <span class="o">&lt;=</span> <span class="mb">5'b0</span><span class="p">;</span>
+     <span class="n">key_pushed</span> <span class="o">&lt;=</span> <span class="mb">1'b0</span><span class="p">;</span> 
+   <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1">// sequential part</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">HCLK</span> <span class="kt">or</span> <span class="kt">negedge</span> <span class="n">HRESETn</span><span class="p">)</span>
+  <span class="k">begin</span>
+	 <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="n">HRESETn</span><span class="p">)</span>
+     <span class="n">KEY_IRQ</span> <span class="o">&lt;=</span> <span class="mb">1'b0</span><span class="p">;</span>
+   <span class="k">else</span> <span class="k">if</span> <span class="p">((</span><span class="n">key_pushed</span> <span class="o">==</span> <span class="mb">1'b0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">KEY</span> <span class="o">!=</span> <span class="mb">5'b0</span><span class="p">))</span>
+     <span class="n">KEY_IRQ</span> <span class="o">&lt;=</span> <span class="mb">1'b1</span><span class="p">;</span>
+   <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">rd</span><span class="p">)</span>
+     <span class="n">KEY_IRQ</span> <span class="o">&lt;=</span> <span class="mb">1'b0</span><span class="p">;</span>
+  <span class="k">end</span>
+
+                          <span class="err">ː</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>기존 KEY 모듈이 4개의 key만 사용할 수 있었기에, 5개를 사용하기 위해 모듈을 위와 같이 수정하였다.</p>
+
+<h2 id="2-sw-구성">2) S/W 구성</h2>
+
+<h3 id="cm0dsasms">cm0dsasm.s</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code> ː      
+
+;Reset Handler
+Reset_Handler   PROC
+                GLOBAL Reset_Handler
+                ENTRY
+        IMPORT  __main
+                LDR     R0, =__main               
+                BX      R0                        ;Branch to __main
+                ENDP
+                      ː  
+</code></pre></div></div>
+
+<p>프로젝트에서 S/W 구성할 때, 어셈블리 언어만 사용하여 S/W를 구성하는 것이 아닌 C 언어도 함께 사용하기 위해 위와 같이 어셈블리어를 수정하였다. Reset_Handler가 작동하면 C언어의 main으로 이동한다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                      ː      
+        				; External Interrupts
+						        				
+        				DCD		Timer_Handler
+        				DCD		UART_Handler
+        				DCD		Key_Handler 
+                      ː  
+</code></pre></div></div>
+
+<p>인터럽트가 발생했을 때, 처리해줄 ISR의 주소를 exception vector에 정의해줬다.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                      ː      
+Key_Handler     PROC
+                EXPORT Key_Handler
+				IMPORT  Key_ISR
+                PUSH    {R0, R1, R2, R3, LR}
+				        BL Key_ISR
+                POP     {R0, R1, R2, R3, PC}                    ;return
+                ENDP
+                      ː  
+</code></pre></div></div>
+
+<p>위 함수는 KEY 인터럽트 핸들러이며, 인터럽트가 발생했을 때 인터럽트를 처리하는 함수를 담고 있다. 여기서는 c로 작성한 코드를 사용하기 위해 context switching을 해주었다. 나머지 Timer_Handler, UART_Handler도 동일하게 작성하였으며 여기서는 생략하였다.</p>
+
+<h3 id="edkdriverh">edk.driver.h</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                      <span class="err">ː</span>      
+<span class="cp">#define AHB_GPIO_JB_BASE		0x50000000
+#define AHB_UART_BASE			0x51000000
+#define AHB_TIMER_BASE			0x52000000
+#define AHB_GPIO_BASE			0x53000000
+#define AHB_7SEG_BASE			0x54000000
+#define AHB_KEY_BASE			0x55000000
+#define NVIC_INT_ENABLE		0xE000E100
+</span>                      <span class="err">ː</span>  
+</code></pre></div></div>
+
+<p>각각의 주변 장치를 컨트롤하기 위해 주솟값을 정의해줬다. 이를 구조체를 사용하여 접근할 수 있도록 코드를 작성하였으며 이 부분은 생략하였다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                      <span class="err">ː</span>      
+<span class="kt">void</span> <span class="nf">seven_seg_write</span><span class="p">(</span><span class="kt">char</span> <span class="n">dig1</span><span class="p">,</span> <span class="kt">char</span> <span class="n">dig2</span><span class="p">,</span><span class="kt">char</span> <span class="n">dig3</span><span class="p">,</span><span class="kt">char</span> <span class="n">dig4</span><span class="p">);</span>		<span class="c1">//Write to 7-segment display</span>
+<span class="kt">void</span> <span class="nf">timer_init</span><span class="p">(</span><span class="kt">int</span> <span class="n">load_value</span><span class="p">,</span> <span class="kt">int</span> <span class="n">prescale</span><span class="p">,</span> <span class="kt">int</span> <span class="n">mode</span><span class="p">);</span>			<span class="c1">//Initialize the timer	</span>
+<span class="kt">void</span> <span class="nf">timer_enable</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>				<span class="c1">//Enable the timer	</span>
+<span class="kt">void</span> <span class="nf">timer_irq_clear</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>			<span class="c1">//Clear interrupt request from timer</span>
+<span class="kt">int</span> <span class="nf">GPIO_read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>						<span class="c1">//GPIO read (from switches)</span>
+<span class="kt">void</span> <span class="nf">GPIO_write</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">);</span>			<span class="c1">//GPIO write (to LEDs)</span>
+<span class="kt">int</span> <span class="nf">GPIO_JB_read</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">GPIO_JB_write</span><span class="p">(</span><span class="kt">int</span> <span class="n">data</span><span class="p">);</span>
+                      <span class="err">ː</span>  
+</code></pre></div></div>
+
+<p>edk.driver.c에는 각 driver를 컨트롤하기 위한 함수를 정의하였으며 함수들은 위와 같다. 7Segment에 값을 쓸 수 있는 함수, timer 관련 초기화, 활성화 인터럽트 클리어 함수가 있다. GPIO는 4개의 함수가 있으며 읽고 쓸 수 있게 하는 함수이다. 그 중 GPIO_JB는 JB Pmod를 GPIO로 사용하여 읽고 쓸 수 있는 함수이다.</p>
+
+<h3 id="mainc-헤더부분">main.c [헤더부분]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">"EDK_CM0.h"</span><span class="c1"> </span><span class="cp">
+#include</span> <span class="cpf">"core_cm0.h"</span><span class="cp">
+#include</span> <span class="cpf">"edk_driver.h"</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;time.h&gt;</span><span class="cp">
+</span></code></pre></div></div>
+
+<p>사용하는 파일을 include해줬다. “”는 파일이며, &lt;&gt;는 라이브러리이다. <stdlib.h>, <time.h>는 시스템에서 랜덤값을 시간을 seed로 만들어주기 위해서 import하였다.</time.h></stdlib.h></p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define Timer_Interrput_Frequency 			1
+#define System_Tick_Frequency 					50000000
+#define Timer_Prescaler 					1					
+#define Timer_Load_Value 								(System_Tick_Frequency/Timer_Interrput_Frequency/Timer_Prescaler)
+</span></code></pre></div></div>
+
+<p>TImer를 50000000 주기로 사용하기 위해서 위와 같이 정의해줬다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// MODE (SW)</span>
+<span class="cp">#define MODE_UPCOUNTER					0x01
+#define MODE_STOPWATCH					0x02
+#define MODE_RANDOM_MULTIPLIER	                        0x04
+#define MODE_ADDER_SUB					0x08
+#define MODE_ROBOT						0x10
+</span></code></pre></div></div>
+
+<p>SW[4:0]은 모드를 나타낸다. 이를 위와 같이 정의해줬다. 이는 스위치에서 활성화된 스위치를 기반으로 작성하였다. 아래 그림은 스위치에 따른 모드이다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/xdoBdxBdp0FKg7TaDjrk.png" alt="이미지" /></p>
+
+<center>그림 6 스위치의 모드</center>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Function</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">knowBit</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">checkMoreThanTwoSW</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">cut0to4</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">cut5to9</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">cut10to15</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">eachSegmentDivider</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">eachSegmentDivider_all</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">digReset</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">diggReset</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">inverseBit</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">*</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">increase_dig_4bit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">decrease_dig_4bit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">increase_dig_3bit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">decrease_dig_3bit</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>시스템에서 사용한 함수들을 헤더 부분에 작성해주었다. 이 함수들의 역할은 다음과 같다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">delay(unsigned int period)</code>: period 변수 하나를 받아 반복문을 사용해 그만큼 지연시키는 함수<br />
+<code class="language-plaintext highlighter-rouge">knowBit (unsigned int temp, unsigned int where)</code>: temp 변수에서 [where] bit에 있는 bit를 추출하는 함수<br />
+<code class="language-plaintext highlighter-rouge">checkMoreThanTwoSW (unsigned int temp)</code>: 스위치가 0개나 2개 이상 켜져 있음을 감지하는 함수<br />
+<code class="language-plaintext highlighter-rouge">cut0to4(unsigned int temp)</code>: temp의 [4:0]를 추출하는 함수<br />
+<code class="language-plaintext highlighter-rouge">cut5to9(unsigned int temp)</code>: temp의 [9:5]를 추출하는 함수<br />
+<code class="language-plaintext highlighter-rouge">cut10to15(unsigned int temp)</code>: temp의 [15:10]를 추출하는 함수<br />
+<code class="language-plaintext highlighter-rouge">eachSegmentDivider(unsigned int result, unsigned int thousand)</code>: result 변수를 세그먼트에 넣을 수 있도록 각 자리로 나눠서 넣어주는 함수, 1000의 자리는 임의의 값으로 선택할 수 있다.<br />
+eachSegmentDivider_all(unsigned int result): result 변수를 7세그먼트에 넣을 수 있도록 각 자리로 나눠서 넣어주는 함수<br />
+<code class="language-plaintext highlighter-rouge">digReset(void)</code>: dig 변수를 초기화해주는 함수<br />
+<code class="language-plaintext highlighter-rouge">diggReset(void)</code>: digg 변수를 초기화해주는 함수<br />
+<code class="language-plaintext highlighter-rouge">inverseBit(unsigned int* temp)</code>: temp가 1이면 0으로 0이면 1로 바꿔주는 함수<br />
+<code class="language-plaintext highlighter-rouge">increase_dig_4bit(void)</code>: 4자리의 dig 변수를 하나씩 증가하는 함수<br />
+<code class="language-plaintext highlighter-rouge">decrease_dig_4bit(void)</code>: 4자리의 dig 변수를 하나씩 감소하는 함수<br />
+<code class="language-plaintext highlighter-rouge">increase_dig_3bit(void)</code>: 3자리의 dig 변수를 하나씩 증가하는 함수<br />
+<code class="language-plaintext highlighter-rouge">decrease_dig_3bit(void)</code>: 3자리의 dig 변수를 하나씩 감소하는 함수</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// value</span>
+<span class="k">static</span> <span class="kt">char</span> <span class="n">dig1</span><span class="p">,</span><span class="n">dig2</span><span class="p">,</span><span class="n">dig3</span><span class="p">,</span><span class="n">dig4</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">char</span> <span class="n">digg1</span><span class="p">,</span><span class="n">digg2</span><span class="p">,</span><span class="n">digg3</span><span class="p">,</span><span class="n">digg4</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">char</span> <span class="n">seven1000</span><span class="p">,</span> <span class="n">seven100</span><span class="p">,</span> <span class="n">seven10</span><span class="p">,</span> <span class="n">seven1</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">stopwatchStart</span><span class="p">;</span>
+<span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">add_sub_select</span><span class="p">;</span> <span class="c1">// 0: add mode, 1: sub mode</span>
+<span class="k">static</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">stop_multi_select</span><span class="p">;</span> <span class="c1">// 0: stopwatch mode, 1: multiplier mode</span>
+</code></pre></div></div>
+
+<p>전역 변수의 값들로 역할은 다음과 같다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">dig1,dig2,dig3,dig4</code>: 업 카운터의 카운팅 값<br />
+<code class="language-plaintext highlighter-rouge">digg1,digg2,digg3,digg4</code>: 스탑워치의 카운팅 값<br />
+<code class="language-plaintext highlighter-rouge">seven1000, seven100, seven10, seven1</code>: 시스템에서 계산된 값을 7segment에 적기 전에 저장하는 변수<br />
+<code class="language-plaintext highlighter-rouge">result</code>: 시스템에서 계산된 값을 저장하는 변수<br />
+<code class="language-plaintext highlighter-rouge">stopwatchStart</code>: 스탑워치를 작동할지 멈출지를 결정하는 변수<br />
+<code class="language-plaintext highlighter-rouge">add_sub_select</code>: 덧셈과 뺄셈 모드를 결정하는 변수 (0: add mode, 1: sub mode)<br />
+<code class="language-plaintext highlighter-rouge">stop_multi_select</code>: 스탑워치와 곱셈 모드를 결정하는 변수 (0: stopwatch mode, 1: multiplier mode)</p>
+
+<h3 id="mainc-uart_isr">main.c [UART_ISR()]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">UART_ISR</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+	<span class="o">*</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">char</span><span class="o">*</span><span class="p">)</span> <span class="n">AHB_UART_BASE</span> <span class="o">=</span> <span class="n">knowBit</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">(),</span><span class="mi">4</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>UART_ISR 함수이다. UART의 인터럽트를 처리하기 위해서 정의했다. 여기서는 SW[4]의 값을 UART로 보내주는 역할을 한다.</p>
+
+<h3 id="mainc-timer_isr">main.c [Timer_ISR()]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">Timer_ISR</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+	<span class="n">increase_dig_4bit</span><span class="p">();</span>
+	
+	<span class="c1">// MODE_UPCOUNTER</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">cut0to4</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">==</span> <span class="n">MODE_UPCOUNTER</span><span class="p">){</span> 
+		<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">dig1</span><span class="p">,</span> <span class="n">dig2</span><span class="p">,</span> <span class="n">dig3</span><span class="p">,</span> <span class="n">dig4</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+
+	<span class="c1">// MODE_STOPWATCH</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">cut0to4</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">==</span> <span class="n">MODE_STOPWATCH</span><span class="p">){</span>
+		<span class="n">decrease_dig_4bit</span><span class="p">();</span>
+		<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">digg1</span><span class="p">,</span> <span class="n">digg2</span><span class="p">,</span> <span class="n">digg3</span><span class="p">,</span> <span class="n">digg4</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="c1">// clear JB when not digg:0000</span>
+	<span class="k">if</span><span class="p">(((</span><span class="n">digg4</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">digg3</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">digg2</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">digg1</span><span class="o">==</span><span class="mi">0</span><span class="p">))</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">){</span> <span class="c1">// 1 is digg all 0000</span>
+		<span class="n">GPIO_JB_write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span>
+	<span class="p">}</span>
+	
+	<span class="n">timer_irq_clear</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Timer_ISR 함수이다. Timer의 인터럽트를 처리하기 위해서 정의했다. 타이머 인터럽트가 발생하면 우선 dig가 하나 증가하고 UPCOUNTER 모드하면 이를 7세그먼트로 출력한다. 만약 STOPWATCH 모드라면 반대로 숫자를 하나씩 감소해주는 기능을 수행한다.</p>
+
+<p>STOPWATCH 모드에서 0이 되면 GPIO_JB 핀을 통해 외부 LED가 점등을 하게 된다. 만약 digg가 0000이 아니라면 GPIO_JB 핀의 출력을 0으로 초기화해 LED를 꺼준다.</p>
+
+<p>그 후 timer의 인터럽트 신호를 clear해준다.</p>
+
+<h3 id="mainc-key_isr">main.c [Key_ISR()]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="nf">Key_ISR</span><span class="p">(){</span>
+  <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">;</span>
+  <span class="n">temp</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">*</span><span class="p">)</span> <span class="n">AHB_KEY_BASE</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="mh">0x1</span><span class="p">){</span> <span class="c1">// top key:  up-counter reset, stopwatch reset</span>
+		<span class="n">digReset</span><span class="p">();</span>
+		<span class="n">diggReset</span><span class="p">();</span>
+                <span class="n">seven_seg_write</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+		<span class="n">stopwatchStart</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="mh">0x2</span><span class="p">){</span> <span class="c1">// left key</span>
+		<span class="n">increase_dig_3bit</span><span class="p">();</span>
+		<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">digg1</span><span class="p">,</span> <span class="n">digg2</span><span class="p">,</span> <span class="n">digg3</span><span class="p">,</span> <span class="n">digg4</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="mh">0x4</span><span class="p">){</span> <span class="c1">// right key</span>
+		<span class="n">decrease_dig_3bit</span><span class="p">();</span>
+		<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">digg1</span><span class="p">,</span> <span class="n">digg2</span><span class="p">,</span> <span class="n">digg3</span><span class="p">,</span> <span class="n">digg4</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="mh">0x8</span><span class="p">){</span> <span class="c1">// bottom key</span>
+		<span class="n">inverseBit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stopwatchStart</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">temp</span> <span class="o">==</span> <span class="mh">0x10</span><span class="p">){</span> <span class="c1">// middle key</span>
+		<span class="n">inverseBit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">add_sub_select</span><span class="p">);</span>
+		<span class="n">inverseBit</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stop_multi_select</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Key_ISR 함수이다. Key의 인터럽트를 처리하기 위해서 정의했다. Key 인터럽트가 발생하면 5개의 물리적 Key 중에서 어느 Key를 눌렀는지 확인해야 한다. 그렇기 때문에 if문을 사용하여 각 5개의 물리적 Key가 눌렸을 때의 기능을 구현하였다. 아래는 이에 대한 설명이다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">top key</code>: 업카운터와 스탑워치를 초기화하는 버튼으로 이에 대한 기능을 수행한다. dig와 digg변수를 초기화해주고 7세그먼트를 0000으로 초기화해준다. 또한, 스탑워치 작동 변수 stopwatchStart 를 0으로 초기화 시켜줌으로써 스탑워치를 정지시킨다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">left key</code>: 스탑워치의 시간을 세팅하는데, 그 중 10의 자리를 증가시킨다. digg3를 하나 증가시켜준다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">right key</code>: 스탑워치의 시간을 세팅하는데, 그 중 10의 자리를 감소시킨다. digg3를 하나 감소시켜준다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">bottom key</code>: 스탑워치의 작동을 시작하거나, 일시중지한다. 이는 비트를 뒤집어주는 함수를 통해 수행된다. stop_multi_select가 0이면 작동을 하지 않는 상태이고, 1이면 작동을 하는 상태를 나타낸다.</p>
+
+<p><code class="language-plaintext highlighter-rouge">middle key</code>: 덧셈기/뺄셈기 모드, 랜덤 숫자 발생기/곱셈기 모드 일 때, 모드를 변경시켜준다. 이는 비트를 뒤집어주는 함수를 통해 수행된다. 예를 들어 0이면 덧셈기 모드, 1이면 뺄셈기 모드이다.</p>
+
+<h3 id="mainc-main">main.c [main()]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">){</span>
+
+	<span class="c1">//Initialise timer (load value, prescaler value, mode value)</span>
+	<span class="n">timer_init</span><span class="p">(</span><span class="n">Timer_Load_Value</span><span class="p">,</span><span class="n">Timer_Prescaler</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+	<span class="n">timer_enable</span><span class="p">();</span>
+	<span class="n">seven_seg_write</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+	<span class="n">GPIO_JB_write</span><span class="p">(</span><span class="mh">0x00</span><span class="p">);</span> <span class="c1">//Initialise GPIO_JB</span>
+	<span class="n">stopwatchStart</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">add_sub_select</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="n">stop_multi_select</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	
+	<span class="n">NVIC_SetPriority</span> <span class="p">(</span><span class="n">Timer_IRQn</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">);</span>
+	<span class="n">NVIC_SetPriority</span> <span class="p">(</span><span class="n">UART_IRQn</span><span class="p">,</span> <span class="mh">0x80</span><span class="p">);</span>
+	<span class="n">NVIC_SetPriority</span> <span class="p">(</span><span class="n">KEY_IRQn</span><span class="p">,</span> <span class="mh">0xC0</span><span class="p">);</span>
+	<span class="n">NVIC_EnableIRQ</span><span class="p">(</span><span class="n">Timer_IRQn</span><span class="p">);</span>			<span class="c1">//enable timer interrupt</span>
+	<span class="n">NVIC_EnableIRQ</span><span class="p">(</span><span class="n">UART_IRQn</span><span class="p">);</span>			<span class="c1">//enable UART interrupt</span>
+	<span class="n">NVIC_EnableIRQ</span><span class="p">(</span><span class="n">KEY_IRQn</span><span class="p">);</span>				<span class="c1">//enable UART interrupt</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>main함수가 실행되면 기본적으로 초기화를 해준다. Timer의 Timer_Load_Value, Timer_Prescaler를 초기화해주고 타이머를 할성화해준다. 또한, 7세그먼트를 0으로 초기화, JB Pmod의 출력신호를 0으로 초기화, 변수 초기화 작업을 해준다.</p>
+
+<p>그 후 인터럽트 신호의 우선순위를 설정하고 활성화하여 인터럽트를 받을 수 있는 상태로 만들어준다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                         <span class="err">ː</span>
+	<span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+		<span class="n">GPIO_write</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">());</span>
+		
+		<span class="k">if</span> <span class="p">(</span><span class="n">checkMoreThanTwoSW</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="k">goto</span> <span class="n">nothingHappen</span><span class="p">;</span>
+
+                          <span class="err">ː</span>
+
+		<span class="nl">nothingHappen:</span>
+		<span class="n">delay</span><span class="p">(</span><span class="mi">1000000</span><span class="p">);</span> <span class="c1">// ******</span>
+	<span class="p">}</span>
+<span class="err">}</span>
+</code></pre></div></div>
+
+<p>main 내부에는 while문이 존재해 프로그램이 종료되지 않고 계속 Polling을 통해 서비스를 처리할 수 있도록 하였다. GPIO_write(GPIO_read());는 basys3 보드 내부의 sw를 읽어 내부 led에 적도록 하기 위해 사용되었다.</p>
+
+<p>checkMoreThanTwoSW(GPIO_read()) 함수는 sw[4:0] 모드 스위치가 만약 0개 켜있거나 2이상 켜있을 경우 0을 반환하는데, 0을 반환한 경우 nothingHappen: 라벨로 건너뛰어서 다른 기능을 수행하지 못하게 하였다. 만약 sw가 만약 0이거나 2이상일 경우 시스템이 작동을 하게 되면 프로그램이 꼬이기 때문이다.</p>
+
+<p>만약 모드 스위치가 정상적으로 1개만 켜있다면 goto문은 실행되지 않고 아래의 코드를 계속 수행한다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+                          <span class="err">ː</span>
+		<span class="c1">// MODE_RANDOM_MULTIPLIER	</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">cut0to4</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">==</span> <span class="n">MODE_RANDOM_MULTIPLIER</span>	<span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">stop_multi_select</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span> <span class="c1">// RANDOM MODE</span>
+				<span class="n">result</span> <span class="o">=</span> <span class="n">rand</span><span class="p">()</span> <span class="o">%</span> <span class="mi">10000</span><span class="p">;</span>
+				<span class="n">eachSegmentDivider_all</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+				<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">seven1000</span><span class="p">,</span> <span class="n">seven100</span><span class="p">,</span> <span class="n">seven10</span><span class="p">,</span> <span class="n">seven1</span><span class="p">);</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span> <span class="c1">// MULTIPLIER MODE</span>
+				<span class="n">result</span> <span class="o">=</span> <span class="n">cut5to9</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">*</span> <span class="n">cut10to15</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">());</span>
+				<span class="n">eachSegmentDivider</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">);</span>
+				<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">seven1000</span><span class="p">,</span> <span class="n">seven100</span><span class="p">,</span> <span class="n">seven10</span><span class="p">,</span> <span class="n">seven1</span><span class="p">);</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+                          <span class="err">ː</span>
+
+</code></pre></div></div>
+
+<p>sw[2]가 켜진 경우, 랜덤 숫자를 출력하거나 곱셈기로 동작한다. stop_multi_select 변수에 따라 랜덤 숫자를 출력하거나 곱셈기로 동작하는데, stop_multi_select 변수는 middle-key를 누를 때마다 바뀐다.</p>
+
+<p>우선 stop_multi_select가 0이면 랜덤 숫자를 출력한다. c함수 stdlib.h 라이브러리 내부의 rand()함수를 이용해 난수 값을 만들어 줬다. 이때 seed가 시간이므로 time.h도 include 해줘야 한다. 이렇게 만든 변수값을 % 10000을 통해 4자리의 값으로 만들어 주었고 7세그먼트에 이를 출력한다.</p>
+
+<p>stop_multi_select가 1이면 곱셈기로 동작한다. cut5to9(GPIO_read())를 통해 sw[9:5]의 값을 추출하고 cut10to15(GPIO_read())를 통해 sw[15:10] 값을 추출하여 곱해준다. 곱해준 값을 7세그먼트에 출력한다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="err">ː</span>
+		<span class="c1">// MODE_ADDER_SUB</span>
+		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">cut0to4</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">==</span> <span class="n">MODE_ADDER_SUB</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">add_sub_select</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span> <span class="c1">// ADDER MODE</span>
+				<span class="n">result</span> <span class="o">=</span> <span class="n">cut5to9</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">+</span> <span class="n">cut10to15</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">());</span>
+				<span class="n">eachSegmentDivider</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">);</span>
+				<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">seven1000</span><span class="p">,</span> <span class="n">seven100</span><span class="p">,</span> <span class="n">seven10</span><span class="p">,</span> <span class="n">seven1</span><span class="p">);</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span> <span class="c1">// SUB MODE</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">cut10to15</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span><span class="o">&gt;</span> <span class="n">cut5to9</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())){</span>
+					<span class="n">result</span> <span class="o">=</span> <span class="n">cut10to15</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">-</span> <span class="n">cut5to9</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">());</span>
+					<span class="n">eachSegmentDivider</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mh">0x00</span><span class="p">);</span>
+					<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">seven1000</span><span class="p">,</span> <span class="n">seven100</span><span class="p">,</span> <span class="n">seven10</span><span class="p">,</span> <span class="n">seven1</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="n">cut10to15</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span><span class="o">&lt;</span> <span class="n">cut5to9</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())){</span>
+					<span class="n">result</span> <span class="o">=</span> <span class="n">cut5to9</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">-</span> <span class="n">cut10to15</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">());</span>
+					<span class="n">eachSegmentDivider</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="mh">0x11</span><span class="p">);</span> <span class="c1">// 0x11 is -</span>
+					<span class="n">seven_seg_write</span><span class="p">(</span><span class="n">seven1000</span><span class="p">,</span> <span class="n">seven100</span><span class="p">,</span> <span class="n">seven10</span><span class="p">,</span> <span class="n">seven1</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">seven_seg_write</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>sw[3]이 켜진 경우, 덧셈기나 뺄셈기로 동작한다. add_sub_select 변수에 따라 덧셈기나 뺄셈기로 동작하는데, add_sub_select 변수는 middle-key를 누를 때마다 바뀐다.</p>
+
+<p>우선 add_sub_select 0이면 덧셈기로 동작한다. cut5to9(GPIO_read())를 통해 sw[9:5]의 값을 추출하고 cut10to15(GPIO_read())를 통해 sw[15:10] 값을 추출하여 더해준다. 더해준 값을 7세그먼트에 출력한다.</p>
+
+<p>add_sub_select 1이면 뺄셈기로 동작한다. cut5to9(GPIO_read())를 통해 sw[9:5]의 값을 추출하고 cut10to15(GPIO_read())를 통해 sw[15:10] 값을 추출하여 빼준다. 빼준 값을 7세그먼트에 출력한다.</p>
+
+<p>뺄셈기일 경우 if문을 사용하여 처리를 해주었는데, A-B에서 A가 B보다 크면 양수가 나와 문제가 없지만 B가 A보다 클 경우 (-)를 디스플레이해줘야 하기에 if문으로 처리해주었다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+		<span class="c1">// MODE_ROBOT</span>
+		<span class="k">else</span> <span class="nf">if</span> <span class="p">(</span><span class="n">cut0to4</span><span class="p">(</span><span class="n">GPIO_read</span><span class="p">())</span> <span class="o">==</span> <span class="n">MODE_ROBOT</span><span class="p">){</span>
+			<span class="n">seven_seg_write</span><span class="p">(</span><span class="mh">0x11</span><span class="p">,</span><span class="mh">0x11</span><span class="p">,</span><span class="mh">0x11</span><span class="p">,</span><span class="mh">0x11</span><span class="p">);</span>
+		<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>sw[4]가 켜진 경우, ROBOT mode로 동작한다. 이때는 기본적으로 UART의 인터럽트로 처리를 하며, 위 코드는 ROBOT mode로 동작함을 알려주기 위해 7세그먼트에 (- - - -)를 표시하는 코드이다.</p>
+
+<h3 id="mainc-functions">main.c [Functions]</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="kt">void</span> <span class="nf">delay</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">period</span><span class="p">){</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">counter</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">period</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+		<span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>period 변수 하나를 받아 반복문을 사용해 그만큼 지연시키는 함수이다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="err">ː</span>
+<span class="c1">// A function that extracts a specific bit</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">knowBit</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">where</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">temp</span> <span class="o">&amp;</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">where</span><span class="p">))</span> <span class="o">&gt;&gt;</span> <span class="n">where</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// A function that sets a specific bit</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">SetBit</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">where</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">(</span><span class="n">temp</span> <span class="o">|</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="n">where</span><span class="p">));</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>temp 변수에서 [where] bit에 있는 bit를 추출하는 함수이다. temp와 원하는 비트가 1인 값을 AND 연산하여 추출한다. 반대로 원하는 비트에 1을 OR 연산하면 값을 쓸 수 있다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="err">ː</span>
+<span class="c1">// Check if more than two mode SW on =&gt; 1: only one, 0: 0 or more than two</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">checkMoreThanTwoSW</span> <span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">){</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">check_v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	
+	<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">){</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">knowBit</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+			<span class="n">check_v</span> <span class="o">++</span><span class="p">;</span>
+		<span class="n">i</span> <span class="o">++</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">if</span> <span class="p">(</span><span class="n">check_v</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="k">return</span> <span class="n">check_v</span><span class="p">;</span>
+	<span class="k">else</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>모드 스위치가 0개나 2개 이상 켜져 있음을 감지하는 함수이다. temp값을 받아서 각 자리에 1이 있는지 없는지 검사를 Loop로 수행한다. 만약 check_v가 1이라면 하나면 켜진 것이고 그 이외의 값이라면 0이나 2이상 켜진 것으로 0을 반환한다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">cut0to4</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">){</span>
+	<span class="n">temp</span> <span class="o">=</span> <span class="mh">0x001F</span> <span class="o">&amp;</span> <span class="n">temp</span><span class="p">;</span> <span class="c1">// 0x001F: 0000 0000 0001 1111</span>
+	<span class="k">return</span> <span class="n">temp</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">cut5to9</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">){</span>
+	<span class="n">temp</span> <span class="o">=</span> <span class="mh">0x03E0</span> <span class="o">&amp;</span> <span class="n">temp</span><span class="p">;</span> <span class="c1">// 0x03E0: 0000 0011 1110 0000</span>
+	<span class="k">return</span> <span class="n">temp</span> <span class="o">&gt;&gt;</span> <span class="mi">5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">cut10to15</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">temp</span><span class="p">){</span>
+	<span class="n">temp</span> <span class="o">=</span> <span class="mh">0x7C00</span> <span class="o">&amp;</span> <span class="n">temp</span><span class="p">;</span> <span class="c1">// 0x7C00: 0111 1100 0000 0000</span>
+	<span class="k">return</span> <span class="n">temp</span> <span class="o">&gt;&gt;</span> <span class="mi">10</span><span class="p">;</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>각각 temp의 [4:0]를 추출하는 함수, temp의 [9:5]를 추출하는 함수, temp의 [15:10]를 추출하는 함수이다. 원하는 비트에 1이 써진 값을 &amp;연산함으로써 원하는 값을 추출할 수 있다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="c1">// SegmentDivider -&gt; 3bit + special sign</span>
+<span class="kt">void</span> <span class="nf">eachSegmentDivider</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">result</span><span class="p">,</span> <span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">thousand</span><span class="p">){</span>
+	<span class="n">seven1</span>		<span class="o">=</span>	<span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">seven10</span>		<span class="o">=</span> <span class="p">(</span><span class="n">result</span> <span class="o">%</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span><span class="mi">10</span> <span class="p">;</span>    
+	<span class="n">seven100</span> 	<span class="o">=</span> <span class="p">(</span><span class="n">result</span> <span class="o">%</span><span class="mi">1000</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+	<span class="n">seven1000</span> <span class="o">=</span>	<span class="n">thousand</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// SegmentDivider -&gt; 3bit + special sign</span>
+<span class="kt">void</span> <span class="nf">eachSegmentDivider_all</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span> <span class="n">result</span><span class="p">){</span>
+	<span class="n">seven1</span>		<span class="o">=</span>	<span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+	<span class="n">seven10</span>		<span class="o">=</span> <span class="p">(</span><span class="n">result</span> <span class="o">%</span> <span class="mi">100</span><span class="p">)</span> <span class="o">/</span><span class="mi">10</span> <span class="p">;</span>    
+	<span class="n">seven100</span> 	<span class="o">=</span> <span class="p">(</span><span class="n">result</span> <span class="o">%</span><span class="mi">1000</span><span class="p">)</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+	<span class="n">seven1000</span> <span class="o">=</span>	<span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">;</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>result 변수를 세그먼트에 넣을 수 있도록 각 자리로 나눠서 넣어주는 함수이다. 1000의 자리는 임의의 값으로 선택할 수 있도록 따로 분리하였다. 1000의 자리를 따로 설정할 수 있는 함수가 필요한 이유는 연산 결과 (-)를 7세그먼트에 써야할 일이 있기 때문이다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="kt">void</span> <span class="nf">inverseBit</span><span class="p">(</span><span class="kt">unsigned</span> <span class="kt">int</span><span class="o">*</span> <span class="n">temp</span><span class="p">){</span>
+	<span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">temp</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+		<span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+	<span class="k">else</span>
+		<span class="o">*</span><span class="n">temp</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>temp가 1이면 0으로 0이면 1로 바꿔주는 함수이다. 모드를 바꿀 때 사용할 수 있다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="kt">void</span> <span class="nf">digReset</span><span class="p">(){</span>
+	<span class="n">dig1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">dig2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">dig3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">dig4</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">diggReset</span><span class="p">(){</span>
+	<span class="n">digg1</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">digg2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">digg3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">digg4</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>dig, digg 변수를 초기화해주는 함수이다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="kt">void</span> <span class="nf">increase_dig_4bit</span><span class="p">(){</span>
+	<span class="n">dig4</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">dig4</span><span class="o">==</span><span class="mi">10</span><span class="p">){</span>
+		<span class="n">dig4</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="n">dig3</span><span class="o">++</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">dig3</span><span class="o">==</span><span class="mi">10</span><span class="p">){</span>
+			<span class="n">dig3</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+			<span class="n">dig2</span><span class="o">++</span><span class="p">;</span>
+			<span class="k">if</span> <span class="p">(</span><span class="n">dig2</span><span class="o">==</span><span class="mi">10</span><span class="p">){</span>
+				<span class="n">dig2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+				<span class="n">dig1</span><span class="o">++</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">decrease_dig_4bit</span><span class="p">(){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">stopwatchStart</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">digg4</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">digg3</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+					<span class="k">if</span><span class="p">(</span><span class="n">digg2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+						<span class="k">if</span><span class="p">(</span><span class="n">digg1</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+							<span class="n">GPIO_JB_write</span><span class="p">(</span><span class="mh">0x01</span><span class="p">);</span>
+						<span class="p">}</span>
+						<span class="k">else</span><span class="p">{</span>
+							<span class="n">digg1</span><span class="o">--</span><span class="p">;</span>
+							<span class="n">digg2</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+						<span class="p">}</span>
+					<span class="p">}</span>
+					<span class="k">else</span><span class="p">{</span>
+						<span class="n">digg2</span><span class="o">--</span><span class="p">;</span>
+						<span class="n">digg3</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+					<span class="p">}</span>
+				<span class="p">}</span>
+				<span class="k">else</span><span class="p">{</span>
+					<span class="n">digg3</span><span class="o">--</span><span class="p">;</span>
+					<span class="n">digg4</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+				<span class="p">}</span>
+			<span class="p">}</span>
+			<span class="k">else</span>
+				<span class="n">digg4</span><span class="o">--</span><span class="p">;</span>
+		<span class="p">}</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>각각 4자리의 dig 변수를 하나씩 증가하는 함수, 4자리의 dig 변수를 하나씩 감소하는 함수이다. GPIO_JB_write(0x01);는 스탑워치에서 감소하다가 0000이 되면 외부 LED를 밝혀줘야 할 때 사용된다.</p>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>                          <span class="err">ː</span>
+<span class="kt">void</span> <span class="nf">increase_dig_3bit</span><span class="p">(){</span>
+	<span class="n">digg3</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">if</span> <span class="p">(</span><span class="n">digg3</span><span class="o">==</span><span class="mi">10</span><span class="p">){</span>
+		<span class="n">digg3</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+		<span class="n">digg2</span><span class="o">++</span><span class="p">;</span>
+		<span class="k">if</span> <span class="p">(</span><span class="n">digg2</span><span class="o">==</span><span class="mi">10</span><span class="p">){</span>
+			<span class="n">digg2</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+			<span class="n">digg1</span><span class="o">++</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">decrease_dig_3bit</span><span class="p">(){</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">digg3</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">digg2</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+			<span class="k">if</span><span class="p">(</span><span class="n">digg1</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span>
+				<span class="c1">// digg: 0000</span>
+			<span class="p">}</span>
+			<span class="k">else</span><span class="p">{</span>
+				<span class="n">digg1</span><span class="o">--</span><span class="p">;</span>
+				<span class="n">digg2</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+			<span class="p">}</span>
+		<span class="p">}</span>
+		<span class="k">else</span><span class="p">{</span>
+			<span class="n">digg2</span><span class="o">--</span><span class="p">;</span>
+			<span class="n">digg3</span> <span class="o">=</span> <span class="mi">9</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+	<span class="k">else</span><span class="p">{</span>
+		<span class="n">digg3</span><span class="o">--</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+                          <span class="err">ː</span>
+</code></pre></div></div>
+
+<p>각각 10의 자리의 dig 변수를 증가하는 함수, 10의 자리의 dig 변수를 감소하는 함수이다. key의 왼쪽과 오른쪽을 눌렀을 때, 각각 스탑워치의 설정 시간이 증가, 감소하는 역할을 한다.</p>
+
+<h3 id="esp32_servo_uartino">ESP32_Servo_UART.ino</h3>
+
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;ESP32_Servo.h&gt;</span><span class="cp">
+</span>
+<span class="n">Servo</span> <span class="n">frontLegs</span><span class="p">,</span> <span class="n">backLegs</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="n">FRONT_Servo</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">BACK_Servo</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">setup</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">Serial</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">19200</span><span class="p">);</span>
+  <span class="n">Serial2</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="mi">19200</span><span class="p">,</span> <span class="n">SERIAL_8N1</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">);</span>
+
+  <span class="n">frontLegs</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">FRONT_Servo</span><span class="p">);</span>
+  <span class="n">backLegs</span><span class="p">.</span><span class="n">attach</span><span class="p">(</span><span class="n">BACK_Servo</span><span class="p">);</span>
+  <span class="n">frontLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>  <span class="c1">//Center the servo</span>
+  <span class="n">backLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>   <span class="c1">//Center the servo</span>
+
+  <span class="n">delay</span><span class="p">(</span><span class="mi">5000</span><span class="p">);</span>  <span class="c1">//Wait 5 sec to fix bug legs</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">loop</span><span class="p">()</span> <span class="p">{</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">Serial2</span><span class="p">.</span><span class="n">available</span><span class="p">())</span> <span class="p">{</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">Serial2</span><span class="p">.</span><span class="n">read</span><span class="p">());</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">Serial2</span><span class="p">.</span><span class="n">read</span><span class="p">()</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="n">Servo_Work</span><span class="p">();</span>
+    <span class="k">else</span>
+      <span class="n">Servo_Wait</span><span class="p">();</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">Servo_Work</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+  <span class="n">frontLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">70</span><span class="p">);</span>  <span class="c1">//move front leg a little</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+  <span class="n">backLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">70</span><span class="p">);</span>  <span class="c1">//move back leg a little</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+  <span class="n">frontLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">110</span><span class="p">);</span>  <span class="c1">//move front leg a little</span>
+  <span class="n">delay</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+  <span class="n">backLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">110</span><span class="p">);</span>  <span class="c1">//move back leg a little</span>
+<span class="p">}</span>
+
+
+<span class="kt">void</span> <span class="nf">Servo_Wait</span><span class="p">()</span> <span class="p">{</span>
+  <span class="n">frontLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>  <span class="c1">//Center the servo</span>
+  <span class="n">backLegs</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="mi">90</span><span class="p">);</span>   <span class="c1">//Center the servo</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Basys3와 UART 통신을 위하여 ESP32에서도 동일하게 UART 통신을 위한 구성을 하였다. Serial2.begin(19200, SERIAL_8N1, 16, 17);을 통해 16번의 RX 핀과 17번의 TX 핀을 Serial2 통신으로 구성하였으며 앞서 Basys3에서 설정한 통신 속도(Baudrate)가 19200이였기에 ESP32에서도 동일하게 설정하였다. 또한 Basys3의 UART 통신에 관한 래퍼런스 매뉴얼을 참고하면 페러티 bit이 존재하지 않는 것을 알 수 있기에 ESP32의 통신 설정에서도 SERIAL_8N1 모드를 사용하여 통신을 진행하였다.</p>
+
+<p>이후, Serial2.read()를 통해 UART 통신을 하여 Basys3에서 값을 읽어와 모터를 제어하였다.</p>
+
+<h1 id="5-결과">5. 결과</h1>
+
+<h2 id="기능1-업-카운터">기능1) 업 카운터</h2>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/gax7PVNSzg8QNUdRwTlq.png" alt="이미지" /></p>
+
+<h2 id="기능2-스탑워치">기능2) 스탑워치</h2>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/MeIhvpiEMZZ0L1WUZPhq.png" alt="이미지" /></p>
+
+<h2 id="기능3-랜덤숫자곱셈기">기능3) 랜덤숫자/곱셈기</h2>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/wjXORwp9r3jHPPQlR0wy.png" alt="이미지" /></p>
+
+<h2 id="기능4-덧셈기뺄셈기">기능4) 덧셈기/뺄셈기</h2>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/bJUB1Gu3Vpx69Q7og5Wq.png" alt="이미지" /></p>
+
+<h2 id="기능5-로봇-컨트롤">기능5) 로봇 컨트롤</h2>
+
+<p>ESP32의 코드를 구현한 Arduino IDE에서 아래의 코드를 통해 Basys3와의 UART 통신 결과값을 받아볼 수 있었으며 Basys3의 SW4가 활성화됨에 따라 들어오는 값이 0 또는 1로 변경된다는 것을 알 수 있었다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/YdQ2jJbqSVCe3jlk8buX.png" alt="이미지" /></p>
+
+<center>그림 7 UART 통신 함수 및 Serial 통신 함수를 사용한 UART 통신 확인</center>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/FT7FxLSZQE66Edtxs91O.png" alt="이미지" /></p>
+
+<center>그림 8 Basys3 SW4의 활성화 여부에 따른 UART 통신 결과값 확인</center>
+
+<p>이를 이용하여 서보 모터를 0 또는 1의 값에 의해 제어를 하였으며 이 조건문을 통해 아래 그림의 로봇을 제어할 수 있게 되었다.</p>
+
+<p><img src="https://raw.githubusercontent.com/radic2682/blog_images_repo/main/uploads/Multi_Function_mini_Robot/GbnSa9EJfNpytwHc3LOj.png" alt="이미지" /></p>
+
+<center>그림 9 Basys3와 ESP32를 통해 제어하는 소형 로봇</center>
+
+<h1 id="6-고찰">6. 고찰</h1>
+
+<p>다기능 카운터, 계산기와 UART 통신을 통한 작은 로봇 제어를 설계하였다. 모든 결과가 설계대로 잘 작동함을 확인할 수 있었다.</p>
+
+<p>프로젝트를 수행하며 ARM HW에서 모듈과 버스의 관계에 대한 이해가 향상되었으며, 각 모듈에 대한 사용법을 확실히 익힐 수 있었다. 또한, memory mapped I/O를 이해해 외부 장치 컨트롤에 대한 이해가 높아졌고 외부 통신 방법에 대한 이해가 높아졌다.</p>
+
+<p>프로젝트를 수행하며 각자의 역할은 다음과 같이 나누어 수행을 했다.</p>
+
+<p>Me : Verilog ARM Cortex-M0 HW 구성, 시스템의 SW 구현</p>
+
+<p>황태욱 : Verilog ARM Cortex-M0 HW 구성, ESP32-WROOM-32D 회로 구성 및 코드 작성, 로봇 구현</p>
+
+<p><a href="https://velog.io/@tae_uk/%EC%8B%9C%EC%8A%A4%ED%85%9C-%EC%98%A8-%EC%B9%A9SoC-%EA%B3%BC%EC%A0%9C-...-2-Basys3%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C-%EB%8B%A4%EA%B8%B0%EB%8A%A5-%EC%B9%B4%EC%9A%B4%ED%84%B0-%EA%B3%84%EC%82%B0%EA%B8%B0%EC%99%80-UART-%ED%86%B5%EC%8B%A0%EC%9D%84-%ED%86%B5%ED%95%9C-%EB%A1%9C%EB%B4%87-%EC%A1%B0%EC%A0%95">조원 블로그로 이동하기</a></p>
 
             </div>
             <td></td>
