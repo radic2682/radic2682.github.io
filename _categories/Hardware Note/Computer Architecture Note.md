@@ -1,6 +1,6 @@
 ---
-title: Computer Structure Note
-name: Computer Structure Note
+title: Computer Architecture Note
+name: Computer Architecture Note
 isSub: true
 layout: category
 parent: Hardware Note
