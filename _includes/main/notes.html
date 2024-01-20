@@ -94,14 +94,14 @@
       </div>
 
       <div class="detail_content">
-        <h3>Computer Structure Note</h3>
+        <h3>Computer Architecture Note</h3>
 
         <div class="dc_box">
           {% assign sorted_posts = site.posts | sort: 'title' %}
 
           {% for post in sorted_posts %}
             {% for category in post.categories %}
-              {% if category == "Computer Structure Note" %}
+              {% if category == "Computer Architecture Note" %}
                   <a href="{{ post.url }}"><p id="box_title">{{ post.title }}</p></a>
               {% endif %}
             {% endfor %}
